@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +18,9 @@
   >
 
   <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <style>
 
@@ -38,20 +42,42 @@
     }
 
     header {
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.96);
       border-bottom: 1px solid #e5e7eb;
       position: sticky;
       top: 0;
       z-index: 100;
+      backdrop-filter: blur(8px);
     }
 
     .nav {
       max-width: 1100px;
       margin: auto;
-      padding: 17px 20px;
+      padding: 15px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #4f46e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 21px;
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.22);
     }
 
     .logo {
@@ -59,10 +85,16 @@
       font-weight: 800;
       text-decoration: none;
       color: #111827;
+      letter-spacing: -0.5px;
     }
 
     .logo span {
       color: #4f46e5;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
     }
 
     nav a {
@@ -70,6 +102,7 @@
       text-decoration: none;
       color: #4b5563;
       font-size: 15px;
+      font-weight: 500;
     }
 
     nav a:hover {
@@ -83,10 +116,22 @@
       padding: 0 20px;
     }
 
+    .hero-badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4f46e5;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
     .hero h1 {
       font-size: 48px;
       line-height: 1.15;
       margin-bottom: 18px;
+      letter-spacing: -1.2px;
     }
 
     .hero h1 span {
@@ -257,21 +302,6 @@
       cursor: pointer;
     }
 
-    .number-input {
-      width: 100%;
-      max-width: 180px;
-      padding: 11px 13px;
-      border: 1px solid #d1d5db;
-      border-radius: 8px;
-      font-size: 15px;
-      outline: none;
-      margin: 5px 0 15px;
-    }
-
-    .number-input:focus {
-      border-color: #4f46e5;
-    }
-
     .range-container {
       max-width: 450px;
       margin: 5px 0 18px;
@@ -405,11 +435,6 @@
       font-size: 14px;
     }
 
-    .error-message {
-      background: #fef2f2;
-      color: #b91c1c;
-    }
-
     .about {
       background: white;
       border-top: 1px solid #e5e7eb;
@@ -439,6 +464,12 @@
       font-size: 14px;
     }
 
+    .footer-brand {
+      color: white;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
     .no-results {
       display: none;
       padding: 20px;
@@ -464,13 +495,27 @@
 
     @media (max-width: 550px) {
 
-      .tools-grid {
-        grid-template-columns: 1fr;
+      .nav {
+        padding: 13px 15px;
+      }
+
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        font-size: 19px;
+      }
+
+      .logo {
+        font-size: 23px;
       }
 
       nav a {
         margin-left: 10px;
         font-size: 13px;
+      }
+
+      .tools-grid {
+        grid-template-columns: 1fr;
       }
 
       .hero {
@@ -500,13 +545,18 @@
 
 <body>
 
-
 <header>
 
   <div class="nav">
 
-    <a href="#" class="logo">
-      Vel<span>quro</span>
+    <a href="#" class="brand">
+
+      <div class="brand-mark">V</div>
+
+      <div class="logo">
+        Vel<span>quro</span>
+      </div>
+
     </a>
 
     <nav>
@@ -519,8 +569,11 @@
 </header>
 
 
-
 <section class="hero">
+
+  <div class="hero-badge">
+    Free • Fast • Browser-Based
+  </div>
 
   <h1>
     Simple <span>Tools</span> for Everyday Tasks
@@ -546,13 +599,10 @@
 </section>
 
 
-
 <main class="container" id="tools">
 
 
-<!-- ================================================= -->
 <!-- WORD COUNTER -->
-<!-- ================================================= -->
 
 <div class="tool-section" id="wordCounter">
 
@@ -637,10 +687,7 @@
 </div>
 
 
-
-<!-- ================================================= -->
 <!-- CASE CONVERTER -->
-<!-- ================================================= -->
 
 <div class="tool-section" id="caseConverter">
 
@@ -705,10 +752,7 @@
 </div>
 
 
-
-<!-- ================================================= -->
 <!-- DUPLICATE LINE REMOVER -->
-<!-- ================================================= -->
 
 <div class="tool-section" id="duplicateRemover">
 
@@ -811,10 +855,7 @@
 </div>
 
 
-
-<!-- ================================================= -->
 <!-- JSON FORMATTER -->
-<!-- ================================================= -->
 
 <div class="tool-section" id="jsonFormatter">
 
@@ -868,10 +909,7 @@
 </div>
 
 
-
-<!-- ================================================= -->
 <!-- PASSWORD GENERATOR -->
-<!-- ================================================= -->
 
 <div class="tool-section" id="passwordGenerator">
 
@@ -985,10 +1023,7 @@
 </div>
 
 
-
-<!-- ================================================= -->
 <!-- IMAGE COMPRESSOR -->
-<!-- ================================================= -->
 
 <div class="tool-section" id="imageCompressor">
 
@@ -1084,10 +1119,7 @@
 </div>
 
 
-
-<!-- ================================================= -->
 <!-- TEXT TOOLS -->
-<!-- ================================================= -->
 
 <section class="category">
 
@@ -1098,7 +1130,6 @@
   </p>
 
   <div class="tools-grid">
-
 
     <div
       class="tool-card"
@@ -1173,10 +1204,7 @@
 </section>
 
 
-
-<!-- ================================================= -->
 <!-- DEVELOPER & UTILITY TOOLS -->
-<!-- ================================================= -->
 
 <section class="category">
 
@@ -1187,7 +1215,6 @@
   </p>
 
   <div class="tools-grid">
-
 
     <div
       class="tool-card"
@@ -1262,7 +1289,6 @@
 </section>
 
 
-
 <div
   class="no-results"
   id="noResults"
@@ -1274,10 +1300,7 @@
 </main>
 
 
-
-<!-- ================================================= -->
 <!-- ABOUT -->
-<!-- ================================================= -->
 
 <section
   class="about"
@@ -1308,32 +1331,33 @@
 </section>
 
 
-
 <footer>
 
+  <div class="footer-brand">
+    Velquro
+  </div>
+
   <p>
+    Free online tools for everyday digital tasks.
+  </p>
+
+  <p style="margin-top:8px;">
     © 2026 Velquro. All rights reserved.
   </p>
 
 </footer>
 
 
-
 <script>
 
-
-/* ================================================= */
 /* OPEN / CLOSE TOOLS */
-/* ================================================= */
 
 function openTool(toolId) {
 
   document
     .querySelectorAll('.tool-section')
     .forEach(function(section) {
-
       section.classList.remove('active');
-
     });
 
   const tool =
@@ -1348,7 +1372,6 @@ function openTool(toolId) {
 
 }
 
-
 function closeTool(toolId) {
 
   document
@@ -1358,10 +1381,7 @@ function closeTool(toolId) {
 }
 
 
-
-/* ================================================= */
 /* WORD COUNTER */
-/* ================================================= */
 
 function countWords() {
 
@@ -1402,7 +1422,6 @@ function countWords() {
       ? Math.max(1, Math.ceil(words / 200))
       : 0;
 
-
   document.getElementById('wordCount').textContent =
     words;
 
@@ -1427,7 +1446,6 @@ function countWords() {
 
 }
 
-
 function clearWordCounter() {
 
   document.getElementById('wordText').value = '';
@@ -1442,10 +1460,7 @@ function clearWordCounter() {
 }
 
 
-
-/* ================================================= */
 /* CASE CONVERTER */
-/* ================================================= */
 
 function convertCase(type) {
 
@@ -1454,7 +1469,6 @@ function convertCase(type) {
 
   let text =
     textarea.value;
-
 
   if (!text.trim()) {
 
@@ -1467,22 +1481,13 @@ function convertCase(type) {
 
   }
 
-
   if (type === 'upper') {
-
-    text =
-      text.toUpperCase();
-
+    text = text.toUpperCase();
   }
-
 
   if (type === 'lower') {
-
-    text =
-      text.toLowerCase();
-
+    text = text.toLowerCase();
   }
-
 
   if (type === 'title') {
 
@@ -1492,14 +1497,11 @@ function convertCase(type) {
         .replace(
           /\b([a-z])/g,
           function(match) {
-
             return match.toUpperCase();
-
           }
         );
 
   }
-
 
   if (type === 'sentence') {
 
@@ -1510,14 +1512,11 @@ function convertCase(type) {
       text.replace(
         /(^\s*[a-z])|([.!?]\s+[a-z])/g,
         function(match) {
-
           return match.toUpperCase();
-
         }
       );
 
   }
-
 
   textarea.value =
     text;
@@ -1528,7 +1527,6 @@ function convertCase(type) {
   );
 
 }
-
 
 function clearCase() {
 
@@ -1542,10 +1540,7 @@ function clearCase() {
 }
 
 
-
-/* ================================================= */
 /* DUPLICATE LINE REMOVER */
-/* ================================================= */
 
 function getDuplicateData() {
 
@@ -1569,7 +1564,6 @@ function getDuplicateData() {
       .getElementById('trimLines')
       .checked;
 
-
   let lines =
     text.split(/\r?\n/);
 
@@ -1580,38 +1574,30 @@ function getDuplicateData() {
 
   const processed = [];
 
-
   lines.forEach(function(line) {
 
     let current =
       line;
 
     if (trimLines) {
-
-      current =
-        current.trim();
-
+      current = current.trim();
     }
 
     if (
       removeEmpty &&
       current === ''
     ) {
-
       return;
-
     }
 
     processed.push(current);
 
   });
 
-
   const seen =
     new Set();
 
   const unique = [];
-
 
   processed.forEach(function(line) {
 
@@ -1619,10 +1605,7 @@ function getDuplicateData() {
       line;
 
     if (ignoreCase) {
-
-      key =
-        key.toLowerCase();
-
+      key = key.toLowerCase();
     }
 
     if (!seen.has(key)) {
@@ -1634,7 +1617,6 @@ function getDuplicateData() {
     }
 
   });
-
 
   return {
 
@@ -1652,7 +1634,6 @@ function getDuplicateData() {
 
 }
 
-
 function updateDuplicateStats() {
 
   const data =
@@ -1668,7 +1649,6 @@ function updateDuplicateStats() {
     data.duplicates;
 
 }
-
 
 function removeDuplicates() {
 
@@ -1692,7 +1672,6 @@ function removeDuplicates() {
 
 }
 
-
 function clearDuplicates() {
 
   document.getElementById('duplicateText').value = '';
@@ -1707,10 +1686,7 @@ function clearDuplicates() {
 }
 
 
-
-/* ================================================= */
 /* JSON FORMATTER */
-/* ================================================= */
 
 function validateJSON() {
 
@@ -1721,11 +1697,8 @@ function validateJSON() {
       .trim();
 
   if (!text) {
-
     return;
-
   }
-
 
   try {
 
@@ -1747,7 +1720,6 @@ function validateJSON() {
 
 }
 
-
 function formatJSON() {
 
   const textarea =
@@ -1755,7 +1727,6 @@ function formatJSON() {
 
   const text =
     textarea.value.trim();
-
 
   if (!text) {
 
@@ -1767,7 +1738,6 @@ function formatJSON() {
     return;
 
   }
-
 
   try {
 
@@ -1797,7 +1767,6 @@ function formatJSON() {
 
 }
 
-
 function minifyJSON() {
 
   const textarea =
@@ -1805,7 +1774,6 @@ function minifyJSON() {
 
   const text =
     textarea.value.trim();
-
 
   if (!text) {
 
@@ -1817,7 +1785,6 @@ function minifyJSON() {
     return;
 
   }
-
 
   try {
 
@@ -1843,7 +1810,6 @@ function minifyJSON() {
 
 }
 
-
 function clearJSON() {
 
   document.getElementById('jsonText').value = '';
@@ -1854,10 +1820,7 @@ function clearJSON() {
 }
 
 
-
-/* ================================================= */
 /* PASSWORD GENERATOR */
-/* ================================================= */
 
 function updatePasswordLength() {
 
@@ -1873,7 +1836,6 @@ function updatePasswordLength() {
 
 }
 
-
 function generatePassword() {
 
   const length =
@@ -1882,7 +1844,6 @@ function generatePassword() {
         .getElementById('passwordLength')
         .value
     );
-
 
   const upper =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -1896,13 +1857,11 @@ function generatePassword() {
   const symbols =
     '!@#$%^&*()-_=+[]{}?';
 
-
   let characters =
     '';
 
   let required =
     '';
-
 
   if (
     document
@@ -1917,7 +1876,6 @@ function generatePassword() {
 
   }
 
-
   if (
     document
       .getElementById('passwordLower')
@@ -1930,7 +1888,6 @@ function generatePassword() {
       getSecureRandomCharacter(lower);
 
   }
-
 
   if (
     document
@@ -1945,7 +1902,6 @@ function generatePassword() {
 
   }
 
-
   if (
     document
       .getElementById('passwordSymbols')
@@ -1959,7 +1915,6 @@ function generatePassword() {
 
   }
 
-
   if (!characters) {
 
     showMessage(
@@ -1970,7 +1925,6 @@ function generatePassword() {
     return;
 
   }
-
 
   if (required.length > length) {
 
@@ -1983,10 +1937,8 @@ function generatePassword() {
 
   }
 
-
   let password =
     required;
-
 
   while (
     password.length < length
@@ -1999,16 +1951,13 @@ function generatePassword() {
 
   }
 
-
   password =
     shuffleString(password);
-
 
   document
     .getElementById('passwordOutput')
     .value =
     password;
-
 
   showMessage(
     'passwordMessage',
@@ -2016,7 +1965,6 @@ function generatePassword() {
   );
 
 }
-
 
 function getSecureRandomCharacter(characters) {
 
@@ -2033,7 +1981,6 @@ function getSecureRandomCharacter(characters) {
   ];
 
 }
-
 
 function shuffleString(string) {
 
@@ -2072,7 +2019,6 @@ function shuffleString(string) {
 
 }
 
-
 function clearPassword() {
 
   document
@@ -2087,13 +2033,9 @@ function clearPassword() {
 }
 
 
-
-/* ================================================= */
 /* IMAGE COMPRESSOR */
-/* ================================================= */
 
 let selectedImage = null;
-
 
 function updateQuality() {
 
@@ -2109,7 +2051,6 @@ function updateQuality() {
 
 }
 
-
 function loadImage() {
 
   const input =
@@ -2119,13 +2060,9 @@ function loadImage() {
   const file =
     input.files[0];
 
-
   if (!file) {
-
     return;
-
   }
-
 
   if (!file.type.startsWith('image/')) {
 
@@ -2138,14 +2075,11 @@ function loadImage() {
 
   }
 
-
   selectedImage =
     file;
 
-
   const reader =
     new FileReader();
-
 
   reader.onload =
     function(event) {
@@ -2160,7 +2094,6 @@ function loadImage() {
       preview.style.display =
         'block';
 
-
       const info =
         document
           .getElementById('imageInfo');
@@ -2174,11 +2107,9 @@ function loadImage() {
 
     };
 
-
   reader.readAsDataURL(file);
 
 }
-
 
 function compressImage() {
 
@@ -2193,7 +2124,6 @@ function compressImage() {
 
   }
 
-
   const quality =
     parseInt(
       document
@@ -2201,17 +2131,14 @@ function compressImage() {
         .value
     ) / 100;
 
-
   const reader =
     new FileReader();
-
 
   reader.onload =
     function(event) {
 
       const img =
         new Image();
-
 
       img.onload =
         function() {
@@ -2221,24 +2148,20 @@ function compressImage() {
               'canvas'
             );
 
-
           canvas.width =
             img.width;
 
           canvas.height =
             img.height;
 
-
           const context =
             canvas.getContext('2d');
-
 
           context.drawImage(
             img,
             0,
             0
           );
-
 
           canvas.toBlob(
             function(blob) {
@@ -2254,24 +2177,20 @@ function compressImage() {
 
               }
 
-
               const url =
                 URL.createObjectURL(
                   blob
                 );
 
-
               const download =
                 document
                   .getElementById('downloadImage');
-
 
               download.href =
                 url;
 
               download.style.display =
                 'inline-block';
-
 
               const saved =
                 formatFileSize(
@@ -2282,7 +2201,6 @@ function compressImage() {
                 formatFileSize(
                   blob.size
                 );
-
 
               const percentage =
                 selectedImage.size > 0
@@ -2295,11 +2213,9 @@ function compressImage() {
                     )
                   : 0;
 
-
               const info =
                 document
                   .getElementById('imageInfo');
-
 
               info.textContent =
                 'Original: ' +
@@ -2309,7 +2225,6 @@ function compressImage() {
                 ' | Size change: ' +
                 percentage +
                 '%';
-
 
               showMessage(
                 'imageMessage',
@@ -2323,19 +2238,16 @@ function compressImage() {
 
         };
 
-
       img.src =
         event.target.result;
 
     };
-
 
   reader.readAsDataURL(
     selectedImage
   );
 
 }
-
 
 function clearImage() {
 
@@ -2372,15 +2284,11 @@ function clearImage() {
 
 }
 
-
 function formatFileSize(bytes) {
 
   if (bytes === 0) {
-
     return '0 Bytes';
-
   }
-
 
   const units =
     [
@@ -2390,13 +2298,11 @@ function formatFileSize(bytes) {
       'GB'
     ];
 
-
   const index =
     Math.floor(
       Math.log(bytes) /
       Math.log(1024)
     );
-
 
   return (
     bytes /
@@ -2408,10 +2314,7 @@ function formatFileSize(bytes) {
 }
 
 
-
-/* ================================================= */
 /* COPY */
-/* ================================================= */
 
 function copyText(
   elementId,
@@ -2425,7 +2328,6 @@ function copyText(
   const text =
     textarea.value;
 
-
   if (!text) {
 
     showMessage(
@@ -2436,7 +2338,6 @@ function copyText(
     return;
 
   }
-
 
   if (
     navigator.clipboard &&
@@ -2473,7 +2374,6 @@ function copyText(
 
 }
 
-
 function fallbackCopy(
   text,
   messageId
@@ -2499,7 +2399,6 @@ function fallbackCopy(
 
   temporary.select();
 
-
   try {
 
     document.execCommand(
@@ -2520,7 +2419,6 @@ function fallbackCopy(
 
   }
 
-
   document.body.removeChild(
     temporary
   );
@@ -2528,10 +2426,7 @@ function fallbackCopy(
 }
 
 
-
-/* ================================================= */
 /* MESSAGE */
-/* ================================================= */
 
 function showMessage(
   elementId,
@@ -2552,7 +2447,6 @@ function showMessage(
     element.messageTimer
   );
 
-
   element.messageTimer =
     setTimeout(
       function() {
@@ -2567,10 +2461,7 @@ function showMessage(
 }
 
 
-
-/* ================================================= */
 /* SEARCH */
-/* ================================================= */
 
 function searchTools() {
 
@@ -2581,16 +2472,13 @@ function searchTools() {
       .toLowerCase()
       .trim();
 
-
   const cards =
     document.querySelectorAll(
       '.tool-card'
     );
 
-
   let visible =
     0;
-
 
   cards.forEach(
     function(card) {
@@ -2598,7 +2486,6 @@ function searchTools() {
       const name =
         card.dataset.name
           .toLowerCase();
-
 
       if (
         name.includes(search)
@@ -2619,11 +2506,9 @@ function searchTools() {
     }
   );
 
-
   const noResults =
     document
       .getElementById('noResults');
-
 
   if (visible === 0) {
 
@@ -2640,10 +2525,7 @@ function searchTools() {
 }
 
 
-
-/* ================================================= */
 /* INITIALIZE */
-/* ================================================= */
 
 countWords();
 
@@ -2657,3 +2539,4 @@ updateQuality();
 
 </body>
 </html>
+```
