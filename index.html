@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Velquro - Free Online Tools</title>
+  <meta name="description" content="Velquro provides simple, fast and free online tools for text, productivity and everyday tasks.">
+  <meta name="keywords" content="free online tools, word counter, case converter, text cleaner">
+  <meta name="robots" content="index, follow">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      text-decoration: none;
+      color: #111827;
+    }
+
+    .logo span {
+      color: #4f46e5;
+    }
+
+    nav a {
+      margin-left: 22px;
+      text-decoration: none;
+      color: #4b5563;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #4f46e5;
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: 70px auto 40px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #4f46e5;
+    }
+
+    .hero p {
+      color: #667085;
+      font-size: 19px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .search-box {
+      max-width: 600px;
+      margin: 30px auto 0;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1px solid #d1d5db;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+      background: white;
+    }
+
+    .search-box input:focus {
+      border-color: #4f46e5;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .category {
+      margin: 45px 0;
+    }
+
+    .category h2 {
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .category-description {
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .tool-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 24px;
+      transition: 0.2s;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    }
+
+    .tool-icon {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .tool-card h3 {
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .tool-card p {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .tool-button {
+      display: inline-block;
+      border: none;
+      background: #4f46e5;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .tool-button:hover {
+      background: #4338ca;
+    }
+
+    .tool-section {
+      display: none;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 25px 0;
+    }
+
+    .tool-section.active {
+      display: block;
+    }
+
+    .tool-section h2 {
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 180px;
+      margin: 15px 0;
+      padding: 15px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      resize: vertical;
+      font-family: inherit;
+      font-size: 15px;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #4f46e5;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      background: #4f46e5;
+      color: white;
+      padding: 11px 17px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    button.secondary {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    .stats {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+      color: #4b5563;
+    }
+
+    .about {
+      background: white;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 70px;
+      padding: 55px 20px;
+    }
+
+    .about-inner {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .about h2 {
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      color: #667085;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    .no-results {
+      display: none;
+      padding: 20px;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 13px;
+      }
+
+      .hero {
+        margin-top: 45px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#" class="logo">Vel<span>quro</span></a>
+
+    <nav>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+
+  <h1>Simple <span>Tools</span> for Everyday Tasks</h1>
+
+  <p>
+    Free, fast and easy-to-use online tools. No complicated setup.
+    More useful tools are coming soon.
+  </p>
+
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search for a tool..."
+      onkeyup="searchTools()"
+    >
+  </div>
+
+</section>
+
+
+<main class="container" id="tools">
+
+  <!-- TOOL 1 -->
+
+  <div class="tool-section" id="wordCounter">
+
+    <h2>Word Counter</h2>
+
+    <p>Count words, characters and sentences in your text.</p>
+
+    <textarea
+      id="wordText"
+      placeholder="Paste or type your text here..."
+      oninput="countWords()"
+    ></textarea>
+
+    <div class="stats">
+      <div>Words: <strong id="wordCount">0</strong></div>
+      <div>Characters: <strong id="characterCount">0</strong></div>
+      <div>Sentences: <strong id="sentenceCount">0</strong></div>
+    </div>
+
+    <br>
+
+    <button class="secondary" onclick="closeTool('wordCounter')">
+      Close Tool
+    </button>
+
+  </div>
+
+
+  <!-- TOOL 2 -->
+
+  <div class="tool-section" id="caseConverter">
+
+    <h2>Case Converter</h2>
+
+    <p>Convert your text into different letter cases.</p>
+
+    <textarea
+      id="caseText"
+      placeholder="Enter your text here..."
+    ></textarea>
+
+    <div class="button-row">
+
+      <button onclick="convertCase('upper')">
+        UPPERCASE
+      </button>
+
+      <button onclick="convertCase('lower')">
+        lowercase
+      </button>
+
+      <button onclick="convertCase('title')">
+        Title Case
+      </button>
+
+      <button class="secondary" onclick="clearCase()">
+        Clear
+      </button>
+
+    </div>
+
+    <br>
+
+    <button class="secondary" onclick="closeTool('caseConverter')">
+      Close Tool
+    </button>
+
+  </div>
+
+
+  <!-- TOOL 3 -->
+
+  <div class="tool-section" id="duplicateRemover">
+
+    <h2>Duplicate Line Remover</h2>
+
+    <p>
+      Remove duplicate lines from your text instantly.
+    </p>
+
+    <textarea
+      id="duplicateText"
+      placeholder="Paste your lines here..."
+    ></textarea>
+
+    <div class="button-row">
+
+      <button onclick="removeDuplicates()">
+        Remove Duplicates
+      </button>
+
+      <button class="secondary" onclick="clearDuplicates()">
+        Clear
+      </button>
+
+    </div>
+
+    <br>
+
+    <button class="secondary" onclick="closeTool('duplicateRemover')">
+      Close Tool
+    </button>
+
+  </div>
+
+
+  <!-- TEXT TOOLS -->
+
+  <section class="category">
+
+    <h2>Text Tools</h2>
+
+    <p class="category-description">
+      Simple tools to help you work with text faster.
+    </p>
+
+    <div class="tools-grid">
+
+      <div class="tool-card" data-name="word counter text">
+        <div class="tool-icon">📝</div>
+        <h3>Word Counter</h3>
+        <p>Count words, characters and sentences instantly.</p>
+        <button class="tool-button" onclick="openTool('wordCounter')">
+          Use Tool
+        </button>
+      </div>
+
+
+      <div class="tool-card" data-name="case converter text uppercase lowercase">
+        <div class="tool-icon">🔤</div>
+        <h3>Case Converter</h3>
+        <p>Convert text to uppercase, lowercase or title case.</p>
+        <button class="tool-button" onclick="openTool('caseConverter')">
+          Use Tool
+        </button>
+      </div>
+
+
+      <div class="tool-card" data-name="duplicate line remover text cleaner">
+        <div class="tool-icon">🧹</div>
+        <h3>Duplicate Line Remover</h3>
+        <p>Remove repeated lines from your text.</p>
+        <button class="tool-button" onclick="openTool('duplicateRemover')">
+          Use Tool
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- COMING SOON -->
+
+  <section class="category">
+
+    <h2>More Tools Coming Soon</h2>
+
+    <p class="category-description">
+      We're building more free tools for everyday tasks.
+    </p>
+
+    <div class="tools-grid">
+
+      <div class="tool-card" data-name="json formatter developer">
+        <div class="tool-icon">💻</div>
+        <h3>JSON Formatter</h3>
+        <p>Format and organize JSON data easily.</p>
+        <button class="tool-button" onclick="comingSoon()">
+          Coming Soon
+        </button>
+      </div>
+
+
+      <div class="tool-card" data-name="image compressor image">
+        <div class="tool-icon">🖼️</div>
+        <h3>Image Compressor</h3>
+        <p>Reduce image file size directly in your browser.</p>
+        <button class="tool-button" onclick="comingSoon()">
+          Coming Soon
+        </button>
+      </div>
+
+
+      <div class="tool-card" data-name="password generator security">
+        <div class="tool-icon">🔐</div>
+        <h3>Password Generator</h3>
+        <p>Create strong random passwords.</p>
+        <button class="tool-button" onclick="comingSoon()">
+          Coming Soon
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="no-results" id="noResults">
+    No tools found. Try another search.
+  </div>
+
+</main>
+
+
+<section class="about" id="about">
+
+  <div class="about-inner">
+
+    <h2>About Velquro</h2>
+
+    <p>
+      Velquro is a collection of simple and useful online tools
+      designed to make everyday digital tasks easier.
+    </p>
+
+    <p>
+      Our goal is to provide fast, easy-to-use tools without
+      unnecessary complexity.
+    </p>
+
+    <p>
+      More tools and features will be added over time.
+    </p>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>© 2026 Velquro. All rights reserved.</p>
+
+</footer>
+
+
+<script>
+
+  function openTool(toolId) {
+
+    document.querySelectorAll('.tool-section').forEach(function(section) {
+      section.classList.remove('active');
+    });
+
+    document.getElementById(toolId).classList.add('active');
+
+    document.getElementById(toolId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+
+
+  function closeTool(toolId) {
+
+    document.getElementById(toolId).classList.remove('active');
+
+  }
+
+
+  function countWords() {
+
+    const text = document.getElementById('wordText').value;
+
+    const words = text.trim()
+      ? text.trim().split(/\s+/).length
+      : 0;
+
+    const characters = text.length;
+
+    const sentences = text.trim()
+      ? (text.match(/[.!?]+/g) || []).length
+      : 0;
+
+    document.getElementById('wordCount').textContent = words;
+
+    document.getElementById('characterCount').textContent = characters;
+
+    document.getElementById('sentenceCount').textContent = sentences;
+
+  }
+
+
+  function convertCase(type) {
+
+    const textarea = document.getElementById('caseText');
+
+    const text = textarea.value;
+
+    if (type === 'upper') {
+
+      textarea.value = text.toUpperCase();
+
+    }
+
+    if (type === 'lower') {
+
+      textarea.value = text.toLowerCase();
+
+    }
+
+    if (type === 'title') {
+
+      textarea.value = text
+        .toLowerCase()
+        .replace(/\b\w/g, function(letter) {
+          return letter.toUpperCase();
+        });
+
+    }
+
+  }
+
+
+  function clearCase() {
+
+    document.getElementById('caseText').value = '';
+
+  }
+
+
+  function removeDuplicates() {
+
+    const textarea = document.getElementById('duplicateText');
+
+    const lines = textarea.value.split('\n');
+
+    const uniqueLines = [];
+
+    const seen = new Set();
+
+    lines.forEach(function(line) {
+
+      const cleanLine = line.trim();
+
+      if (cleanLine !== '' && !seen.has(cleanLine.toLowerCase())) {
+
+        seen.add(cleanLine.toLowerCase());
+
+        uniqueLines.push(cleanLine);
+
+      }
+
+    });
+
+    textarea.value = uniqueLines.join('\n');
+
+  }
+
+
+  function clearDuplicates() {
+
+    document.getElementById('duplicateText').value = '';
+
+  }
+
+
+  function comingSoon() {
+
+    alert('This tool is coming soon. We are working on it!');
+
+  }
+
+
+  function searchTools() {
+
+    const search = document
+      .getElementById('searchInput')
+      .value
+      .toLowerCase()
+      .trim();
+
+    const cards = document.querySelectorAll('.tool-card');
+
+    let visible = 0;
+
+    cards.forEach(function(card) {
+
+      const name = card.dataset.name.toLowerCase();
+
+      if (name.includes(search)) {
+
+        card.style.display = '';
+
+        visible++;
+
+      } else {
+
+        card.style.display = 'none';
+
+      }
+
+    });
+
+    const noResults = document.getElementById('noResults');
+
+    if (visible === 0) {
+
+      noResults.style.display = 'block';
+
+    } else {
+
+      noResults.style.display = 'none';
+
+    }
+
+  }
+
+</script>
+
+</body>
+</html>
