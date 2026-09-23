@@ -699,7 +699,60 @@
 
   </div>
 
+<!-- ========================= -->
+<!-- JSON FORMATTER -->
+<!-- ========================= -->
 
+<div class="tool-section" id="jsonFormatter">
+
+  <h2>JSON Formatter & Validator</h2>
+
+  <p class="tool-description">
+    Format, validate and minify JSON data directly in your browser.
+  </p>
+
+  <textarea
+    id="jsonText"
+    placeholder='Paste your JSON here, for example: {"name":"Velquro","tools":3}'
+    oninput="validateJSON()"
+  ></textarea>
+
+  <div class="button-row">
+
+    <button onclick="formatJSON()">
+      Format JSON
+    </button>
+
+    <button onclick="minifyJSON()">
+      Minify JSON
+    </button>
+
+    <button
+      class="success"
+      onclick="copyText('jsonText', 'jsonMessage')"
+    >
+      Copy JSON
+    </button>
+
+    <button
+      class="secondary"
+      onclick="clearJSON()"
+    >
+      Clear
+    </button>
+
+  </div>
+
+  <div class="tool-message" id="jsonMessage"></div>
+
+  <button
+    class="secondary close-button"
+    onclick="closeTool('jsonFormatter')"
+  >
+    Close Tool
+  </button>
+
+</div>
 
   <!-- ========================= -->
   <!-- TEXT TOOLS -->
