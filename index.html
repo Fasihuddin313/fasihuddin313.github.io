@@ -1561,6 +1561,134 @@ function clearJSON() {
 
   }
 
+/* =========================
+   JSON FORMATTER
+========================= */
+
+function validateJSON() {
+
+  const textarea = document.getElementById('jsonText');
+  const text = textarea.value.trim();
+
+  if (!text) {
+    return;
+  }
+
+  try {
+
+    JSON.parse(text);
+
+    showMessage(
+      'jsonMessage',
+      'Valid JSON ✓'
+    );
+
+  } catch (error) {
+
+    showMessage(
+      'jsonMessage',
+      'Invalid JSON. Check your syntax.'
+    );
+
+  }
+
+}
+
+
+function formatJSON() {
+
+  const textarea = document.getElementById('jsonText');
+
+  const text = textarea.value.trim();
+
+  if (!text) {
+
+    showMessage(
+      'jsonMessage',
+      'Please enter JSON first.'
+    );
+
+    return;
+
+  }
+
+  try {
+
+    const parsed = JSON.parse(text);
+
+    textarea.value = JSON.stringify(
+      parsed,
+      null,
+      2
+    );
+
+    showMessage(
+      'jsonMessage',
+      'JSON formatted successfully ✓'
+    );
+
+  } catch (error) {
+
+    showMessage(
+      'jsonMessage',
+      'Invalid JSON. Please fix the syntax first.'
+    );
+
+  }
+
+}
+
+
+function minifyJSON() {
+
+  const textarea = document.getElementById('jsonText');
+
+  const text = textarea.value.trim();
+
+  if (!text) {
+
+    showMessage(
+      'jsonMessage',
+      'Please enter JSON first.'
+    );
+
+    return;
+
+  }
+
+  try {
+
+    const parsed = JSON.parse(text);
+
+    textarea.value = JSON.stringify(parsed);
+
+    showMessage(
+      'jsonMessage',
+      'JSON minified successfully ✓'
+    );
+
+  } catch (error) {
+
+    showMessage(
+      'jsonMessage',
+      'Invalid JSON. Please fix the syntax first.'
+    );
+
+  }
+
+}
+
+
+function clearJSON() {
+
+  document.getElementById('jsonText').value = '';
+
+  const message =
+    document.getElementById('jsonMessage');
+
+  message.style.display = 'none';
+
+}
 
 
   /* =========================
