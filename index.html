@@ -5,11 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Velquro - Free Online Tools</title>
-  <meta name="description" content="Velquro provides simple, fast and free online tools for text, productivity and everyday tasks.">
-  <meta name="keywords" content="free online tools, word counter, case converter, duplicate remover, text tools">
+
+  <meta
+    name="description"
+    content="Velquro provides simple, fast and free online tools including word counter, case converter, duplicate line remover, JSON formatter, password generator and image compressor."
+  >
+
+  <meta
+    name="keywords"
+    content="free online tools, word counter, case converter, duplicate line remover, JSON formatter, JSON validator, password generator, image compressor"
+  >
+
   <meta name="robots" content="index, follow">
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -86,7 +96,7 @@
     .hero p {
       color: #667085;
       font-size: 19px;
-      max-width: 650px;
+      max-width: 680px;
       margin: auto;
     }
 
@@ -123,7 +133,7 @@
       border-radius: 16px;
       padding: 28px;
       margin: 25px 0 45px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
     }
 
     .tool-section.active {
@@ -247,6 +257,76 @@
       cursor: pointer;
     }
 
+    .number-input {
+      width: 100%;
+      max-width: 180px;
+      padding: 11px 13px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      margin: 5px 0 15px;
+    }
+
+    .number-input:focus {
+      border-color: #4f46e5;
+    }
+
+    .range-container {
+      max-width: 450px;
+      margin: 5px 0 18px;
+    }
+
+    .range-container input[type="range"] {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .range-label {
+      display: flex;
+      justify-content: space-between;
+      color: #4b5563;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .password-output {
+      font-family: monospace;
+      font-size: 18px;
+      letter-spacing: 1px;
+      min-height: 70px;
+      resize: none;
+      background: #f8fafc;
+    }
+
+    .image-area {
+      border: 2px dashed #d1d5db;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      margin: 15px 0;
+      background: #fafafa;
+    }
+
+    .image-area input {
+      max-width: 100%;
+    }
+
+    .image-preview {
+      max-width: 100%;
+      max-height: 350px;
+      margin: 20px auto;
+      display: none;
+      border-radius: 10px;
+    }
+
+    .image-info {
+      display: none;
+      margin: 15px 0;
+      color: #4b5563;
+      font-size: 14px;
+    }
+
     .category {
       margin: 45px 0;
     }
@@ -277,7 +357,7 @@
 
     .tool-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
     }
 
     .tool-icon {
@@ -304,7 +384,6 @@
       padding: 10px 15px;
       border-radius: 8px;
       cursor: pointer;
-      text-decoration: none;
       font-size: 14px;
     }
 
@@ -324,6 +403,11 @@
       background: #ecfdf5;
       color: #047857;
       font-size: 14px;
+    }
+
+    .error-message {
+      background: #fef2f2;
+      color: #b91c1c;
     }
 
     .about {
@@ -363,6 +447,7 @@
     }
 
     @media (max-width: 800px) {
+
       .tools-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -374,9 +459,11 @@
       .hero h1 {
         font-size: 38px;
       }
+
     }
 
     @media (max-width: 550px) {
+
       .tools-grid {
         grid-template-columns: 1fr;
       }
@@ -405,34 +492,47 @@
       .button-row button {
         flex: 1 1 auto;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
+
 <header>
+
   <div class="nav">
-    <a href="#" class="logo">Vel<span>quro</span></a>
+
+    <a href="#" class="logo">
+      Vel<span>quro</span>
+    </a>
 
     <nav>
       <a href="#tools">Tools</a>
       <a href="#about">About</a>
     </nav>
+
   </div>
+
 </header>
+
 
 
 <section class="hero">
 
-  <h1>Simple <span>Tools</span> for Everyday Tasks</h1>
+  <h1>
+    Simple <span>Tools</span> for Everyday Tasks
+  </h1>
 
   <p>
     Free, fast and easy-to-use online tools.
-    No complicated setup. Everything works directly in your browser.
+    Everything works directly in your browser.
   </p>
 
   <div class="search-box">
+
     <input
       type="text"
       id="searchInput"
@@ -440,268 +540,281 @@
       oninput="searchTools()"
       aria-label="Search tools"
     >
+
   </div>
 
 </section>
 
 
+
 <main class="container" id="tools">
 
 
-  <!-- ========================= -->
-  <!-- WORD COUNTER -->
-  <!-- ========================= -->
+<!-- ================================================= -->
+<!-- WORD COUNTER -->
+<!-- ================================================= -->
 
-  <div class="tool-section" id="wordCounter">
+<div class="tool-section" id="wordCounter">
 
-    <h2>Word Counter</h2>
+  <h2>Word Counter</h2>
 
-    <p class="tool-description">
-      Count words, characters, sentences, lines and estimated reading time.
-    </p>
+  <p class="tool-description">
+    Count words, characters, sentences, lines, paragraphs and estimated reading time.
+  </p>
 
-    <textarea
-      id="wordText"
-      placeholder="Paste or type your text here..."
-      oninput="countWords()"
-    ></textarea>
+  <textarea
+    id="wordText"
+    placeholder="Paste or type your text here..."
+    oninput="countWords()"
+  ></textarea>
 
-    <div class="stats">
+  <div class="stats">
 
-      <div class="stat">
-        <span class="stat-label">Words</span>
-        <span class="stat-value" id="wordCount">0</span>
-      </div>
-
-      <div class="stat">
-        <span class="stat-label">Characters</span>
-        <span class="stat-value" id="characterCount">0</span>
-      </div>
-
-      <div class="stat">
-        <span class="stat-label">No Spaces</span>
-        <span class="stat-value" id="noSpaceCount">0</span>
-      </div>
-
-      <div class="stat">
-        <span class="stat-label">Sentences</span>
-        <span class="stat-value" id="sentenceCount">0</span>
-      </div>
-
-      <div class="stat">
-        <span class="stat-label">Lines</span>
-        <span class="stat-value" id="lineCount">0</span>
-      </div>
-
-      <div class="stat">
-        <span class="stat-label">Paragraphs</span>
-        <span class="stat-value" id="paragraphCount">0</span>
-      </div>
-
-      <div class="stat">
-        <span class="stat-label">Reading Time</span>
-        <span class="stat-value" id="readingTime">0 min</span>
-      </div>
-
+    <div class="stat">
+      <span class="stat-label">Words</span>
+      <span class="stat-value" id="wordCount">0</span>
     </div>
 
-    <div class="button-row">
-
-      <button class="success" onclick="copyText('wordText', 'wordMessage')">
-        Copy Text
-      </button>
-
-      <button class="secondary" onclick="clearWordCounter()">
-        Clear
-      </button>
-
+    <div class="stat">
+      <span class="stat-label">Characters</span>
+      <span class="stat-value" id="characterCount">0</span>
     </div>
 
-    <div class="tool-message" id="wordMessage"></div>
+    <div class="stat">
+      <span class="stat-label">No Spaces</span>
+      <span class="stat-value" id="noSpaceCount">0</span>
+    </div>
+
+    <div class="stat">
+      <span class="stat-label">Sentences</span>
+      <span class="stat-value" id="sentenceCount">0</span>
+    </div>
+
+    <div class="stat">
+      <span class="stat-label">Lines</span>
+      <span class="stat-value" id="lineCount">0</span>
+    </div>
+
+    <div class="stat">
+      <span class="stat-label">Paragraphs</span>
+      <span class="stat-value" id="paragraphCount">0</span>
+    </div>
+
+    <div class="stat">
+      <span class="stat-label">Reading Time</span>
+      <span class="stat-value" id="readingTime">0 min</span>
+    </div>
+
+  </div>
+
+  <div class="button-row">
 
     <button
-      class="secondary close-button"
-      onclick="closeTool('wordCounter')"
+      class="success"
+      onclick="copyText('wordText', 'wordMessage')"
     >
-      Close Tool
+      Copy Text
+    </button>
+
+    <button
+      class="secondary"
+      onclick="clearWordCounter()"
+    >
+      Clear
     </button>
 
   </div>
 
+  <div class="tool-message" id="wordMessage"></div>
+
+  <button
+    class="secondary close-button"
+    onclick="closeTool('wordCounter')"
+  >
+    Close Tool
+  </button>
+
+</div>
 
 
-  <!-- ========================= -->
-  <!-- CASE CONVERTER -->
-  <!-- ========================= -->
 
-  <div class="tool-section" id="caseConverter">
+<!-- ================================================= -->
+<!-- CASE CONVERTER -->
+<!-- ================================================= -->
 
-    <h2>Case Converter</h2>
+<div class="tool-section" id="caseConverter">
 
-    <p class="tool-description">
-      Quickly convert your text into uppercase, lowercase, title case or sentence case.
-    </p>
+  <h2>Case Converter</h2>
 
-    <textarea
-      id="caseText"
-      placeholder="Enter or paste your text here..."
-    ></textarea>
+  <p class="tool-description">
+    Convert your text into uppercase, lowercase, title case or sentence case.
+  </p>
 
-    <div class="button-row">
+  <textarea
+    id="caseText"
+    placeholder="Enter or paste your text here..."
+  ></textarea>
 
-      <button onclick="convertCase('upper')">
-        UPPERCASE
-      </button>
+  <div class="button-row">
 
-      <button onclick="convertCase('lower')">
-        lowercase
-      </button>
+    <button onclick="convertCase('upper')">
+      UPPERCASE
+    </button>
 
-      <button onclick="convertCase('title')">
-        Title Case
-      </button>
+    <button onclick="convertCase('lower')">
+      lowercase
+    </button>
 
-      <button onclick="convertCase('sentence')">
-        Sentence case
-      </button>
+    <button onclick="convertCase('title')">
+      Title Case
+    </button>
 
-    </div>
-
-    <div class="button-row">
-
-      <button
-        class="success"
-        onclick="copyText('caseText', 'caseMessage')"
-      >
-        Copy Text
-      </button>
-
-      <button
-        class="secondary"
-        onclick="clearCase()"
-      >
-        Clear
-      </button>
-
-    </div>
-
-    <div class="tool-message" id="caseMessage"></div>
-
-    <button
-      class="secondary close-button"
-      onclick="closeTool('caseConverter')"
-    >
-      Close Tool
+    <button onclick="convertCase('sentence')">
+      Sentence case
     </button>
 
   </div>
 
-
-
-  <!-- ========================= -->
-  <!-- DUPLICATE LINE REMOVER -->
-  <!-- ========================= -->
-
-  <div class="tool-section" id="duplicateRemover">
-
-    <h2>Duplicate Line Remover</h2>
-
-    <p class="tool-description">
-      Remove duplicate lines from your text while keeping the first occurrence.
-    </p>
-
-    <textarea
-      id="duplicateText"
-      placeholder="Paste your lines here, one line at a time..."
-      oninput="updateDuplicateStats()"
-    ></textarea>
-
-    <div class="options">
-
-      <label class="checkbox-label">
-        <input
-          type="checkbox"
-          id="ignoreCase"
-          checked
-        >
-        Ignore uppercase/lowercase
-      </label>
-
-      <label class="checkbox-label">
-        <input
-          type="checkbox"
-          id="removeEmpty"
-          checked
-        >
-        Remove empty lines
-      </label>
-
-      <label class="checkbox-label">
-        <input
-          type="checkbox"
-          id="trimLines"
-          checked
-        >
-        Trim spaces
-      </label>
-
-    </div>
-
-    <div class="stats">
-
-      <div class="stat">
-        <span class="stat-label">Original Lines</span>
-        <span class="stat-value" id="originalLines">0</span>
-      </div>
-
-      <div class="stat">
-        <span class="stat-label">Unique Lines</span>
-        <span class="stat-value" id="uniqueLines">0</span>
-      </div>
-
-      <div class="stat">
-        <span class="stat-label">Duplicates</span>
-        <span class="stat-value" id="duplicateLines">0</span>
-      </div>
-
-    </div>
-
-    <div class="button-row">
-
-      <button onclick="removeDuplicates()">
-        Remove Duplicates
-      </button>
-
-      <button
-        class="success"
-        onclick="copyText('duplicateText', 'duplicateMessage')"
-      >
-        Copy Result
-      </button>
-
-      <button
-        class="secondary"
-        onclick="clearDuplicates()"
-      >
-        Clear
-      </button>
-
-    </div>
-
-    <div class="tool-message" id="duplicateMessage"></div>
+  <div class="button-row">
 
     <button
-      class="secondary close-button"
-      onclick="closeTool('duplicateRemover')"
+      class="success"
+      onclick="copyText('caseText', 'caseMessage')"
     >
-      Close Tool
+      Copy Text
+    </button>
+
+    <button
+      class="secondary"
+      onclick="clearCase()"
+    >
+      Clear
     </button>
 
   </div>
 
-<!-- ========================= -->
+  <div class="tool-message" id="caseMessage"></div>
+
+  <button
+    class="secondary close-button"
+    onclick="closeTool('caseConverter')"
+  >
+    Close Tool
+  </button>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- DUPLICATE LINE REMOVER -->
+<!-- ================================================= -->
+
+<div class="tool-section" id="duplicateRemover">
+
+  <h2>Duplicate Line Remover</h2>
+
+  <p class="tool-description">
+    Remove repeated lines from your text while keeping the first occurrence.
+  </p>
+
+  <textarea
+    id="duplicateText"
+    placeholder="Paste your lines here, one line at a time..."
+    oninput="updateDuplicateStats()"
+  ></textarea>
+
+  <div class="options">
+
+    <label class="checkbox-label">
+      <input
+        type="checkbox"
+        id="ignoreCase"
+        checked
+        onchange="updateDuplicateStats()"
+      >
+      Ignore uppercase/lowercase
+    </label>
+
+    <label class="checkbox-label">
+      <input
+        type="checkbox"
+        id="removeEmpty"
+        checked
+        onchange="updateDuplicateStats()"
+      >
+      Remove empty lines
+    </label>
+
+    <label class="checkbox-label">
+      <input
+        type="checkbox"
+        id="trimLines"
+        checked
+        onchange="updateDuplicateStats()"
+      >
+      Trim spaces
+    </label>
+
+  </div>
+
+  <div class="stats">
+
+    <div class="stat">
+      <span class="stat-label">Original Lines</span>
+      <span class="stat-value" id="originalLines">0</span>
+    </div>
+
+    <div class="stat">
+      <span class="stat-label">Unique Lines</span>
+      <span class="stat-value" id="uniqueLines">0</span>
+    </div>
+
+    <div class="stat">
+      <span class="stat-label">Duplicates</span>
+      <span class="stat-value" id="duplicateLines">0</span>
+    </div>
+
+  </div>
+
+  <div class="button-row">
+
+    <button onclick="removeDuplicates()">
+      Remove Duplicates
+    </button>
+
+    <button
+      class="success"
+      onclick="copyText('duplicateText', 'duplicateMessage')"
+    >
+      Copy Result
+    </button>
+
+    <button
+      class="secondary"
+      onclick="clearDuplicates()"
+    >
+      Clear
+    </button>
+
+  </div>
+
+  <div class="tool-message" id="duplicateMessage"></div>
+
+  <button
+    class="secondary close-button"
+    onclick="closeTool('duplicateRemover')"
+  >
+    Close Tool
+  </button>
+
+</div>
+
+
+
+<!-- ================================================= -->
 <!-- JSON FORMATTER -->
-<!-- ========================= -->
+<!-- ================================================= -->
 
 <div class="tool-section" id="jsonFormatter">
 
@@ -713,7 +826,7 @@
 
   <textarea
     id="jsonText"
-    placeholder='Paste your JSON here, for example: {"name":"Velquro","tools":3}'
+    placeholder='Paste your JSON here, for example: {"name":"Velquro","tools":6}'
     oninput="validateJSON()"
   ></textarea>
 
@@ -754,200 +867,422 @@
 
 </div>
 
-  <!-- ========================= -->
-  <!-- TEXT TOOLS -->
-  <!-- ========================= -->
-
-  <section class="category">
-
-    <h2>Text Tools</h2>
-
-    <p class="category-description">
-      Simple tools to help you work with text faster.
-    </p>
-
-    <div class="tools-grid">
 
 
-      <div
-        class="tool-card"
-        data-name="word counter text words characters sentences"
-      >
+<!-- ================================================= -->
+<!-- PASSWORD GENERATOR -->
+<!-- ================================================= -->
 
-        <div class="tool-icon">📝</div>
+<div class="tool-section" id="passwordGenerator">
 
-        <h3>Word Counter</h3>
+  <h2>Password Generator</h2>
 
-        <p>
-          Count words, characters, sentences, lines and reading time.
-        </p>
-
-        <button
-          class="tool-button"
-          onclick="openTool('wordCounter')"
-        >
-          Use Tool
-        </button>
-
-      </div>
-
-
-
-      <div
-        class="tool-card"
-        data-name="case converter text uppercase lowercase title sentence"
-      >
-
-        <div class="tool-icon">🔤</div>
-
-        <h3>Case Converter</h3>
-
-        <p>
-          Convert text to uppercase, lowercase, title case or sentence case.
-        </p>
-
-        <button
-          class="tool-button"
-          onclick="openTool('caseConverter')"
-        >
-          Use Tool
-        </button>
-
-      </div>
-
-
-
-      <div
-        class="tool-card"
-        data-name="duplicate line remover duplicate text cleaner repeated lines"
-      >
-
-        <div class="tool-icon">🧹</div>
-
-        <h3>Duplicate Line Remover</h3>
-
-        <p>
-          Remove repeated lines and clean your text quickly.
-        </p>
-
-        <button
-          class="tool-button"
-          onclick="openTool('duplicateRemover')"
-        >
-          Use Tool
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ========================= -->
-  <!-- COMING SOON -->
-  <!-- ========================= -->
-
-  <section class="category">
-
-    <h2>More Tools Coming Soon</h2>
-
-    <p class="category-description">
-      We're building more free tools for everyday tasks.
-    </p>
-
-    <div class="tools-grid">
-
-
-      <div
-        class="tool-card"
-  data-name="json formatter json validator developer code"
->
-
-  <div class="tool-icon">💻</div>
-
-  <h3>JSON Formatter</h3>
-
-  <p>
-    Format, validate and minify JSON data easily.
+  <p class="tool-description">
+    Generate strong random passwords directly in your browser.
   </p>
 
-  <button
-    class="tool-button"
-    onclick="openTool('jsonFormatter')"
-  >
-    Use Tool
-  </button>
+  <div class="range-container">
 
-      </div>
+    <div class="range-label">
 
+      <span>Password Length</span>
 
-
-      <div
-        class="tool-card"
-        data-name="image compressor image compression"
-      >
-
-        <div class="tool-icon">🖼️</div>
-
-        <h3>Image Compressor</h3>
-
-        <p>
-          Reduce image file size directly in your browser.
-        </p>
-
-        <button
-          class="tool-button"
-          onclick="comingSoon()"
-        >
-          Coming Soon
-        </button>
-
-      </div>
-
-
-
-      <div
-        class="tool-card"
-        data-name="password generator security password"
-      >
-
-        <div class="tool-icon">🔐</div>
-
-        <h3>Password Generator</h3>
-
-        <p>
-          Create strong random passwords.
-        </p>
-
-        <button
-          class="tool-button"
-          onclick="comingSoon()"
-        >
-          Coming Soon
-        </button>
-
-      </div>
+      <strong id="passwordLengthValue">
+        16
+      </strong>
 
     </div>
 
-  </section>
+    <input
+      type="range"
+      id="passwordLength"
+      min="6"
+      max="64"
+      value="16"
+      oninput="updatePasswordLength()"
+    >
 
-
-  <div class="no-results" id="noResults">
-    No tools found. Try another search.
   </div>
+
+  <div class="options">
+
+    <label class="checkbox-label">
+      <input
+        type="checkbox"
+        id="passwordUpper"
+        checked
+      >
+      Uppercase
+    </label>
+
+    <label class="checkbox-label">
+      <input
+        type="checkbox"
+        id="passwordLower"
+        checked
+      >
+      Lowercase
+    </label>
+
+    <label class="checkbox-label">
+      <input
+        type="checkbox"
+        id="passwordNumbers"
+        checked
+      >
+      Numbers
+    </label>
+
+    <label class="checkbox-label">
+      <input
+        type="checkbox"
+        id="passwordSymbols"
+        checked
+      >
+      Symbols
+    </label>
+
+  </div>
+
+  <textarea
+    id="passwordOutput"
+    class="password-output"
+    readonly
+    placeholder="Your generated password will appear here..."
+  ></textarea>
+
+  <div class="button-row">
+
+    <button onclick="generatePassword()">
+      Generate Password
+    </button>
+
+    <button
+      class="success"
+      onclick="copyText('passwordOutput', 'passwordMessage')"
+    >
+      Copy Password
+    </button>
+
+    <button
+      class="secondary"
+      onclick="clearPassword()"
+    >
+      Clear
+    </button>
+
+  </div>
+
+  <div class="tool-message" id="passwordMessage"></div>
+
+  <button
+    class="secondary close-button"
+    onclick="closeTool('passwordGenerator')"
+  >
+    Close Tool
+  </button>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- IMAGE COMPRESSOR -->
+<!-- ================================================= -->
+
+<div class="tool-section" id="imageCompressor">
+
+  <h2>Image Compressor</h2>
+
+  <p class="tool-description">
+    Compress JPG, PNG and WebP images directly in your browser.
+    Your image stays on your device.
+  </p>
+
+  <div class="image-area">
+
+    <input
+      type="file"
+      id="imageInput"
+      accept="image/jpeg,image/png,image/webp"
+      onchange="loadImage()"
+    >
+
+    <img
+      id="imagePreview"
+      class="image-preview"
+      alt="Image preview"
+    >
+
+    <div
+      class="image-info"
+      id="imageInfo"
+    ></div>
+
+  </div>
+
+  <div class="range-container">
+
+    <div class="range-label">
+
+      <span>Compression Quality</span>
+
+      <strong id="qualityValue">
+        70%
+      </strong>
+
+    </div>
+
+    <input
+      type="range"
+      id="qualityRange"
+      min="10"
+      max="100"
+      value="70"
+      oninput="updateQuality()"
+    >
+
+  </div>
+
+  <div class="button-row">
+
+    <button onclick="compressImage()">
+      Compress Image
+    </button>
+
+    <button
+      class="secondary"
+      onclick="clearImage()"
+    >
+      Clear
+    </button>
+
+  </div>
+
+  <div
+    class="tool-message"
+    id="imageMessage"
+  ></div>
+
+  <a
+    id="downloadImage"
+    download="velquro-compressed-image.jpg"
+    style="display:none; text-decoration:none;"
+  >
+    <button class="success" type="button">
+      Download Compressed Image
+    </button>
+  </a>
+
+  <button
+    class="secondary close-button"
+    onclick="closeTool('imageCompressor')"
+  >
+    Close Tool
+  </button>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- TEXT TOOLS -->
+<!-- ================================================= -->
+
+<section class="category">
+
+  <h2>Text Tools</h2>
+
+  <p class="category-description">
+    Simple tools to help you work with text faster.
+  </p>
+
+  <div class="tools-grid">
+
+
+    <div
+      class="tool-card"
+      data-name="word counter text words characters sentences"
+    >
+
+      <div class="tool-icon">📝</div>
+
+      <h3>Word Counter</h3>
+
+      <p>
+        Count words, characters, sentences, lines and reading time.
+      </p>
+
+      <button
+        class="tool-button"
+        onclick="openTool('wordCounter')"
+      >
+        Use Tool
+      </button>
+
+    </div>
+
+
+    <div
+      class="tool-card"
+      data-name="case converter text uppercase lowercase title sentence"
+    >
+
+      <div class="tool-icon">🔤</div>
+
+      <h3>Case Converter</h3>
+
+      <p>
+        Convert text to uppercase, lowercase, title case or sentence case.
+      </p>
+
+      <button
+        class="tool-button"
+        onclick="openTool('caseConverter')"
+      >
+        Use Tool
+      </button>
+
+    </div>
+
+
+    <div
+      class="tool-card"
+      data-name="duplicate line remover duplicate text cleaner repeated lines"
+    >
+
+      <div class="tool-icon">🧹</div>
+
+      <h3>Duplicate Line Remover</h3>
+
+      <p>
+        Remove repeated lines and clean your text quickly.
+      </p>
+
+      <button
+        class="tool-button"
+        onclick="openTool('duplicateRemover')"
+      >
+        Use Tool
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- DEVELOPER & UTILITY TOOLS -->
+<!-- ================================================= -->
+
+<section class="category">
+
+  <h2>Developer & Utility Tools</h2>
+
+  <p class="category-description">
+    Useful browser-based tools for developers and everyday tasks.
+  </p>
+
+  <div class="tools-grid">
+
+
+    <div
+      class="tool-card"
+      data-name="json formatter json validator developer code"
+    >
+
+      <div class="tool-icon">💻</div>
+
+      <h3>JSON Formatter</h3>
+
+      <p>
+        Format, validate and minify JSON data easily.
+      </p>
+
+      <button
+        class="tool-button"
+        onclick="openTool('jsonFormatter')"
+      >
+        Use Tool
+      </button>
+
+    </div>
+
+
+    <div
+      class="tool-card"
+      data-name="password generator security password random"
+    >
+
+      <div class="tool-icon">🔐</div>
+
+      <h3>Password Generator</h3>
+
+      <p>
+        Create strong random passwords with custom options.
+      </p>
+
+      <button
+        class="tool-button"
+        onclick="openTool('passwordGenerator')"
+      >
+        Use Tool
+      </button>
+
+    </div>
+
+
+    <div
+      class="tool-card"
+      data-name="image compressor image compression jpg png webp"
+    >
+
+      <div class="tool-icon">🖼️</div>
+
+      <h3>Image Compressor</h3>
+
+      <p>
+        Reduce image file size directly in your browser.
+      </p>
+
+      <button
+        class="tool-button"
+        onclick="openTool('imageCompressor')"
+      >
+        Use Tool
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<div
+  class="no-results"
+  id="noResults"
+>
+  No tools found. Try another search.
+</div>
+
 
 </main>
 
 
 
-<!-- ========================= -->
+<!-- ================================================= -->
 <!-- ABOUT -->
-<!-- ========================= -->
+<!-- ================================================= -->
 
-<section class="about" id="about">
+<section
+  class="about"
+  id="about"
+>
 
   <div class="about-inner">
 
@@ -964,7 +1299,8 @@
     </p>
 
     <p>
-      More tools and features will be added over time.
+      Velquro tools work directly in your browser whenever possible,
+      helping keep your information on your device.
     </p>
 
   </div>
@@ -975,7 +1311,9 @@
 
 <footer>
 
-  <p>© 2026 Velquro. All rights reserved.</p>
+  <p>
+    © 2026 Velquro. All rights reserved.
+  </p>
 
 </footer>
 
@@ -983,479 +1321,1337 @@
 
 <script>
 
-  /* =========================
-     OPEN / CLOSE TOOL
-  ========================= */
 
-  function openTool(toolId) {
+/* ================================================= */
+/* OPEN / CLOSE TOOLS */
+/* ================================================= */
 
-    document.querySelectorAll('.tool-section').forEach(function(section) {
+function openTool(toolId) {
+
+  document
+    .querySelectorAll('.tool-section')
+    .forEach(function(section) {
+
       section.classList.remove('active');
+
     });
 
-    const tool = document.getElementById(toolId);
+  const tool =
+    document.getElementById(toolId);
 
-    tool.classList.add('active');
+  tool.classList.add('active');
 
-    tool.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+  tool.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
 
-  }
-
-
-  function closeTool(toolId) {
-
-    document.getElementById(toolId).classList.remove('active');
-
-  }
+}
 
 
+function closeTool(toolId) {
 
-  /* =========================
-     WORD COUNTER
-  ========================= */
+  document
+    .getElementById(toolId)
+    .classList.remove('active');
 
-  function countWords() {
+}
 
-    const text = document.getElementById('wordText').value;
 
-    const trimmed = text.trim();
 
-    const words = trimmed
+/* ================================================= */
+/* WORD COUNTER */
+/* ================================================= */
+
+function countWords() {
+
+  const text =
+    document.getElementById('wordText').value;
+
+  const trimmed =
+    text.trim();
+
+  const words =
+    trimmed
       ? trimmed.split(/\s+/u).length
       : 0;
 
-    const characters = text.length;
+  const characters =
+    text.length;
 
-    const noSpaces = text.replace(/\s/g, '').length;
+  const noSpaces =
+    text.replace(/\s/g, '').length;
 
-    const sentences = trimmed
+  const sentences =
+    trimmed
       ? (text.match(/[.!?]+(?=\s|$)/g) || []).length
       : 0;
 
-    const lines = text
+  const lines =
+    text
       ? text.split(/\r?\n/).length
       : 0;
 
-    const paragraphs = trimmed
+  const paragraphs =
+    trimmed
       ? trimmed.split(/\n\s*\n+/).length
       : 0;
 
-    const readingMinutes = words > 0
+  const readingMinutes =
+    words > 0
       ? Math.max(1, Math.ceil(words / 200))
       : 0;
 
 
-    document.getElementById('wordCount').textContent = words;
+  document.getElementById('wordCount').textContent =
+    words;
 
-    document.getElementById('characterCount').textContent = characters;
+  document.getElementById('characterCount').textContent =
+    characters;
 
-    document.getElementById('noSpaceCount').textContent = noSpaces;
+  document.getElementById('noSpaceCount').textContent =
+    noSpaces;
 
-    document.getElementById('sentenceCount').textContent = sentences;
+  document.getElementById('sentenceCount').textContent =
+    sentences;
 
-    document.getElementById('lineCount').textContent = lines;
+  document.getElementById('lineCount').textContent =
+    lines;
 
-    document.getElementById('paragraphCount').textContent = paragraphs;
+  document.getElementById('paragraphCount').textContent =
+    paragraphs;
 
-    document.getElementById('readingTime').textContent =
-      readingMinutes + (readingMinutes === 1 ? ' min' : ' mins');
+  document.getElementById('readingTime').textContent =
+    readingMinutes +
+    (readingMinutes === 1 ? ' min' : ' mins');
+
+}
+
+
+function clearWordCounter() {
+
+  document.getElementById('wordText').value = '';
+
+  countWords();
+
+  showMessage(
+    'wordMessage',
+    'Text cleared.'
+  );
+
+}
+
+
+
+/* ================================================= */
+/* CASE CONVERTER */
+/* ================================================= */
+
+function convertCase(type) {
+
+  const textarea =
+    document.getElementById('caseText');
+
+  let text =
+    textarea.value;
+
+
+  if (!text.trim()) {
+
+    showMessage(
+      'caseMessage',
+      'Please enter some text first.'
+    );
+
+    return;
 
   }
 
 
+  if (type === 'upper') {
 
-  function clearWordCounter() {
-
-    document.getElementById('wordText').value = '';
-
-    countWords();
-
-    showMessage('wordMessage', 'Text cleared.');
+    text =
+      text.toUpperCase();
 
   }
 
 
+  if (type === 'lower') {
 
-  /* =========================
-     CASE CONVERTER
-  ========================= */
+    text =
+      text.toLowerCase();
 
-  function convertCase(type) {
-
-    const textarea = document.getElementById('caseText');
-
-    let text = textarea.value;
-
-    if (!text.trim()) {
-      showMessage('caseMessage', 'Please enter some text first.');
-      return;
-    }
+  }
 
 
-    if (type === 'upper') {
+  if (type === 'title') {
 
-      text = text.toUpperCase();
-
-    }
-
-
-    if (type === 'lower') {
-
-      text = text.toLowerCase();
-
-    }
-
-
-    if (type === 'title') {
-
-      text = text
+    text =
+      text
         .toLowerCase()
-        .replace(/\b([a-z])/g, function(match) {
-          return match.toUpperCase();
-        });
+        .replace(
+          /\b([a-z])/g,
+          function(match) {
 
-    }
+            return match.toUpperCase();
+
+          }
+        );
+
+  }
 
 
-    if (type === 'sentence') {
+  if (type === 'sentence') {
 
-      text = text.toLowerCase();
+    text =
+      text.toLowerCase();
 
-      text = text.replace(
+    text =
+      text.replace(
         /(^\s*[a-z])|([.!?]\s+[a-z])/g,
         function(match) {
+
           return match.toUpperCase();
+
         }
       );
 
+  }
+
+
+  textarea.value =
+    text;
+
+  showMessage(
+    'caseMessage',
+    'Text converted successfully.'
+  );
+
+}
+
+
+function clearCase() {
+
+  document.getElementById('caseText').value = '';
+
+  showMessage(
+    'caseMessage',
+    'Text cleared.'
+  );
+
+}
+
+
+
+/* ================================================= */
+/* DUPLICATE LINE REMOVER */
+/* ================================================= */
+
+function getDuplicateData() {
+
+  const text =
+    document
+      .getElementById('duplicateText')
+      .value;
+
+  const ignoreCase =
+    document
+      .getElementById('ignoreCase')
+      .checked;
+
+  const removeEmpty =
+    document
+      .getElementById('removeEmpty')
+      .checked;
+
+  const trimLines =
+    document
+      .getElementById('trimLines')
+      .checked;
+
+
+  let lines =
+    text.split(/\r?\n/);
+
+  const originalCount =
+    text
+      ? lines.length
+      : 0;
+
+  const processed = [];
+
+
+  lines.forEach(function(line) {
+
+    let current =
+      line;
+
+    if (trimLines) {
+
+      current =
+        current.trim();
+
     }
 
+    if (
+      removeEmpty &&
+      current === ''
+    ) {
 
-    textarea.value = text;
+      return;
 
-    showMessage('caseMessage', 'Text converted successfully.');
+    }
+
+    processed.push(current);
+
+  });
+
+
+  const seen =
+    new Set();
+
+  const unique = [];
+
+
+  processed.forEach(function(line) {
+
+    let key =
+      line;
+
+    if (ignoreCase) {
+
+      key =
+        key.toLowerCase();
+
+    }
+
+    if (!seen.has(key)) {
+
+      seen.add(key);
+
+      unique.push(line);
+
+    }
+
+  });
+
+
+  return {
+
+    original: originalCount,
+
+    unique: unique.length,
+
+    duplicates:
+      processed.length -
+      unique.length,
+
+    result: unique
+
+  };
+
+}
+
+
+function updateDuplicateStats() {
+
+  const data =
+    getDuplicateData();
+
+  document.getElementById('originalLines').textContent =
+    data.original;
+
+  document.getElementById('uniqueLines').textContent =
+    data.unique;
+
+  document.getElementById('duplicateLines').textContent =
+    data.duplicates;
+
+}
+
+
+function removeDuplicates() {
+
+  const data =
+    getDuplicateData();
+
+  document.getElementById('duplicateText').value =
+    data.result.join('\n');
+
+  updateDuplicateStats();
+
+  showMessage(
+    'duplicateMessage',
+    data.duplicates +
+    (
+      data.duplicates === 1
+        ? ' duplicate line removed.'
+        : ' duplicate lines removed.'
+    )
+  );
+
+}
+
+
+function clearDuplicates() {
+
+  document.getElementById('duplicateText').value = '';
+
+  updateDuplicateStats();
+
+  showMessage(
+    'duplicateMessage',
+    'Text cleared.'
+  );
+
+}
+
+
+
+/* ================================================= */
+/* JSON FORMATTER */
+/* ================================================= */
+
+function validateJSON() {
+
+  const text =
+    document
+      .getElementById('jsonText')
+      .value
+      .trim();
+
+  if (!text) {
+
+    return;
 
   }
 
 
+  try {
 
-  function clearCase() {
-
-    document.getElementById('caseText').value = '';
-
-    showMessage('caseMessage', 'Text cleared.');
-
-  }
-
-
-
-  /* =========================
-     DUPLICATE LINE REMOVER
-  ========================= */
-
-  function getDuplicateData() {
-
-    const textarea = document.getElementById('duplicateText');
-
-    const text = textarea.value;
-
-    const ignoreCase =
-      document.getElementById('ignoreCase').checked;
-
-    const removeEmpty =
-      document.getElementById('removeEmpty').checked;
-
-    const trimLines =
-      document.getElementById('trimLines').checked;
-
-
-    let lines = text.split(/\r?\n/);
-
-    const originalCount = lines.length;
-
-    const processed = [];
-
-    lines.forEach(function(line) {
-
-      let current = line;
-
-      if (trimLines) {
-        current = current.trim();
-      }
-
-      if (removeEmpty && current === '') {
-        return;
-      }
-
-      processed.push(current);
-
-    });
-
-
-    const seen = new Set();
-
-    const unique = [];
-
-    processed.forEach(function(line) {
-
-      let key = line;
-
-      if (ignoreCase) {
-        key = key.toLowerCase();
-      }
-
-      if (!seen.has(key)) {
-
-        seen.add(key);
-
-        unique.push(line);
-
-      }
-
-    });
-
-
-    return {
-      original: originalCount,
-      unique: unique.length,
-      duplicates: processed.length - unique.length,
-      result: unique
-    };
-
-  }
-
-
-
-  function updateDuplicateStats() {
-
-    const data = getDuplicateData();
-
-    document.getElementById('originalLines').textContent =
-      data.original;
-
-    document.getElementById('uniqueLines').textContent =
-      data.unique;
-
-    document.getElementById('duplicateLines').textContent =
-      data.duplicates;
-
-  }
-
-
-
-  function removeDuplicates() {
-
-    const data = getDuplicateData();
-
-    document.getElementById('duplicateText').value =
-      data.result.join('\n');
-
-    updateDuplicateStats();
+    JSON.parse(text);
 
     showMessage(
-      'duplicateMessage',
-      data.duplicates +
-      (data.duplicates === 1
-        ? ' duplicate line removed.'
-        : ' duplicate lines removed.')
+      'jsonMessage',
+      'Valid JSON ✓'
+    );
+
+  } catch (error) {
+
+    showMessage(
+      'jsonMessage',
+      'Invalid JSON. Check your syntax.'
+    );
+
+  }
+
+}
+
+
+function formatJSON() {
+
+  const textarea =
+    document.getElementById('jsonText');
+
+  const text =
+    textarea.value.trim();
+
+
+  if (!text) {
+
+    showMessage(
+      'jsonMessage',
+      'Please enter JSON first.'
+    );
+
+    return;
+
+  }
+
+
+  try {
+
+    const parsed =
+      JSON.parse(text);
+
+    textarea.value =
+      JSON.stringify(
+        parsed,
+        null,
+        2
+      );
+
+    showMessage(
+      'jsonMessage',
+      'JSON formatted successfully ✓'
+    );
+
+  } catch (error) {
+
+    showMessage(
+      'jsonMessage',
+      'Invalid JSON. Please fix the syntax first.'
+    );
+
+  }
+
+}
+
+
+function minifyJSON() {
+
+  const textarea =
+    document.getElementById('jsonText');
+
+  const text =
+    textarea.value.trim();
+
+
+  if (!text) {
+
+    showMessage(
+      'jsonMessage',
+      'Please enter JSON first.'
+    );
+
+    return;
+
+  }
+
+
+  try {
+
+    const parsed =
+      JSON.parse(text);
+
+    textarea.value =
+      JSON.stringify(parsed);
+
+    showMessage(
+      'jsonMessage',
+      'JSON minified successfully ✓'
+    );
+
+  } catch (error) {
+
+    showMessage(
+      'jsonMessage',
+      'Invalid JSON. Please fix the syntax first.'
+    );
+
+  }
+
+}
+
+
+function clearJSON() {
+
+  document.getElementById('jsonText').value = '';
+
+  document.getElementById('jsonMessage').style.display =
+    'none';
+
+}
+
+
+
+/* ================================================= */
+/* PASSWORD GENERATOR */
+/* ================================================= */
+
+function updatePasswordLength() {
+
+  const length =
+    document
+      .getElementById('passwordLength')
+      .value;
+
+  document
+    .getElementById('passwordLengthValue')
+    .textContent =
+    length;
+
+}
+
+
+function generatePassword() {
+
+  const length =
+    parseInt(
+      document
+        .getElementById('passwordLength')
+        .value
+    );
+
+
+  const upper =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+  const lower =
+    'abcdefghijklmnopqrstuvwxyz';
+
+  const numbers =
+    '0123456789';
+
+  const symbols =
+    '!@#$%^&*()-_=+[]{}?';
+
+
+  let characters =
+    '';
+
+  let required =
+    '';
+
+
+  if (
+    document
+      .getElementById('passwordUpper')
+      .checked
+  ) {
+
+    characters += upper;
+
+    required +=
+      getSecureRandomCharacter(upper);
+
+  }
+
+
+  if (
+    document
+      .getElementById('passwordLower')
+      .checked
+  ) {
+
+    characters += lower;
+
+    required +=
+      getSecureRandomCharacter(lower);
+
+  }
+
+
+  if (
+    document
+      .getElementById('passwordNumbers')
+      .checked
+  ) {
+
+    characters += numbers;
+
+    required +=
+      getSecureRandomCharacter(numbers);
+
+  }
+
+
+  if (
+    document
+      .getElementById('passwordSymbols')
+      .checked
+  ) {
+
+    characters += symbols;
+
+    required +=
+      getSecureRandomCharacter(symbols);
+
+  }
+
+
+  if (!characters) {
+
+    showMessage(
+      'passwordMessage',
+      'Select at least one character type.'
+    );
+
+    return;
+
+  }
+
+
+  if (required.length > length) {
+
+    showMessage(
+      'passwordMessage',
+      'Password length is too short for the selected options.'
+    );
+
+    return;
+
+  }
+
+
+  let password =
+    required;
+
+
+  while (
+    password.length < length
+  ) {
+
+    password +=
+      getSecureRandomCharacter(
+        characters
+      );
+
+  }
+
+
+  password =
+    shuffleString(password);
+
+
+  document
+    .getElementById('passwordOutput')
+    .value =
+    password;
+
+
+  showMessage(
+    'passwordMessage',
+    'Strong password generated.'
+  );
+
+}
+
+
+function getSecureRandomCharacter(characters) {
+
+  const randomArray =
+    new Uint32Array(1);
+
+  crypto.getRandomValues(
+    randomArray
+  );
+
+  return characters[
+    randomArray[0] %
+    characters.length
+  ];
+
+}
+
+
+function shuffleString(string) {
+
+  const array =
+    string.split('');
+
+  for (
+    let i = array.length - 1;
+    i > 0;
+    i--
+  ) {
+
+    const randomArray =
+      new Uint32Array(1);
+
+    crypto.getRandomValues(
+      randomArray
+    );
+
+    const j =
+      randomArray[0] %
+      (i + 1);
+
+    [
+      array[i],
+      array[j]
+    ] =
+    [
+      array[j],
+      array[i]
+    ];
+
+  }
+
+  return array.join('');
+
+}
+
+
+function clearPassword() {
+
+  document
+    .getElementById('passwordOutput')
+    .value = '';
+
+  document
+    .getElementById('passwordMessage')
+    .style.display =
+    'none';
+
+}
+
+
+
+/* ================================================= */
+/* IMAGE COMPRESSOR */
+/* ================================================= */
+
+let selectedImage = null;
+
+
+function updateQuality() {
+
+  const quality =
+    document
+      .getElementById('qualityRange')
+      .value;
+
+  document
+    .getElementById('qualityValue')
+    .textContent =
+    quality + '%';
+
+}
+
+
+function loadImage() {
+
+  const input =
+    document
+      .getElementById('imageInput');
+
+  const file =
+    input.files[0];
+
+
+  if (!file) {
+
+    return;
+
+  }
+
+
+  if (!file.type.startsWith('image/')) {
+
+    showMessage(
+      'imageMessage',
+      'Please select a valid image file.'
+    );
+
+    return;
+
+  }
+
+
+  selectedImage =
+    file;
+
+
+  const reader =
+    new FileReader();
+
+
+  reader.onload =
+    function(event) {
+
+      const preview =
+        document
+          .getElementById('imagePreview');
+
+      preview.src =
+        event.target.result;
+
+      preview.style.display =
+        'block';
+
+
+      const info =
+        document
+          .getElementById('imageInfo');
+
+      info.textContent =
+        'Original size: ' +
+        formatFileSize(file.size);
+
+      info.style.display =
+        'block';
+
+    };
+
+
+  reader.readAsDataURL(file);
+
+}
+
+
+function compressImage() {
+
+  if (!selectedImage) {
+
+    showMessage(
+      'imageMessage',
+      'Please select an image first.'
+    );
+
+    return;
+
+  }
+
+
+  const quality =
+    parseInt(
+      document
+        .getElementById('qualityRange')
+        .value
+    ) / 100;
+
+
+  const reader =
+    new FileReader();
+
+
+  reader.onload =
+    function(event) {
+
+      const img =
+        new Image();
+
+
+      img.onload =
+        function() {
+
+          const canvas =
+            document.createElement(
+              'canvas'
+            );
+
+
+          canvas.width =
+            img.width;
+
+          canvas.height =
+            img.height;
+
+
+          const context =
+            canvas.getContext('2d');
+
+
+          context.drawImage(
+            img,
+            0,
+            0
+          );
+
+
+          canvas.toBlob(
+            function(blob) {
+
+              if (!blob) {
+
+                showMessage(
+                  'imageMessage',
+                  'Compression failed. Please try another image.'
+                );
+
+                return;
+
+              }
+
+
+              const url =
+                URL.createObjectURL(
+                  blob
+                );
+
+
+              const download =
+                document
+                  .getElementById('downloadImage');
+
+
+              download.href =
+                url;
+
+              download.style.display =
+                'inline-block';
+
+
+              const saved =
+                formatFileSize(
+                  selectedImage.size
+                );
+
+              const compressed =
+                formatFileSize(
+                  blob.size
+                );
+
+
+              const percentage =
+                selectedImage.size > 0
+                  ? Math.round(
+                      (
+                        1 -
+                        blob.size /
+                        selectedImage.size
+                      ) * 100
+                    )
+                  : 0;
+
+
+              const info =
+                document
+                  .getElementById('imageInfo');
+
+
+              info.textContent =
+                'Original: ' +
+                saved +
+                ' | Compressed: ' +
+                compressed +
+                ' | Size change: ' +
+                percentage +
+                '%';
+
+
+              showMessage(
+                'imageMessage',
+                'Image compressed successfully.'
+              );
+
+            },
+            'image/jpeg',
+            quality
+          );
+
+        };
+
+
+      img.src =
+        event.target.result;
+
+    };
+
+
+  reader.readAsDataURL(
+    selectedImage
+  );
+
+}
+
+
+function clearImage() {
+
+  selectedImage =
+    null;
+
+  document
+    .getElementById('imageInput')
+    .value = '';
+
+  document
+    .getElementById('imagePreview')
+    .style.display =
+    'none';
+
+  document
+    .getElementById('imagePreview')
+    .src = '';
+
+  document
+    .getElementById('imageInfo')
+    .style.display =
+    'none';
+
+  document
+    .getElementById('downloadImage')
+    .style.display =
+    'none';
+
+  document
+    .getElementById('imageMessage')
+    .style.display =
+    'none';
+
+}
+
+
+function formatFileSize(bytes) {
+
+  if (bytes === 0) {
+
+    return '0 Bytes';
+
+  }
+
+
+  const units =
+    [
+      'Bytes',
+      'KB',
+      'MB',
+      'GB'
+    ];
+
+
+  const index =
+    Math.floor(
+      Math.log(bytes) /
+      Math.log(1024)
+    );
+
+
+  return (
+    bytes /
+    Math.pow(1024, index)
+  ).toFixed(2) +
+  ' ' +
+  units[index];
+
+}
+
+
+
+/* ================================================= */
+/* COPY */
+/* ================================================= */
+
+function copyText(
+  elementId,
+  messageId
+) {
+
+  const textarea =
+    document
+      .getElementById(elementId);
+
+  const text =
+    textarea.value;
+
+
+  if (!text) {
+
+    showMessage(
+      messageId,
+      'There is nothing to copy.'
+    );
+
+    return;
+
+  }
+
+
+  if (
+    navigator.clipboard &&
+    window.isSecureContext
+  ) {
+
+    navigator.clipboard
+      .writeText(text)
+      .then(function() {
+
+        showMessage(
+          messageId,
+          'Copied to clipboard.'
+        );
+
+      })
+      .catch(function() {
+
+        fallbackCopy(
+          text,
+          messageId
+        );
+
+      });
+
+  } else {
+
+    fallbackCopy(
+      text,
+      messageId
+    );
+
+  }
+
+}
+
+
+function fallbackCopy(
+  text,
+  messageId
+) {
+
+  const temporary =
+    document.createElement(
+      'textarea'
+    );
+
+  temporary.value =
+    text;
+
+  temporary.style.position =
+    'fixed';
+
+  temporary.style.left =
+    '-9999px';
+
+  document.body.appendChild(
+    temporary
+  );
+
+  temporary.select();
+
+
+  try {
+
+    document.execCommand(
+      'copy'
+    );
+
+    showMessage(
+      messageId,
+      'Copied to clipboard.'
+    );
+
+  } catch (error) {
+
+    showMessage(
+      messageId,
+      'Copy failed. Please copy manually.'
     );
 
   }
 
 
+  document.body.removeChild(
+    temporary
+  );
 
-  function clearDuplicates() {
-
-    document.getElementById('duplicateText').value = '';
-
-    updateDuplicateStats();
-
-    showMessage('duplicateMessage', 'Text cleared.');
-
-  }
+}
 
 
 
-  /* =========================
-     COPY FUNCTION
-  ========================= */
+/* ================================================= */
+/* MESSAGE */
+/* ================================================= */
 
-  function copyText(elementId, messageId) {
+function showMessage(
+  elementId,
+  message
+) {
 
-    const textarea = document.getElementById(elementId);
+  const element =
+    document
+      .getElementById(elementId);
 
-    const text = textarea.value;
+  element.textContent =
+    message;
 
-    if (!text) {
+  element.style.display =
+    'block';
 
-      showMessage(messageId, 'There is nothing to copy.');
-
-      return;
-
-    }
+  clearTimeout(
+    element.messageTimer
+  );
 
 
-    if (navigator.clipboard && window.isSecureContext) {
+  element.messageTimer =
+    setTimeout(
+      function() {
 
-      navigator.clipboard.writeText(text)
-        .then(function() {
+        element.style.display =
+          'none';
 
-          showMessage(messageId, 'Copied to clipboard.');
+      },
+      3000
+    );
 
-        })
-        .catch(function() {
-
-          fallbackCopy(text, messageId);
-
-        });
-
-    } else {
-
-      fallbackCopy(text, messageId);
-
-    }
-
-  }
+}
 
 
 
-  function fallbackCopy(text, messageId) {
+/* ================================================= */
+/* SEARCH */
+/* ================================================= */
 
-    const temporary = document.createElement('textarea');
+function searchTools() {
 
-    temporary.value = text;
-
-    temporary.style.position = 'fixed';
-
-    temporary.style.left = '-9999px';
-
-    document.body.appendChild(temporary);
-
-    temporary.select();
-
-    try {
-
-      document.execCommand('copy');
-
-      showMessage(messageId, 'Copied to clipboard.');
-
-    } catch (error) {
-
-      showMessage(
-        messageId,
-        'Copy failed. Please copy the text manually.'
-      );
-
-    }
-
-    document.body.removeChild(temporary);
-
-  }
-
-
-
-  /* =========================
-     MESSAGE
-  ========================= */
-
-  function showMessage(elementId, message) {
-
-    const element = document.getElementById(elementId);
-
-    element.textContent = message;
-
-    element.style.display = 'block';
-
-    clearTimeout(element.messageTimer);
-
-    element.messageTimer = setTimeout(function() {
-
-      element.style.display = 'none';
-
-    }, 2500);
-
-  }
-
-
-
-  /* =========================
-     SEARCH
-  ========================= */
-
-  function searchTools() {
-
-    const search = document
+  const search =
+    document
       .getElementById('searchInput')
       .value
       .toLowerCase()
       .trim();
 
-    const cards = document.querySelectorAll('.tool-card');
 
-    let visible = 0;
+  const cards =
+    document.querySelectorAll(
+      '.tool-card'
+    );
 
 
-    cards.forEach(function(card) {
+  let visible =
+    0;
+
+
+  cards.forEach(
+    function(card) {
 
       const name =
-        card.dataset.name.toLowerCase();
+        card.dataset.name
+          .toLowerCase();
 
-      if (name.includes(search)) {
 
-        card.style.display = '';
+      if (
+        name.includes(search)
+      ) {
+
+        card.style.display =
+          '';
 
         visible++;
 
       } else {
 
-        card.style.display = 'none';
+        card.style.display =
+          'none';
 
       }
 
-    });
-
-
-    const noResults =
-      document.getElementById('noResults');
-
-
-    if (visible === 0) {
-
-      noResults.style.display = 'block';
-
-    } else {
-
-      noResults.style.display = 'none';
-
     }
+  );
+
+
+  const noResults =
+    document
+      .getElementById('noResults');
+
+
+  if (visible === 0) {
+
+    noResults.style.display =
+      'block';
+
+  } else {
+
+    noResults.style.display =
+      'none';
 
   }
 
-
-  /* =========================
-     COMING SOON
-  ========================= */
-
-  function comingSoon() {
-
-    alert(
-      'This tool is coming soon. We are working on it!'
-    );
-
-  }
+}
 
 
 
-  /* =========================
-     INITIALIZE
-  ========================= */
+/* ================================================= */
+/* INITIALIZE */
+/* ================================================= */
 
-  countWords();
+countWords();
 
-  updateDuplicateStats();
+updateDuplicateStats();
+
+updatePasswordLength();
+
+updateQuality();
 
 </script>
 
