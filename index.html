@@ -1,11 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <head>
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +9,12 @@
 
   <meta
     name="description"
-    content="Velquro provides free online tools for word counting, case conversion, duplicate line removal, JSON formatting, password generation, image compression and more."
+    content="Velquro provides free online tools for word counting, text conversion, JSON formatting, password generation, image compression, QR codes, calculations and unit conversion."
   >
 
   <meta
     name="keywords"
-    content="free online tools, word counter, case converter, duplicate line remover, JSON formatter, password generator, image compressor, online utilities"
+    content="free online tools, word counter, case converter, duplicate line remover, JSON formatter, password generator, image compressor, QR code generator, unit converter, percentage calculator, age calculator"
   >
 
   <meta name="robots" content="index, follow">
@@ -36,12 +31,12 @@
   <meta property="og:title" content="Velquro - Free Online Tools">
   <meta
     property="og:description"
-    content="Free online tools for everyday digital tasks including word counting, JSON formatting, password generation and image compression."
+    content="Free online tools for text, developer tasks, measurements, calculations and everyday digital needs."
   >
   <meta property="og:url" content="https://fasihuddin313.github.io/">
   <meta property="og:site_name" content="Velquro">
 
-  <!-- Twitter / Social Sharing -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Velquro - Free Online Tools">
   <meta
@@ -50,133 +45,108 @@
   >
 
   <style>
-
-  <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f6f8fb;
-      color: #172033;
+      background: #f8fafc;
+      color: #111827;
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+
     header {
-      background: rgba(255, 255, 255, 0.96);
+      background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
       position: sticky;
       top: 0;
-      z-index: 100;
-      backdrop-filter: blur(8px);
+      z-index: 1000;
     }
 
-    .nav {
-      max-width: 1100px;
+    .header-inner {
+      max-width: 1150px;
       margin: auto;
-      padding: 15px 20px;
+      padding: 16px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: #4f46e5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 21px;
-      font-weight: 800;
-      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.22);
+      gap: 20px;
     }
 
     .logo {
-      font-size: 26px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
       font-weight: 800;
-      text-decoration: none;
       color: #111827;
-      letter-spacing: -0.5px;
     }
 
-    .logo span {
-      color: #4f46e5;
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #6d28d9;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 21px;
     }
 
     nav {
       display: flex;
       align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
     nav a {
-      margin-left: 22px;
-      text-decoration: none;
       color: #4b5563;
-      font-size: 15px;
-      font-weight: 500;
+      font-size: 14px;
+      font-weight: 600;
     }
 
     nav a:hover {
-      color: #4f46e5;
+      color: #6d28d9;
     }
+
+    /* Hero */
 
     .hero {
-      max-width: 900px;
-      margin: 70px auto 40px;
       text-align: center;
-      padding: 0 20px;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: #eef2ff;
-      color: #4f46e5;
-      padding: 7px 13px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 18px;
+      padding: 70px 20px 45px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     }
 
     .hero h1 {
-      font-size: 48px;
+      font-size: 46px;
       line-height: 1.15;
-      margin-bottom: 18px;
-      letter-spacing: -1.2px;
-    }
-
-    .hero h1 span {
-      color: #4f46e5;
+      margin-bottom: 16px;
+      color: #111827;
     }
 
     .hero p {
-      color: #667085;
-      font-size: 19px;
       max-width: 680px;
-      margin: auto;
+      margin: 0 auto 28px;
+      color: #6b7280;
+      font-size: 18px;
     }
 
     .search-box {
-      max-width: 600px;
-      margin: 30px auto 0;
+      max-width: 620px;
+      margin: auto;
     }
 
     .search-box input {
@@ -187,2506 +157,723 @@
       font-size: 16px;
       outline: none;
       background: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
     }
 
     .search-box input:focus {
-      border-color: #4f46e5;
-      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.10);
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
     }
 
-    .container {
-      max-width: 1100px;
+    /* Main */
+
+    main {
+      max-width: 1150px;
       margin: auto;
-      padding: 20px;
+      padding: 25px 20px 70px;
     }
 
-    .tool-section {
-      display: none;
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 28px;
-      margin: 25px 0 45px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    .tools-section {
+      margin-top: 42px;
     }
 
-    .tool-section.active {
-      display: block;
-    }
-
-    .tool-section h2 {
+    .tools-section h2 {
       font-size: 25px;
-      margin-bottom: 8px;
-    }
-
-    .tool-description {
-      color: #6b7280;
-      margin-bottom: 18px;
-    }
-
-    textarea {
-      width: 100%;
-      min-height: 210px;
-      margin: 10px 0 15px;
-      padding: 15px;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
-      resize: vertical;
-      font-family: inherit;
-      font-size: 15px;
-      outline: none;
-      line-height: 1.6;
-    }
-
-    textarea:focus {
-      border-color: #4f46e5;
-      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08);
-    }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    button {
-      border: none;
-      cursor: pointer;
-      background: #4f46e5;
-      color: white;
-      padding: 11px 17px;
-      border-radius: 8px;
-      font-size: 14px;
-      transition: 0.15s;
-    }
-
-    button:hover {
-      background: #4338ca;
-    }
-
-    button.secondary {
-      background: #e5e7eb;
-      color: #111827;
-    }
-
-    button.secondary:hover {
-      background: #d1d5db;
-    }
-
-    button.success {
-      background: #059669;
-    }
-
-    button.success:hover {
-      background: #047857;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin: 10px 0 18px;
-    }
-
-    .stat {
-      background: #f8fafc;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 13px;
-    }
-
-    .stat-label {
-      display: block;
-      color: #6b7280;
-      font-size: 13px;
-      margin-bottom: 3px;
-    }
-
-    .stat-value {
-      font-size: 20px;
-      font-weight: 700;
-      color: #111827;
-    }
-
-    .options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin: 10px 0 18px;
-    }
-
-    .checkbox-label {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      color: #4b5563;
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    .checkbox-label input {
-      width: 16px;
-      height: 16px;
-      cursor: pointer;
-    }
-
-    .range-container {
-      max-width: 450px;
-      margin: 5px 0 18px;
-    }
-
-    .range-container input[type="range"] {
-      width: 100%;
-      cursor: pointer;
-    }
-
-    .range-label {
-      display: flex;
-      justify-content: space-between;
-      color: #4b5563;
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
-
-    .password-output {
-      font-family: monospace;
-      font-size: 18px;
-      letter-spacing: 1px;
-      min-height: 70px;
-      resize: none;
-      background: #f8fafc;
-    }
-
-    .image-area {
-      border: 2px dashed #d1d5db;
-      border-radius: 12px;
-      padding: 30px 20px;
-      text-align: center;
-      margin: 15px 0;
-      background: #fafafa;
-    }
-
-    .image-area input {
-      max-width: 100%;
-    }
-
-    .image-preview {
-      max-width: 100%;
-      max-height: 350px;
-      margin: 20px auto;
-      display: none;
-      border-radius: 10px;
-    }
-
-    .image-info {
-      display: none;
-      margin: 15px 0;
-      color: #4b5563;
-      font-size: 14px;
-    }
-
-    .category {
-      margin: 45px 0;
-    }
-
-    .category h2 {
-      font-size: 25px;
-      margin-bottom: 8px;
-    }
-
-    .category-description {
-      color: #6b7280;
       margin-bottom: 20px;
+      color: #111827;
     }
 
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
 
+    /* Cards */
+
     .tool-card {
-      background: white;
+      background: #ffffff;
       border: 1px solid #e5e7eb;
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 24px;
-      transition: 0.2s;
+      transition: 0.2s ease;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
     }
 
     .tool-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+      border-color: #c4b5fd;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
 
     .tool-icon {
-      font-size: 30px;
-      margin-bottom: 12px;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #f3e8ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 17px;
     }
 
     .tool-card h3 {
-      margin-bottom: 8px;
       font-size: 19px;
+      margin-bottom: 8px;
+      color: #111827;
     }
 
     .tool-card p {
       color: #6b7280;
       font-size: 14px;
+      min-height: 45px;
       margin-bottom: 18px;
     }
 
     .tool-button {
-      display: inline-block;
       border: none;
-      background: #4f46e5;
+      background: #6d28d9;
       color: white;
-      padding: 10px 15px;
-      border-radius: 8px;
+      padding: 11px 18px;
+      border-radius: 9px;
       cursor: pointer;
       font-size: 14px;
+      font-weight: 700;
+      width: 100%;
+      transition: 0.2s ease;
     }
 
     .tool-button:hover {
-      background: #4338ca;
+      background: #5b21b6;
     }
 
-    .close-button {
-      margin-top: 18px;
-    }
+    /* About */
 
-    .tool-message {
-      display: none;
-      margin-top: 12px;
-      padding: 10px 13px;
-      border-radius: 8px;
-      background: #ecfdf5;
-      color: #047857;
-      font-size: 14px;
-    }
-
-    .about {
+    .about-section {
+      margin-top: 65px;
       background: white;
-      border-top: 1px solid #e5e7eb;
-      margin-top: 70px;
-      padding: 55px 20px;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 35px;
     }
 
-    .about-inner {
-      max-width: 900px;
-      margin: auto;
+    .about-section h2 {
+      margin-bottom: 14px;
+      font-size: 28px;
     }
 
-    .about h2 {
-      margin-bottom: 15px;
-    }
-
-    .about p {
-      color: #667085;
+    .about-section p {
+      color: #6b7280;
+      max-width: 850px;
       margin-bottom: 12px;
     }
+
+    /* Footer */
 
     footer {
       background: #111827;
       color: #d1d5db;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 14px;
+      padding: 45px 20px 25px;
+    }
+
+    .footer-inner {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
 
     .footer-brand {
-      color: white;
-      font-weight: 700;
-      margin-bottom: 6px;
+      max-width: 450px;
     }
 
-    .no-results {
-      display: none;
-      padding: 20px;
-      color: #6b7280;
+    .footer-brand h3 {
+      color: white;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .footer-links a {
+      color: #d1d5db;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      padding-top: 20px;
+      color: #9ca3af;
+      font-size: 13px;
       text-align: center;
     }
 
-    @media (max-width: 800px) {
+    /* Search message */
 
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 35px 20px;
+      color: #6b7280;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      margin-top: 20px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 850px) {
       .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .stats {
         grid-template-columns: repeat(2, 1fr);
       }
 
       .hero h1 {
         font-size: 38px;
       }
-
     }
 
-    @media (max-width: 550px) {
-
-      .nav {
-        padding: 13px 15px;
+    @media (max-width: 600px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .brand-mark {
-        width: 34px;
-        height: 34px;
-        font-size: 19px;
+      nav {
+        gap: 12px;
       }
 
-      .logo {
-        font-size: 23px;
+      .hero {
+        padding: 50px 18px 35px;
       }
 
-      nav a {
-        margin-left: 10px;
-        font-size: 13px;
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      main {
+        padding: 15px 15px 50px;
       }
 
       .tools-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        margin-top: 45px;
+      .tools-section h2 {
+        font-size: 22px;
       }
 
-      .hero h1 {
-        font-size: 34px;
+      .about-section {
+        padding: 25px 20px;
       }
 
-      .tool-section {
-        padding: 20px;
+      .footer-top {
+        flex-direction: column;
       }
-
-      .stats {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .button-row button {
-        flex: 1 1 auto;
-      }
-
     }
-
   </style>
 </head>
 
 <body>
 
-<header>
+  <!-- Header -->
 
-  <div class="nav">
+  <header>
+    <div class="header-inner">
 
-    <a href="#" class="brand">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">V</span>
+        <span>Velquro</span>
+      </a>
 
-      <div class="brand-mark">V</div>
+      <nav>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
 
-      <div class="logo">
-        Vel<span>quro</span>
+    </div>
+  </header>
+
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <h1>Simple Tools for Everyday Tasks</h1>
+
+    <p>
+      Free, fast and easy-to-use online tools for text,
+      developer tasks, measurements, calculations and more.
+    </p>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="toolSearch"
+        placeholder="Search for a tool..."
+        oninput="searchTools()"
+      >
+    </div>
+
+  </section>
+
+
+  <!-- Tools -->
+
+  <main id="tools">
+
+    <!-- Text Tools -->
+
+    <section class="tools-section">
+
+      <h2>📝 Text Tools</h2>
+
+      <div class="tools-grid">
+
+        <div
+          class="tool-card"
+          data-name="word counter words count text counter"
+        >
+          <div class="tool-icon">📝</div>
+
+          <h3>Word Counter</h3>
+
+          <p>
+            Count words, characters and lines quickly and easily.
+          </p>
+
+          <button
+            class="tool-button"
+            onclick="window.location.href='word-counter.html'"
+          >
+            Use Tool
+          </button>
+        </div>
+
+
+        <div
+          class="tool-card"
+          data-name="case converter uppercase lowercase title sentence text"
+        >
+          <div class="tool-icon">Aa</div>
+
+          <h3>Case Converter</h3>
+
+          <p>
+            Convert text to uppercase, lowercase, title case and more.
+          </p>
+
+          <button
+            class="tool-button"
+            onclick="window.location.href='case-converter.html'"
+          >
+            Use Tool
+          </button>
+        </div>
+
+
+        <div
+          class="tool-card"
+          data-name="duplicate line remover remove duplicate lines text"
+        >
+          <div class="tool-icon">🧹</div>
+
+          <h3>Duplicate Line Remover</h3>
+
+          <p>
+            Remove duplicate lines from your text quickly.
+          </p>
+
+          <button
+            class="tool-button"
+            onclick="window.location.href='duplicate-line-remover.html'"
+          >
+            Use Tool
+          </button>
+        </div>
+
       </div>
 
-    </a>
-
-    <nav>
-  
-  <a href="#tools">Tools</a>
-  <a href="#about">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="privacy.html">Privacy</a>
-  <a href="terms.html">Terms</a>
-
-    </nav>
-
-  </div>
-
-</header>
+    </section>
 
 
-<section class="hero">
+    <!-- Developer & Utility Tools -->
 
-  <div class="hero-badge">
-    Free • Fast • Browser-Based
-  </div>
+    <section class="tools-section">
 
-  <h1>
-    Simple <span>Tools</span> for Everyday Tasks
-  </h1>
+      <h2>💻 Developer & Utility Tools</h2>
 
-  <p>
-    Free, fast and easy-to-use online tools.
-    Everything works directly in your browser.
-  </p>
+      <div class="tools-grid">
 
-  <div class="search-box">
+        <div
+          class="tool-card"
+          data-name="json formatter validator json beautifier developer"
+        >
+          <div class="tool-icon">{ }</div>
 
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Search for a tool..."
-      oninput="searchTools()"
-      aria-label="Search tools"
-    >
+          <h3>JSON Formatter</h3>
 
-  </div>
+          <p>
+            Format, beautify and validate JSON data easily.
+          </p>
 
-</section>
-
-
-<main class="container" id="tools">
+          <button
+            class="tool-button"
+            onclick="window.location.href='json-formatter.html'"
+          >
+            Use Tool
+          </button>
+        </div>
 
 
-<!-- WORD COUNTER -->
+        <div
+          class="tool-card"
+          data-name="password generator secure random password"
+        >
+          <div class="tool-icon">🔐</div>
 
-<div class="tool-section" id="wordCounter">
+          <h3>Password Generator</h3>
 
-  <h2>Word Counter</h2>
+          <p>
+            Generate strong random passwords for your accounts.
+          </p>
 
-  <p class="tool-description">
-    Count words, characters, sentences, lines, paragraphs and estimated reading time.
-  </p>
+          <button
+            class="tool-button"
+            onclick="window.location.href='password-generator.html'"
+          >
+            Use Tool
+          </button>
+        </div>
 
-  <textarea
-    id="wordText"
-    placeholder="Paste or type your text here..."
-    oninput="countWords()"
-  ></textarea>
 
-  <div class="stats">
+        <div
+          class="tool-card"
+          data-name="image compressor compress image jpg png webp"
+        >
+          <div class="tool-icon">🖼️</div>
 
-    <div class="stat">
-      <span class="stat-label">Words</span>
-      <span class="stat-value" id="wordCount">0</span>
+          <h3>Image Compressor</h3>
+
+          <p>
+            Reduce image file size directly in your browser.
+          </p>
+
+          <button
+            class="tool-button"
+            onclick="window.location.href='image-compressor.html'"
+          >
+            Use Tool
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Measurement & Conversion Tools -->
+
+    <section class="tools-section">
+
+      <h2>📏 Measurement & Conversion Tools</h2>
+
+      <div class="tools-grid">
+
+        <div
+          class="tool-card"
+          data-name="unit converter length weight temperature km miles kg pounds celsius fahrenheit"
+        >
+          <div class="tool-icon">📏</div>
+
+          <h3>Unit Converter</h3>
+
+          <p>
+            Convert length, weight and temperature units quickly and easily.
+          </p>
+
+          <button
+            class="tool-button"
+            onclick="window.location.href='unit-converter.html'"
+          >
+            Use Tool
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Calculator Tools -->
+
+    <section class="tools-section">
+
+      <h2>🧮 Calculator Tools</h2>
+
+      <div class="tools-grid">
+
+        <div
+          class="tool-card"
+          data-name="percentage calculator percent calculator percentage increase decrease"
+        >
+          <div class="tool-icon">%</div>
+
+          <h3>Percentage Calculator</h3>
+
+          <p>
+            Calculate percentages, increases and decreases quickly.
+          </p>
+
+          <button
+            class="tool-button"
+            onclick="window.location.href='percentage-calculator.html'"
+          >
+            Use Tool
+          </button>
+        </div>
+
+
+        <div
+          class="tool-card"
+          data-name="age calculator exact age birthday date of birth calculator"
+        >
+          <div class="tool-icon">🎂</div>
+
+          <h3>Age Calculator</h3>
+
+          <p>
+            Calculate your exact age in years, months and days.
+          </p>
+
+          <button
+            class="tool-button"
+            onclick="window.location.href='age-calculator.html'"
+          >
+            Use Tool
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- QR & Generator Tools -->
+
+    <section class="tools-section">
+
+      <h2>📱 QR & Generator Tools</h2>
+
+      <div class="tools-grid">
+
+        <div
+          class="tool-card"
+          data-name="qr code generator qr code maker create qr code url text"
+        >
+          <div class="tool-icon">📱</div>
+
+          <h3>QR Code Generator</h3>
+
+          <p>
+            Create QR codes from URLs or text quickly and easily.
+          </p>
+
+          <button
+            class="tool-button"
+            onclick="window.location.href='qr-code-generator.html'"
+          >
+            Use Tool
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <div id="noResults" class="no-results">
+      <h3>No tools found</h3>
+      <p>
+        Try searching for another tool or keyword.
+      </p>
     </div>
 
-    <div class="stat">
-      <span class="stat-label">Characters</span>
-      <span class="stat-value" id="characterCount">0</span>
-    </div>
 
-    <div class="stat">
-      <span class="stat-label">No Spaces</span>
-      <span class="stat-value" id="noSpaceCount">0</span>
-    </div>
+    <!-- About -->
 
-    <div class="stat">
-      <span class="stat-label">Sentences</span>
-      <span class="stat-value" id="sentenceCount">0</span>
-    </div>
+    <section class="about-section" id="about">
 
-    <div class="stat">
-      <span class="stat-label">Lines</span>
-      <span class="stat-value" id="lineCount">0</span>
-    </div>
-
-    <div class="stat">
-      <span class="stat-label">Paragraphs</span>
-      <span class="stat-value" id="paragraphCount">0</span>
-    </div>
-
-    <div class="stat">
-      <span class="stat-label">Reading Time</span>
-      <span class="stat-value" id="readingTime">0 min</span>
-    </div>
-
-  </div>
-
-  <div class="button-row">
-
-    <button
-      class="success"
-      onclick="copyText('wordText', 'wordMessage')"
-    >
-      Copy Text
-    </button>
-
-    <button
-      class="secondary"
-      onclick="clearWordCounter()"
-    >
-      Clear
-    </button>
-
-  </div>
-
-  <div class="tool-message" id="wordMessage"></div>
-
-  <button
-    class="secondary close-button"
-    onclick="closeTool('wordCounter')"
-  >
-    Close Tool
-  </button>
-
-</div>
-
-
-<!-- CASE CONVERTER -->
-
-<div class="tool-section" id="caseConverter">
-
-  <h2>Case Converter</h2>
-
-  <p class="tool-description">
-    Convert your text into uppercase, lowercase, title case or sentence case.
-  </p>
-
-  <textarea
-    id="caseText"
-    placeholder="Enter or paste your text here..."
-  ></textarea>
-
-  <div class="button-row">
-
-    <button onclick="convertCase('upper')">
-      UPPERCASE
-    </button>
-
-    <button onclick="convertCase('lower')">
-      lowercase
-    </button>
-
-    <button onclick="convertCase('title')">
-      Title Case
-    </button>
-
-    <button onclick="convertCase('sentence')">
-      Sentence case
-    </button>
-
-  </div>
-
-  <div class="button-row">
-
-    <button
-      class="success"
-      onclick="copyText('caseText', 'caseMessage')"
-    >
-      Copy Text
-    </button>
-
-    <button
-      class="secondary"
-      onclick="clearCase()"
-    >
-      Clear
-    </button>
-
-  </div>
-
-  <div class="tool-message" id="caseMessage"></div>
-
-  <button
-    class="secondary close-button"
-    onclick="closeTool('caseConverter')"
-  >
-    Close Tool
-  </button>
-
-</div>
-
-
-<!-- DUPLICATE LINE REMOVER -->
-
-<div class="tool-section" id="duplicateRemover">
-
-  <h2>Duplicate Line Remover</h2>
-
-  <p class="tool-description">
-    Remove repeated lines from your text while keeping the first occurrence.
-  </p>
-
-  <textarea
-    id="duplicateText"
-    placeholder="Paste your lines here, one line at a time..."
-    oninput="updateDuplicateStats()"
-  ></textarea>
-
-  <div class="options">
-
-    <label class="checkbox-label">
-      <input
-        type="checkbox"
-        id="ignoreCase"
-        checked
-        onchange="updateDuplicateStats()"
-      >
-      Ignore uppercase/lowercase
-    </label>
-
-    <label class="checkbox-label">
-      <input
-        type="checkbox"
-        id="removeEmpty"
-        checked
-        onchange="updateDuplicateStats()"
-      >
-      Remove empty lines
-    </label>
-
-    <label class="checkbox-label">
-      <input
-        type="checkbox"
-        id="trimLines"
-        checked
-        onchange="updateDuplicateStats()"
-      >
-      Trim spaces
-    </label>
-
-  </div>
-
-  <div class="stats">
-
-    <div class="stat">
-      <span class="stat-label">Original Lines</span>
-      <span class="stat-value" id="originalLines">0</span>
-    </div>
-
-    <div class="stat">
-      <span class="stat-label">Unique Lines</span>
-      <span class="stat-value" id="uniqueLines">0</span>
-    </div>
-
-    <div class="stat">
-      <span class="stat-label">Duplicates</span>
-      <span class="stat-value" id="duplicateLines">0</span>
-    </div>
-
-  </div>
-
-  <div class="button-row">
-
-    <button onclick="removeDuplicates()">
-      Remove Duplicates
-    </button>
-
-    <button
-      class="success"
-      onclick="copyText('duplicateText', 'duplicateMessage')"
-    >
-      Copy Result
-    </button>
-
-    <button
-      class="secondary"
-      onclick="clearDuplicates()"
-    >
-      Clear
-    </button>
-
-  </div>
-
-  <div class="tool-message" id="duplicateMessage"></div>
-
-  <button
-    class="secondary close-button"
-    onclick="closeTool('duplicateRemover')"
-  >
-    Close Tool
-  </button>
-
-</div>
-
-
-<!-- JSON FORMATTER -->
-
-<div class="tool-section" id="jsonFormatter">
-
-  <h2>JSON Formatter & Validator</h2>
-
-  <p class="tool-description">
-    Format, validate and minify JSON data directly in your browser.
-  </p>
-
-  <textarea
-    id="jsonText"
-    placeholder='Paste your JSON here, for example: {"name":"Velquro","tools":6}'
-    oninput="validateJSON()"
-  ></textarea>
-
-  <div class="button-row">
-
-    <button onclick="formatJSON()">
-      Format JSON
-    </button>
-
-    <button onclick="minifyJSON()">
-      Minify JSON
-    </button>
-
-    <button
-      class="success"
-      onclick="copyText('jsonText', 'jsonMessage')"
-    >
-      Copy JSON
-    </button>
-
-    <button
-      class="secondary"
-      onclick="clearJSON()"
-    >
-      Clear
-    </button>
-
-  </div>
-
-  <div class="tool-message" id="jsonMessage"></div>
-
-  <button
-    class="secondary close-button"
-    onclick="closeTool('jsonFormatter')"
-  >
-    Close Tool
-  </button>
-
-</div>
-
-
-<!-- PASSWORD GENERATOR -->
-
-<div class="tool-section" id="passwordGenerator">
-
-  <h2>Password Generator</h2>
-
-  <p class="tool-description">
-    Generate strong random passwords directly in your browser.
-  </p>
-
-  <div class="range-container">
-
-    <div class="range-label">
-
-      <span>Password Length</span>
-
-      <strong id="passwordLengthValue">
-        16
-      </strong>
-
-    </div>
-
-    <input
-      type="range"
-      id="passwordLength"
-      min="6"
-      max="64"
-      value="16"
-      oninput="updatePasswordLength()"
-    >
-
-  </div>
-
-  <div class="options">
-
-    <label class="checkbox-label">
-      <input
-        type="checkbox"
-        id="passwordUpper"
-        checked
-      >
-      Uppercase
-    </label>
-
-    <label class="checkbox-label">
-      <input
-        type="checkbox"
-        id="passwordLower"
-        checked
-      >
-      Lowercase
-    </label>
-
-    <label class="checkbox-label">
-      <input
-        type="checkbox"
-        id="passwordNumbers"
-        checked
-      >
-      Numbers
-    </label>
-
-    <label class="checkbox-label">
-      <input
-        type="checkbox"
-        id="passwordSymbols"
-        checked
-      >
-      Symbols
-    </label>
-
-  </div>
-
-  <textarea
-    id="passwordOutput"
-    class="password-output"
-    readonly
-    placeholder="Your generated password will appear here..."
-  ></textarea>
-
-  <div class="button-row">
-
-    <button onclick="generatePassword()">
-      Generate Password
-    </button>
-
-    <button
-      class="success"
-      onclick="copyText('passwordOutput', 'passwordMessage')"
-    >
-      Copy Password
-    </button>
-
-    <button
-      class="secondary"
-      onclick="clearPassword()"
-    >
-      Clear
-    </button>
-
-  </div>
-
-  <div class="tool-message" id="passwordMessage"></div>
-
-  <button
-    class="secondary close-button"
-    onclick="closeTool('passwordGenerator')"
-  >
-    Close Tool
-  </button>
-
-</div>
-
-
-<!-- IMAGE COMPRESSOR -->
-
-<div class="tool-section" id="imageCompressor">
-
-  <h2>Image Compressor</h2>
-
-  <p class="tool-description">
-    Compress JPG, PNG and WebP images directly in your browser.
-    Your image stays on your device.
-  </p>
-
-  <div class="image-area">
-
-    <input
-      type="file"
-      id="imageInput"
-      accept="image/jpeg,image/png,image/webp"
-      onchange="loadImage()"
-    >
-
-    <img
-      id="imagePreview"
-      class="image-preview"
-      alt="Image preview"
-    >
-
-    <div
-      class="image-info"
-      id="imageInfo"
-    ></div>
-
-  </div>
-
-  <div class="range-container">
-
-    <div class="range-label">
-
-      <span>Compression Quality</span>
-
-      <strong id="qualityValue">
-        70%
-      </strong>
-
-    </div>
-
-    <input
-      type="range"
-      id="qualityRange"
-      min="10"
-      max="100"
-      value="70"
-      oninput="updateQuality()"
-    >
-
-  </div>
-
-  <div class="button-row">
-
-    <button onclick="compressImage()">
-      Compress Image
-    </button>
-
-    <button
-      class="secondary"
-      onclick="clearImage()"
-    >
-      Clear
-    </button>
-
-  </div>
-
-  <div
-    class="tool-message"
-    id="imageMessage"
-  ></div>
-
-  <a
-    id="downloadImage"
-    download="velquro-compressed-image.jpg"
-    style="display:none; text-decoration:none;"
-  >
-    <button class="success" type="button">
-      Download Compressed Image
-    </button>
-  </a>
-
-  <button
-    class="secondary close-button"
-    onclick="closeTool('imageCompressor')"
-  >
-    Close Tool
-  </button>
-
-</div>
-
-
-<!-- TEXT TOOLS -->
-
-<section class="category">
-
-  <h2>Text Tools</h2>
-
-  <p class="category-description">
-    Simple tools to help you work with text faster.
-  </p>
-
-  <div class="tools-grid">
-
-    <div
-      class="tool-card"
-      data-name="word counter text words characters sentences"
-    >
-
-      <div class="tool-icon">📝</div>
-
-      <h3>Word Counter</h3>
+      <h2>About Velquro</h2>
 
       <p>
-        Count words, characters, sentences, lines and reading time.
+        Velquro is a collection of simple and useful free online tools
+        designed to make everyday digital tasks faster and easier.
       </p>
-
-      <button
-        class="tool-button"
-        onclick="openTool('wordCounter')"
-      >
-        Use Tool
-      </button>
-
-    </div>
-
-
-    <div
-      class="tool-card"
-      data-name="case converter text uppercase lowercase title sentence"
-    >
-
-      <div class="tool-icon">🔤</div>
-
-      <h3>Case Converter</h3>
 
       <p>
-        Convert text to uppercase, lowercase, title case or sentence case.
+        Our tools cover text processing, developer utilities,
+        measurements, calculations and other common online tasks.
       </p>
-
-      <button
-        class="tool-button"
-        onclick="openTool('caseConverter')"
-      >
-        Use Tool
-      </button>
-
-    </div>
-
-
-    <div
-      class="tool-card"
-      data-name="duplicate line remover duplicate text cleaner repeated lines"
-    >
-
-      <div class="tool-icon">🧹</div>
-
-      <h3>Duplicate Line Remover</h3>
 
       <p>
-        Remove repeated lines and clean your text quickly.
+        Velquro aims to keep these tools simple, fast and easy to use
+        without unnecessary complexity.
       </p>
 
-      <button
-        class="tool-button"
-        onclick="openTool('duplicateRemover')"
-      >
-        Use Tool
-      </button>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <h3>Velquro</h3>
+
+          <p>
+            Simple, free and useful online tools for everyday digital tasks.
+          </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+          <a href="index.html">Home</a>
+          <a href="#tools">Tools</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        © 2026 Velquro. All rights reserved.
+
+      </div>
 
     </div>
 
-  </div>
+  </footer>
 
-</section>
 
+  <!-- Search Script -->
 
-<!-- DEVELOPER & UTILITY TOOLS -->
+  <script>
 
-<section class="category">
+    function searchTools() {
 
-  <h2>Developer & Utility Tools</h2>
+      const searchInput =
+        document.getElementById("toolSearch");
 
-  <p class="category-description">
-    Useful browser-based tools for developers and everyday tasks.
-  </p>
+      const searchTerm =
+        searchInput.value.toLowerCase().trim();
 
-  <div class="tools-grid">
+      const cards =
+        document.querySelectorAll(".tool-card");
 
-    <div
-      class="tool-card"
-      data-name="json formatter json validator developer code"
-    >
+      const sections =
+        document.querySelectorAll(".tools-section");
 
-      <div class="tool-icon">💻</div>
+      const noResults =
+        document.getElementById("noResults");
 
-      <h3>JSON Formatter</h3>
+      let found = false;
 
-      <p>
-        Format, validate and minify JSON data easily.
-      </p>
+      cards.forEach(function(card) {
 
-      <button
-        class="tool-button"
-        onclick="openTool('jsonFormatter')"
-      >
-        Use Tool
-      </button>
+        const name =
+          card.getAttribute("data-name").toLowerCase();
 
-    </div>
+        if (name.includes(searchTerm)) {
 
+          card.style.display = "";
 
-    <div
-      class="tool-card"
-      data-name="password generator security password random"
-    >
+          found = true;
 
-      <div class="tool-icon">🔐</div>
+        } else {
 
-      <h3>Password Generator</h3>
+          card.style.display = "none";
 
-      <p>
-        Create strong random passwords with custom options.
-      </p>
-
-      <button
-        class="tool-button"
-        onclick="openTool('passwordGenerator')"
-      >
-        Use Tool
-      </button>
-
-    </div>
-
-
-    <div
-      class="tool-card"
-      data-name="image compressor image compression jpg png webp"
-    >
-
-      <div class="tool-icon">🖼️</div>
-
-      <h3>Image Compressor</h3>
-
-      <p>
-        Reduce image file size directly in your browser.
-      </p>
-
-      <button
-        class="tool-button"
-        onclick="openTool('imageCompressor')"
-      >
-        Use Tool
-      </button>
-
-    </div>
-
-  </div>
-
- <div
-  class="tool-card"
-  data-name="qr code generator qr code maker create qr code url text"
->
-  <div class="tool-icon">📱</div>
-
-  <h3>QR Code Generator</h3>
-
-  <p>
-    Create QR codes from URLs or text quickly and easily.
-  </p>
-
-  <button
-    class="tool-button"
-    onclick="window.location.href='qr-code-generator.html'"
-  >
-    Use Tool
-  </button>
-</div>
-
-  <section class="tools-section">
-  <h2>📏 Measurement & Conversion Tools</h2>
-
-  <div class="tools-grid">
-
-    <!-- Unit Converter -->
-    <div
-      class="tool-card"
-      data-name="unit converter length weight temperature km miles kg pounds celsius fahrenheit"
-    >
-      <div class="tool-icon">📏</div>
-      <h3>Unit Converter</h3>
-      <p>
-        Convert length, weight and temperature units quickly and easily.
-      </p>
-      <button
-        class="tool-button"
-        onclick="window.location.href='unit-converter.html'"
-      >
-        Use Tool
-      </button>
-    </div>
-
-  </div>
-</section>
-</div>
-<div
-  class="tool-card"
-  data-name="percentage calculator percent calculator percentage increase decrease"
->
-  <div class="tool-icon">%</div>
-
-  <h3>Percentage Calculator</h3>
-
-  <p>
-    Calculate percentages, increases and decreases quickly and easily.
-  </p>
-
-  <button
-    class="tool-button"
-    onclick="window.location.href='percentage-calculator.html'"
-  >
-    Use Tool
-  </button>
-</div>
-
-  <div
-  class="tool-card"
-  data-name="age calculator exact age birthday date of birth calculator"
->
-  <div class="tool-icon">🎂</div>
-
-  <h3>Age Calculator</h3>
-
-  <p>
-    Calculate your exact age in years, months and days.
-  </p>
-
-  <button
-    class="tool-button"
-    onclick="window.location.href='age-calculator.html'"
-  >
-    Use Tool
-  </button>
-</div>
-</div>
-
-</section>
-
-
-<div
-  class="no-results"
-  id="noResults"
->
-  No tools found. Try another search.
-</div>
-
-
-</main>
-
-
-<!-- ABOUT -->
-
-<section
-  class="about"
-  id="about"
->
-
-  <div class="about-inner">
-
-    <h2>About Velquro</h2>
-
-    <p>
-      Velquro is a collection of simple and useful online tools
-      designed to make everyday digital tasks easier.
-    </p>
-
-    <p>
-      Our goal is to provide fast, easy-to-use tools without
-      unnecessary complexity.
-    </p>
-
-    <p>
-      Velquro tools work directly in your browser whenever possible,
-      helping keep your information on your device.
-    </p>
-
-  </div>
-
-</section>
-
-
-<footer>
-
-  <div class="footer-brand">
-    Velquro
-  </div>
-
-  <p>
-    Free online tools for everyday digital tasks.
-  </p>
-
-  <p style="margin-top:8px;">
-
-    <div style="margin: 18px 0;">
-
-  <a href="index.html"
-     style="color:#d1d5db; text-decoration:none; margin:0 10px;">
-    Tools
-  </a>
-
-  <a href="about.html"
-     style="color:#d1d5db; text-decoration:none; margin:0 10px;">
-    About
-  </a>
-
-  <a href="contact.html"
-     style="color:#d1d5db; text-decoration:none; margin:0 10px;">
-    Contact
-  </a>
-
-  <a href="privacy.html"
-     style="color:#d1d5db; text-decoration:none; margin:0 10px;">
-    Privacy Policy
-  </a>
-
-  <a href="terms.html"
-     style="color:#d1d5db; text-decoration:none; margin:0 10px;">
-    Terms of Service
-  </a>
-
-</div>
-    © 2026 Velquro. All rights reserved.
-  </p>
-
-</footer>
-
-
-<script>
-
-/* OPEN / CLOSE TOOLS */
-
-function openTool(toolId) {
-
-  document
-    .querySelectorAll('.tool-section')
-    .forEach(function(section) {
-      section.classList.remove('active');
-    });
-
-  const tool =
-    document.getElementById(toolId);
-
-  tool.classList.add('active');
-
-  tool.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
-
-}
-
-function closeTool(toolId) {
-
-  document
-    .getElementById(toolId)
-    .classList.remove('active');
-
-}
-
-
-/* WORD COUNTER */
-
-function countWords() {
-
-  const text =
-    document.getElementById('wordText').value;
-
-  const trimmed =
-    text.trim();
-
-  const words =
-    trimmed
-      ? trimmed.split(/\s+/u).length
-      : 0;
-
-  const characters =
-    text.length;
-
-  const noSpaces =
-    text.replace(/\s/g, '').length;
-
-  const sentences =
-    trimmed
-      ? (text.match(/[.!?]+(?=\s|$)/g) || []).length
-      : 0;
-
-  const lines =
-    text
-      ? text.split(/\r?\n/).length
-      : 0;
-
-  const paragraphs =
-    trimmed
-      ? trimmed.split(/\n\s*\n+/).length
-      : 0;
-
-  const readingMinutes =
-    words > 0
-      ? Math.max(1, Math.ceil(words / 200))
-      : 0;
-
-  document.getElementById('wordCount').textContent =
-    words;
-
-  document.getElementById('characterCount').textContent =
-    characters;
-
-  document.getElementById('noSpaceCount').textContent =
-    noSpaces;
-
-  document.getElementById('sentenceCount').textContent =
-    sentences;
-
-  document.getElementById('lineCount').textContent =
-    lines;
-
-  document.getElementById('paragraphCount').textContent =
-    paragraphs;
-
-  document.getElementById('readingTime').textContent =
-    readingMinutes +
-    (readingMinutes === 1 ? ' min' : ' mins');
-
-}
-
-function clearWordCounter() {
-
-  document.getElementById('wordText').value = '';
-
-  countWords();
-
-  showMessage(
-    'wordMessage',
-    'Text cleared.'
-  );
-
-}
-
-
-/* CASE CONVERTER */
-
-function convertCase(type) {
-
-  const textarea =
-    document.getElementById('caseText');
-
-  let text =
-    textarea.value;
-
-  if (!text.trim()) {
-
-    showMessage(
-      'caseMessage',
-      'Please enter some text first.'
-    );
-
-    return;
-
-  }
-
-  if (type === 'upper') {
-    text = text.toUpperCase();
-  }
-
-  if (type === 'lower') {
-    text = text.toLowerCase();
-  }
-
-  if (type === 'title') {
-
-    text =
-      text
-        .toLowerCase()
-        .replace(
-          /\b([a-z])/g,
-          function(match) {
-            return match.toUpperCase();
-          }
-        );
-
-  }
-
-  if (type === 'sentence') {
-
-    text =
-      text.toLowerCase();
-
-    text =
-      text.replace(
-        /(^\s*[a-z])|([.!?]\s+[a-z])/g,
-        function(match) {
-          return match.toUpperCase();
         }
-      );
-
-  }
-
-  textarea.value =
-    text;
-
-  showMessage(
-    'caseMessage',
-    'Text converted successfully.'
-  );
-
-}
-
-function clearCase() {
-
-  document.getElementById('caseText').value = '';
-
-  showMessage(
-    'caseMessage',
-    'Text cleared.'
-  );
-
-}
-
-
-/* DUPLICATE LINE REMOVER */
-
-function getDuplicateData() {
-
-  const text =
-    document
-      .getElementById('duplicateText')
-      .value;
-
-  const ignoreCase =
-    document
-      .getElementById('ignoreCase')
-      .checked;
-
-  const removeEmpty =
-    document
-      .getElementById('removeEmpty')
-      .checked;
-
-  const trimLines =
-    document
-      .getElementById('trimLines')
-      .checked;
-
-  let lines =
-    text.split(/\r?\n/);
-
-  const originalCount =
-    text
-      ? lines.length
-      : 0;
-
-  const processed = [];
-
-  lines.forEach(function(line) {
-
-    let current =
-      line;
-
-    if (trimLines) {
-      current = current.trim();
-    }
-
-    if (
-      removeEmpty &&
-      current === ''
-    ) {
-      return;
-    }
-
-    processed.push(current);
-
-  });
-
-  const seen =
-    new Set();
-
-  const unique = [];
-
-  processed.forEach(function(line) {
-
-    let key =
-      line;
-
-    if (ignoreCase) {
-      key = key.toLowerCase();
-    }
-
-    if (!seen.has(key)) {
-
-      seen.add(key);
-
-      unique.push(line);
-
-    }
-
-  });
-
-  return {
-
-    original: originalCount,
-
-    unique: unique.length,
-
-    duplicates:
-      processed.length -
-      unique.length,
-
-    result: unique
-
-  };
-
-}
-
-function updateDuplicateStats() {
-
-  const data =
-    getDuplicateData();
-
-  document.getElementById('originalLines').textContent =
-    data.original;
-
-  document.getElementById('uniqueLines').textContent =
-    data.unique;
-
-  document.getElementById('duplicateLines').textContent =
-    data.duplicates;
-
-}
-
-function removeDuplicates() {
-
-  const data =
-    getDuplicateData();
-
-  document.getElementById('duplicateText').value =
-    data.result.join('\n');
-
-  updateDuplicateStats();
-
-  showMessage(
-    'duplicateMessage',
-    data.duplicates +
-    (
-      data.duplicates === 1
-        ? ' duplicate line removed.'
-        : ' duplicate lines removed.'
-    )
-  );
-
-}
-
-function clearDuplicates() {
-
-  document.getElementById('duplicateText').value = '';
-
-  updateDuplicateStats();
-
-  showMessage(
-    'duplicateMessage',
-    'Text cleared.'
-  );
-
-}
-
-
-/* JSON FORMATTER */
-
-function validateJSON() {
-
-  const text =
-    document
-      .getElementById('jsonText')
-      .value
-      .trim();
-
-  if (!text) {
-    return;
-  }
-
-  try {
-
-    JSON.parse(text);
-
-    showMessage(
-      'jsonMessage',
-      'Valid JSON ✓'
-    );
-
-  } catch (error) {
-
-    showMessage(
-      'jsonMessage',
-      'Invalid JSON. Check your syntax.'
-    );
-
-  }
-
-}
-
-function formatJSON() {
-
-  const textarea =
-    document.getElementById('jsonText');
-
-  const text =
-    textarea.value.trim();
-
-  if (!text) {
-
-    showMessage(
-      'jsonMessage',
-      'Please enter JSON first.'
-    );
-
-    return;
-
-  }
-
-  try {
-
-    const parsed =
-      JSON.parse(text);
-
-    textarea.value =
-      JSON.stringify(
-        parsed,
-        null,
-        2
-      );
-
-    showMessage(
-      'jsonMessage',
-      'JSON formatted successfully ✓'
-    );
-
-  } catch (error) {
-
-    showMessage(
-      'jsonMessage',
-      'Invalid JSON. Please fix the syntax first.'
-    );
-
-  }
-
-}
-
-function minifyJSON() {
-
-  const textarea =
-    document.getElementById('jsonText');
-
-  const text =
-    textarea.value.trim();
-
-  if (!text) {
-
-    showMessage(
-      'jsonMessage',
-      'Please enter JSON first.'
-    );
-
-    return;
-
-  }
-
-  try {
-
-    const parsed =
-      JSON.parse(text);
-
-    textarea.value =
-      JSON.stringify(parsed);
-
-    showMessage(
-      'jsonMessage',
-      'JSON minified successfully ✓'
-    );
-
-  } catch (error) {
-
-    showMessage(
-      'jsonMessage',
-      'Invalid JSON. Please fix the syntax first.'
-    );
-
-  }
-
-}
-
-function clearJSON() {
-
-  document.getElementById('jsonText').value = '';
-
-  document.getElementById('jsonMessage').style.display =
-    'none';
-
-}
-
-
-/* PASSWORD GENERATOR */
-
-function updatePasswordLength() {
-
-  const length =
-    document
-      .getElementById('passwordLength')
-      .value;
-
-  document
-    .getElementById('passwordLengthValue')
-    .textContent =
-    length;
-
-}
-
-function generatePassword() {
-
-  const length =
-    parseInt(
-      document
-        .getElementById('passwordLength')
-        .value
-    );
-
-  const upper =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-  const lower =
-    'abcdefghijklmnopqrstuvwxyz';
-
-  const numbers =
-    '0123456789';
-
-  const symbols =
-    '!@#$%^&*()-_=+[]{}?';
-
-  let characters =
-    '';
-
-  let required =
-    '';
-
-  if (
-    document
-      .getElementById('passwordUpper')
-      .checked
-  ) {
-
-    characters += upper;
-
-    required +=
-      getSecureRandomCharacter(upper);
-
-  }
-
-  if (
-    document
-      .getElementById('passwordLower')
-      .checked
-  ) {
-
-    characters += lower;
-
-    required +=
-      getSecureRandomCharacter(lower);
-
-  }
-
-  if (
-    document
-      .getElementById('passwordNumbers')
-      .checked
-  ) {
-
-    characters += numbers;
-
-    required +=
-      getSecureRandomCharacter(numbers);
-
-  }
-
-  if (
-    document
-      .getElementById('passwordSymbols')
-      .checked
-  ) {
-
-    characters += symbols;
-
-    required +=
-      getSecureRandomCharacter(symbols);
-
-  }
-
-  if (!characters) {
-
-    showMessage(
-      'passwordMessage',
-      'Select at least one character type.'
-    );
-
-    return;
-
-  }
-
-  if (required.length > length) {
-
-    showMessage(
-      'passwordMessage',
-      'Password length is too short for the selected options.'
-    );
-
-    return;
-
-  }
-
-  let password =
-    required;
-
-  while (
-    password.length < length
-  ) {
-
-    password +=
-      getSecureRandomCharacter(
-        characters
-      );
-
-  }
-
-  password =
-    shuffleString(password);
-
-  document
-    .getElementById('passwordOutput')
-    .value =
-    password;
-
-  showMessage(
-    'passwordMessage',
-    'Strong password generated.'
-  );
-
-}
-
-function getSecureRandomCharacter(characters) {
-
-  const randomArray =
-    new Uint32Array(1);
-
-  crypto.getRandomValues(
-    randomArray
-  );
-
-  return characters[
-    randomArray[0] %
-    characters.length
-  ];
-
-}
-
-function shuffleString(string) {
-
-  const array =
-    string.split('');
-
-  for (
-    let i = array.length - 1;
-    i > 0;
-    i--
-  ) {
-
-    const randomArray =
-      new Uint32Array(1);
-
-    crypto.getRandomValues(
-      randomArray
-    );
-
-    const j =
-      randomArray[0] %
-      (i + 1);
-
-    [
-      array[i],
-      array[j]
-    ] =
-    [
-      array[j],
-      array[i]
-    ];
-
-  }
-
-  return array.join('');
-
-}
-
-function clearPassword() {
-
-  document
-    .getElementById('passwordOutput')
-    .value = '';
-
-  document
-    .getElementById('passwordMessage')
-    .style.display =
-    'none';
-
-}
-
-
-/* IMAGE COMPRESSOR */
-
-let selectedImage = null;
-
-function updateQuality() {
-
-  const quality =
-    document
-      .getElementById('qualityRange')
-      .value;
-
-  document
-    .getElementById('qualityValue')
-    .textContent =
-    quality + '%';
-
-}
-
-function loadImage() {
-
-  const input =
-    document
-      .getElementById('imageInput');
-
-  const file =
-    input.files[0];
-
-  if (!file) {
-    return;
-  }
-
-  if (!file.type.startsWith('image/')) {
-
-    showMessage(
-      'imageMessage',
-      'Please select a valid image file.'
-    );
-
-    return;
-
-  }
-
-  selectedImage =
-    file;
-
-  const reader =
-    new FileReader();
-
-  reader.onload =
-    function(event) {
-
-      const preview =
-        document
-          .getElementById('imagePreview');
-
-      preview.src =
-        event.target.result;
-
-      preview.style.display =
-        'block';
-
-      const info =
-        document
-          .getElementById('imageInfo');
-
-      info.textContent =
-        'Original size: ' +
-        formatFileSize(file.size);
-
-      info.style.display =
-        'block';
-
-    };
-
-  reader.readAsDataURL(file);
-
-}
-
-function compressImage() {
-
-  if (!selectedImage) {
-
-    showMessage(
-      'imageMessage',
-      'Please select an image first.'
-    );
-
-    return;
-
-  }
-
-  const quality =
-    parseInt(
-      document
-        .getElementById('qualityRange')
-        .value
-    ) / 100;
-
-  const reader =
-    new FileReader();
-
-  reader.onload =
-    function(event) {
-
-      const img =
-        new Image();
-
-      img.onload =
-        function() {
-
-          const canvas =
-            document.createElement(
-              'canvas'
-            );
-
-          canvas.width =
-            img.width;
-
-          canvas.height =
-            img.height;
-
-          const context =
-            canvas.getContext('2d');
-
-          context.drawImage(
-            img,
-            0,
-            0
-          );
-
-          canvas.toBlob(
-            function(blob) {
-
-              if (!blob) {
-
-                showMessage(
-                  'imageMessage',
-                  'Compression failed. Please try another image.'
-                );
-
-                return;
-
-              }
-
-              const url =
-                URL.createObjectURL(
-                  blob
-                );
-
-              const download =
-                document
-                  .getElementById('downloadImage');
-
-              download.href =
-                url;
-
-              download.style.display =
-                'inline-block';
-
-              const saved =
-                formatFileSize(
-                  selectedImage.size
-                );
-
-              const compressed =
-                formatFileSize(
-                  blob.size
-                );
-
-              const percentage =
-                selectedImage.size > 0
-                  ? Math.round(
-                      (
-                        1 -
-                        blob.size /
-                        selectedImage.size
-                      ) * 100
-                    )
-                  : 0;
-
-              const info =
-                document
-                  .getElementById('imageInfo');
-
-              info.textContent =
-                'Original: ' +
-                saved +
-                ' | Compressed: ' +
-                compressed +
-                ' | Size change: ' +
-                percentage +
-                '%';
-
-              showMessage(
-                'imageMessage',
-                'Image compressed successfully.'
-              );
-
-            },
-            'image/jpeg',
-            quality
-          );
-
-        };
-
-      img.src =
-        event.target.result;
-
-    };
-
-  reader.readAsDataURL(
-    selectedImage
-  );
-
-}
-
-function clearImage() {
-
-  selectedImage =
-    null;
-
-  document
-    .getElementById('imageInput')
-    .value = '';
-
-  document
-    .getElementById('imagePreview')
-    .style.display =
-    'none';
-
-  document
-    .getElementById('imagePreview')
-    .src = '';
-
-  document
-    .getElementById('imageInfo')
-    .style.display =
-    'none';
-
-  document
-    .getElementById('downloadImage')
-    .style.display =
-    'none';
-
-  document
-    .getElementById('imageMessage')
-    .style.display =
-    'none';
-
-}
-
-function formatFileSize(bytes) {
-
-  if (bytes === 0) {
-    return '0 Bytes';
-  }
-
-  const units =
-    [
-      'Bytes',
-      'KB',
-      'MB',
-      'GB'
-    ];
-
-  const index =
-    Math.floor(
-      Math.log(bytes) /
-      Math.log(1024)
-    );
-
-  return (
-    bytes /
-    Math.pow(1024, index)
-  ).toFixed(2) +
-  ' ' +
-  units[index];
-
-}
-
-
-/* COPY */
-
-function copyText(
-  elementId,
-  messageId
-) {
-
-  const textarea =
-    document
-      .getElementById(elementId);
-
-  const text =
-    textarea.value;
-
-  if (!text) {
-
-    showMessage(
-      messageId,
-      'There is nothing to copy.'
-    );
-
-    return;
-
-  }
-
-  if (
-    navigator.clipboard &&
-    window.isSecureContext
-  ) {
-
-    navigator.clipboard
-      .writeText(text)
-      .then(function() {
-
-        showMessage(
-          messageId,
-          'Copied to clipboard.'
-        );
-
-      })
-      .catch(function() {
-
-        fallbackCopy(
-          text,
-          messageId
-        );
 
       });
 
-  } else {
 
-    fallbackCopy(
-      text,
-      messageId
-    );
+      sections.forEach(function(section) {
 
-  }
+        const visibleCards =
+          section.querySelectorAll(
+            ".tool-card:not([style*='display: none'])"
+          );
 
-}
+        if (searchTerm && visibleCards.length === 0) {
 
-function fallbackCopy(
-  text,
-  messageId
-) {
+          section.style.display = "none";
 
-  const temporary =
-    document.createElement(
-      'textarea'
-    );
+        } else {
 
-  temporary.value =
-    text;
+          section.style.display = "";
 
-  temporary.style.position =
-    'fixed';
+        }
 
-  temporary.style.left =
-    '-9999px';
-
-  document.body.appendChild(
-    temporary
-  );
-
-  temporary.select();
-
-  try {
-
-    document.execCommand(
-      'copy'
-    );
-
-    showMessage(
-      messageId,
-      'Copied to clipboard.'
-    );
-
-  } catch (error) {
-
-    showMessage(
-      messageId,
-      'Copy failed. Please copy manually.'
-    );
-
-  }
-
-  document.body.removeChild(
-    temporary
-  );
-
-}
+      });
 
 
-/* MESSAGE */
+      if (searchTerm && !found) {
 
-function showMessage(
-  elementId,
-  message
-) {
-
-  const element =
-    document
-      .getElementById(elementId);
-
-  element.textContent =
-    message;
-
-  element.style.display =
-    'block';
-
-  clearTimeout(
-    element.messageTimer
-  );
-
-  element.messageTimer =
-    setTimeout(
-      function() {
-
-        element.style.display =
-          'none';
-
-      },
-      3000
-    );
-
-}
-
-
-/* SEARCH */
-
-function searchTools() {
-
-  const search =
-    document
-      .getElementById('searchInput')
-      .value
-      .toLowerCase()
-      .trim();
-
-  const cards =
-    document.querySelectorAll(
-      '.tool-card'
-    );
-
-  let visible =
-    0;
-
-  cards.forEach(
-    function(card) {
-
-      const name =
-        card.dataset.name
-          .toLowerCase();
-
-      if (
-        name.includes(search)
-      ) {
-
-        card.style.display =
-          '';
-
-        visible++;
+        noResults.style.display = "block";
 
       } else {
 
-        card.style.display =
-          'none';
+        noResults.style.display = "none";
 
       }
 
     }
-  );
 
-  const noResults =
-    document
-      .getElementById('noResults');
-
-  if (visible === 0) {
-
-    noResults.style.display =
-      'block';
-
-  } else {
-
-    noResults.style.display =
-      'none';
-
-  }
-
-}
-
-
-/* INITIALIZE */
-
-countWords();
-
-updateDuplicateStats();
-
-updatePasswordLength();
-
-updateQuality();
-
-</script>
+  </script>
 
 </body>
 </html>
-```
