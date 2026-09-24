@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>QR Code Generator - Free Online QR Code Tool | Velquro</title>
+
+  <meta
+    name="description"
+    content="Generate QR codes online for free with Velquro. Create downloadable QR codes from URLs, text, contact information and more."
+  >
+
+  <meta
+    name="keywords"
+    content="QR code generator, free QR code generator, QR code maker, create QR code, online QR generator, URL QR code"
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://fasihuddin313.github.io/qr-code-generator.html"
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="shortcut icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg?v=2">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:title"
+    content="QR Code Generator - Free Online Tool | Velquro"
+  >
+
+  <meta
+    property="og:description"
+    content="Create free QR codes from URLs and text with Velquro."
+  >
+
+  <meta
+    property="og:url"
+    content="https://fasihuddin313.github.io/qr-code-generator.html"
+  >
+
+  <meta property="og:site_name" content="Velquro">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+
+  <meta
+    name="twitter:title"
+    content="QR Code Generator - Free Online Tool | Velquro"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Generate and download QR codes online for free."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #111827;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: #7c3aed;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #7c3aed;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    .breadcrumb {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #6b7280;
+    }
+
+    .breadcrumb a {
+      color: #7c3aed;
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin: 0 0 10px;
+    }
+
+    .intro {
+      color: #6b7280;
+      margin-bottom: 28px;
+    }
+
+    .tool-box {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 140px;
+      padding: 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 9px;
+      resize: vertical;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    }
+
+    .generate-btn {
+      width: 100%;
+      margin-top: 18px;
+      padding: 13px 18px;
+      border: none;
+      border-radius: 9px;
+      background: #7c3aed;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .generate-btn:hover {
+      background: #6d28d9;
+    }
+
+    .qr-result {
+      display: none;
+      margin-top: 28px;
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    #qrCode {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+
+    #qrCode img,
+    #qrCode canvas {
+      display: block;
+      max-width: 100%;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 11px 18px;
+      border-radius: 8px;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .download-btn:hover {
+      background: #1f2937;
+    }
+
+    .content-section {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 30px;
+    }
+
+    .content-section h2 {
+      margin-top: 0;
+      font-size: 23px;
+    }
+
+    .content-section h3 {
+      margin-bottom: 6px;
+      font-size: 18px;
+    }
+
+    .content-section p {
+      color: #4b5563;
+    }
+
+    .related-tools {
+      margin-top: 30px;
+    }
+
+    .related-tools a {
+      display: inline-block;
+      margin: 5px 8px 5px 0;
+      padding: 8px 12px;
+      border-radius: 7px;
+      background: #f3f4f6;
+      color: #374151;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .related-tools a:hover {
+      background: #ede9fe;
+      color: #6d28d9;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    .footer-brand {
+      color: white;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    footer a {
+      color: #d1d5db;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 650px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <a class="brand" href="index.html">
+
+      <div class="brand-mark">
+        V
+      </div>
+
+      Velquro
+
+    </a>
+
+    <nav>
+
+      <a href="index.html">Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <div class="breadcrumb">
+
+      <a href="index.html">Home</a>
+      /
+      QR Code Generator
+
+    </div>
+
+
+    <h1>
+      QR Code Generator
+    </h1>
+
+    <p class="intro">
+      Create a QR code from any URL or text and download it as a PNG image.
+      Fast, free, and easy to use.
+    </p>
+
+
+    <div class="tool-box">
+
+      <label for="qrText">
+        Enter text or URL
+      </label>
+
+      <textarea
+        id="qrText"
+        placeholder="Example: https://example.com"
+      ></textarea>
+
+
+      <button
+        class="generate-btn"
+        onclick="generateQR()"
+      >
+        Generate QR Code
+      </button>
+
+
+      <div
+        class="qr-result"
+        id="qrResult"
+      >
+
+        <div id="qrCode"></div>
+
+        <br>
+
+        <a
+          id="downloadBtn"
+          class="download-btn"
+          href="#"
+        >
+          Download QR Code
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <section class="content-section">
+
+      <h2>
+        Free Online QR Code Generator
+      </h2>
+
+      <p>
+        Velquro QR Code Generator lets you quickly create QR codes
+        from website URLs, text, contact information, or other content.
+        No account is required.
+      </p>
+
+
+      <h3>
+        How to create a QR code
+      </h3>
+
+      <p>
+        Enter your text or website URL in the box above and click
+        Generate QR Code. Your QR code will appear instantly.
+        You can then download it as a PNG image.
+      </p>
+
+
+      <h3>
+        What can QR codes be used for?
+      </h3>
+
+      <p>
+        QR codes can be used for websites, menus, contact information,
+        event details, Wi-Fi information, product pages, social profiles,
+        and many other everyday purposes.
+      </p>
+
+
+      <h3>
+        Is my information uploaded?
+      </h3>
+
+      <p>
+        The text you enter is processed in your browser to create the
+        QR code. Velquro does not require an account or file upload
+        for this tool.
+      </p>
+
+
+      <div class="related-tools">
+
+        <h3>
+          Related Tools
+        </h3>
+
+        <a href="word-counter.html">
+          Word Counter
+        </a>
+
+        <a href="case-converter.html">
+          Case Converter
+        </a>
+
+        <a href="duplicate-line-remover.html">
+          Duplicate Line Remover
+        </a>
+
+        <a href="json-formatter.html">
+          JSON Formatter
+        </a>
+
+        <a href="password-generator.html">
+          Password Generator
+        </a>
+
+        <a href="image-compressor.html">
+          Image Compressor
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-brand">
+      Velquro
+    </div>
+
+    <p>
+      Free online tools for everyday digital tasks.
+    </p>
+
+
+    <div style="margin: 18px 0;">
+
+      <a href="index.html">
+        Tools
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+      <a href="privacy.html">
+        Privacy Policy
+      </a>
+
+      <a href="terms.html">
+        Terms of Service
+      </a>
+
+    </div>
+
+
+    <p>
+      © 2026 Velquro. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- QR Code Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+  <script>
+
+    function generateQR() {
+
+      const text =
+        document.getElementById("qrText").value.trim();
+
+      const qrCode =
+        document.getElementById("qrCode");
+
+      const qrResult =
+        document.getElementById("qrResult");
+
+      const downloadBtn =
+        document.getElementById("downloadBtn");
+
+
+      if (!text) {
+
+        alert("Please enter some text or a URL first.");
+
+        return;
+
+      }
+
+
+      qrCode.innerHTML = "";
+
+
+      new QRCode(qrCode, {
+
+        text: text,
+
+        width: 220,
+
+        height: 220,
+
+        colorDark: "#111827",
+
+        colorLight: "#ffffff",
+
+        correctLevel: QRCode.CorrectLevel.H
+
+      });
+
+
+      qrResult.style.display = "block";
+
+
+      setTimeout(function () {
+
+        const canvas =
+          qrCode.querySelector("canvas");
+
+        const image =
+          qrCode.querySelector("img");
+
+
+        if (canvas) {
+
+          downloadBtn.href =
+            canvas.toDataURL("image/png");
+
+          downloadBtn.download =
+            "velquro-qr-code.png";
+
+        } else if (image) {
+
+          downloadBtn.href =
+            image.src;
+
+          downloadBtn.download =
+            "velquro-qr-code.png";
+
+        }
+
+      }, 100);
+
+    }
+
+  </script>
+
+</body>
+</html>
