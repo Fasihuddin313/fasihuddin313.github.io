@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Velquro - Get in Touch</title>
+
+  <meta
+    name="description"
+    content="Contact Velquro for questions, suggestions, feedback or issues related to our free online tools."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://fasihuddin313.github.io/contact.html"
+  >
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="/favicon.svg?v=2"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="shortcut icon"
+    href="/favicon.svg?v=2"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="/favicon.svg?v=2"
+  >
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:title"
+    content="Contact Velquro"
+  >
+
+  <meta
+    property="og:description"
+    content="Get in touch with Velquro for questions, suggestions and feedback."
+  >
+
+  <meta
+    property="og:url"
+    content="https://fasihuddin313.github.io/contact.html"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Velquro"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      max-width: 1150px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #6d28d9;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 21px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #4b5563;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #6d28d9;
+    }
+
+    /* Main */
+
+    main {
+      max-width: 950px;
+      margin: auto;
+      padding: 60px 20px 75px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .page-header h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .page-header p {
+      color: #6b7280;
+      font-size: 17px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .content-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 35px;
+      margin-bottom: 24px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .content-card h2 {
+      font-size: 25px;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .content-card p {
+      color: #4b5563;
+      margin-bottom: 14px;
+    }
+
+    /* Contact Box */
+
+    .contact-box {
+      background: #f5f3ff;
+      border: 1px solid #ddd6fe;
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .contact-box h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #5b21b6;
+    }
+
+    .contact-box a {
+      color: #6d28d9;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Reasons */
+
+    .reason-list {
+      margin-top: 15px;
+      padding-left: 20px;
+      color: #4b5563;
+    }
+
+    .reason-list li {
+      margin-bottom: 9px;
+    }
+
+    /* Footer */
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 45px 20px 25px;
+    }
+
+    .footer-inner {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .footer-brand {
+      max-width: 450px;
+    }
+
+    .footer-brand h3 {
+      color: #ffffff;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .footer-links a {
+      color: #d1d5db;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      padding-top: 20px;
+      color: #9ca3af;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 700px) {
+
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      main {
+        padding: 45px 15px 55px;
+      }
+
+      .page-header h1 {
+        font-size: 34px;
+      }
+
+      .page-header p {
+        font-size: 16px;
+      }
+
+      .content-card {
+        padding: 25px 20px;
+      }
+
+      .footer-top {
+        flex-direction: column;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-mark">V</span>
+
+        <span>Velquro</span>
+
+      </a>
+
+      <nav>
+
+        <a href="index.html#tools">Tools</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="privacy.html">Privacy</a>
+
+        <a href="terms.html">Terms</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- Main -->
+
+  <main>
+
+    <div class="page-header">
+
+      <h1>Contact Velquro</h1>
+
+      <p>
+        Have a question, suggestion or found an issue?
+        We'd love to hear from you.
+      </p>
+
+    </div>
+
+
+    <!-- Contact -->
+
+    <section class="content-card">
+
+      <h2>Get in Touch</h2>
+
+      <p>
+        If you have feedback about one of our tools, a suggestion
+        for a new tool, or you notice something that is not working
+        correctly, you can contact us by email.
+      </p>
+
+      <div class="contact-box">
+
+        <h3>Email</h3>
+
+        <p style="margin-bottom: 0;">
+
+          <a href="mailto:ceoalamgirtravels@gmail.com">
+            ceoalamgirtravels@gmail.com
+          </a>
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- What to Contact About -->
+
+    <section class="content-card">
+
+      <h2>What Can You Contact Us About?</h2>
+
+      <ul class="reason-list">
+
+        <li>
+          Problems or errors with a Velquro tool
+        </li>
+
+        <li>
+          Suggestions for new useful tools
+        </li>
+
+        <li>
+          Feedback about the website or user experience
+        </li>
+
+        <li>
+          Questions about our website policies
+        </li>
+
+        <li>
+          Other website-related questions
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- Response -->
+
+    <section class="content-card">
+
+      <h2>Before Contacting Us</h2>
+
+      <p>
+        When reporting a problem, please include the name of the
+        tool you were using and a short description of the issue.
+        This can help us understand and investigate the problem.
+      </p>
+
+      <p>
+        Please do not send passwords, payment information or other
+        sensitive personal information by email.
+      </p>
+
+    </section>
+
+
+    <!-- Back -->
+
+    <section style="text-align:center; margin-top:30px;">
+
+      <a
+        href="index.html"
+        style="
+          display:inline-block;
+          background:#6d28d9;
+          color:white;
+          padding:12px 22px;
+          border-radius:9px;
+          font-weight:700;
+        "
+      >
+        Back to Velquro
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <h3>Velquro</h3>
+
+          <p>
+            Simple, free and useful online tools for everyday
+            digital tasks.
+          </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+          <a href="index.html">Home</a>
+
+          <a href="index.html#tools">Tools</a>
+
+          <a href="about.html">About</a>
+
+          <a href="contact.html">Contact</a>
+
+          <a href="privacy.html">Privacy</a>
+
+          <a href="terms.html">Terms</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        © 2026 Velquro. All rights reserved.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
