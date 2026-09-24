@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
@@ -19,6 +20,30 @@
 
   <url>
     <loc>https://fasihuddin313.github.io/terms.html</loc>
+  </url>
+
+  <url>
+    <loc>https://fasihuddin313.github.io/word-counter.html</loc>
+  </url>
+
+  <url>
+    <loc>https://fasihuddin313.github.io/case-converter.html</loc>
+  </url>
+
+  <url>
+    <loc>https://fasihuddin313.github.io/duplicate-line-remover.html</loc>
+  </url>
+
+  <url>
+    <loc>https://fasihuddin313.github.io/json-formatter.html</loc>
+  </url>
+
+  <url>
+    <loc>https://fasihuddin313.github.io/password-generator.html</loc>
+  </url>
+
+  <url>
+    <loc>https://fasihuddin313.github.io/image-compressor.html</loc>
   </url>
 
 </urlset>
