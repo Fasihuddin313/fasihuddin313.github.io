@@ -1,20 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>About Velquro - Free Online Tools</title>
 
   <meta
     name="description"
-    content="Learn about Velquro, a collection of simple, fast and useful free online tools for everyday digital tasks."
+    content="Learn about Velquro, a collection of simple, free and useful online tools for text processing, developer utilities, measurements, calculations and everyday digital tasks."
   >
 
-  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://fasihuddin313.github.io/about.html"
+  >
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="/favicon.svg?v=2"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="shortcut icon"
+    href="/favicon.svg?v=2"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="/favicon.svg?v=2"
+  >
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:title"
+    content="About Velquro - Free Online Tools"
+  >
+
+  <meta
+    property="og:description"
+    content="Learn about Velquro and its collection of simple, free online tools."
+  >
+
+  <meta
+    property="og:url"
+    content="https://fasihuddin313.github.io/about.html"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Velquro"
+  >
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -23,259 +70,541 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f6f8fb;
-      color: #172033;
-      line-height: 1.7;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
     }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
 
     header {
-      background: white;
+      background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .nav {
-      max-width: 1100px;
+    .header-inner {
+      max-width: 1150px;
       margin: auto;
-      padding: 15px 20px;
+      padding: 16px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: #4f46e5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 21px;
-      font-weight: 800;
+      gap: 20px;
     }
 
     .logo {
-      font-size: 26px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
       font-weight: 800;
       color: #111827;
     }
 
-    .logo span {
-      color: #4f46e5;
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #6d28d9;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 21px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
     nav a {
-      margin-left: 22px;
-      text-decoration: none;
       color: #4b5563;
-      font-size: 15px;
+      font-size: 14px;
+      font-weight: 600;
     }
 
     nav a:hover {
-      color: #4f46e5;
+      color: #6d28d9;
     }
 
-    .page {
-      max-width: 850px;
-      margin: 60px auto;
-      padding: 0 20px;
+    /* Main */
+
+    main {
+      max-width: 950px;
+      margin: auto;
+      padding: 60px 20px 75px;
     }
 
-    .content {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    .page-header {
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    h1 {
-      font-size: 38px;
+    .page-header h1 {
+      font-size: 42px;
       margin-bottom: 12px;
+      color: #111827;
     }
 
-    .intro {
-      color: #667085;
-      font-size: 18px;
-      margin-bottom: 30px;
+    .page-header p {
+      color: #6b7280;
+      font-size: 17px;
+      max-width: 700px;
+      margin: auto;
     }
 
-    h2 {
-      font-size: 22px;
-      margin: 30px 0 10px;
+    .content-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 35px;
+      margin-bottom: 24px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
     }
 
-    p {
+    .content-card h2 {
+      font-size: 25px;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .content-card p {
       color: #4b5563;
       margin-bottom: 14px;
     }
 
-    ul {
-      margin: 10px 0 20px 22px;
+    .content-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Tool Categories */
+
+    .category {
+      margin-top: 22px;
+    }
+
+    .category h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .tool-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .tool-list li {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 11px 14px;
       color: #4b5563;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .home-button {
-      display: inline-block;
-      margin-top: 20px;
-      background: #4f46e5;
-      color: white;
-      text-decoration: none;
-      padding: 11px 17px;
-      border-radius: 8px;
       font-size: 14px;
     }
 
-    .home-button:hover {
-      background: #4338ca;
+    /* Mission */
+
+    .highlight {
+      background: #f5f3ff;
+      border: 1px solid #ddd6fe;
     }
+
+    .highlight h2 {
+      color: #5b21b6;
+    }
+
+    /* Footer */
 
     footer {
-      margin-top: 60px;
       background: #111827;
       color: #d1d5db;
-      text-align: center;
-      padding: 30px 20px;
+      padding: 45px 20px 25px;
+    }
+
+    .footer-inner {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .footer-brand {
+      max-width: 450px;
+    }
+
+    .footer-brand h3 {
+      color: #ffffff;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      color: #9ca3af;
       font-size: 14px;
     }
 
-    @media (max-width: 550px) {
-      .nav {
-        padding: 13px 15px;
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .footer-links a {
+      color: #d1d5db;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      padding-top: 20px;
+      color: #9ca3af;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 700px) {
+
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .logo {
-        font-size: 23px;
+      nav {
+        gap: 12px;
       }
 
-      .brand-mark {
-        width: 34px;
-        height: 34px;
+      main {
+        padding: 45px 15px 55px;
       }
 
-      nav a {
-        margin-left: 10px;
-        font-size: 13px;
+      .page-header h1 {
+        font-size: 34px;
       }
 
-      .content {
+      .page-header p {
+        font-size: 16px;
+      }
+
+      .content-card {
         padding: 25px 20px;
       }
 
-      h1 {
-        font-size: 32px;
+      .tool-list {
+        grid-template-columns: 1fr;
       }
+
+      .footer-top {
+        flex-direction: column;
+      }
+
     }
+
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="nav">
+  <!-- Header -->
 
-    <a href="index.html" class="brand">
-      <div class="brand-mark">V</div>
+  <header>
 
-      <div class="logo">
-        Vel<span>quro</span>
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-mark">V</span>
+
+        <span>Velquro</span>
+
+      </a>
+
+      <nav>
+
+        <a href="index.html#tools">Tools</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="privacy.html">Privacy</a>
+
+        <a href="terms.html">Terms</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- Main Content -->
+
+  <main>
+
+    <div class="page-header">
+
+      <h1>About Velquro</h1>
+
+      <p>
+        Simple, free and useful online tools designed to make
+        everyday digital tasks faster and easier.
+      </p>
+
+    </div>
+
+
+    <!-- About -->
+
+    <section class="content-card">
+
+      <h2>What is Velquro?</h2>
+
+      <p>
+        Velquro is a collection of free online tools created to
+        help people complete common digital tasks quickly and easily.
+      </p>
+
+      <p>
+        Instead of using complicated software for simple jobs,
+        Velquro provides lightweight browser-based tools that are
+        easy to understand and use.
+      </p>
+
+      <p>
+        The website is designed for students, developers, writers,
+        creators, professionals and anyone who needs a quick online
+        utility.
+      </p>
+
+    </section>
+
+
+    <!-- Tools -->
+
+    <section class="content-card">
+
+      <h2>Our Tools</h2>
+
+      <p>
+        Velquro currently provides tools across several categories.
+      </p>
+
+
+      <div class="category">
+
+        <h3>📝 Text Tools</h3>
+
+        <ul class="tool-list">
+
+          <li>Word Counter</li>
+
+          <li>Case Converter</li>
+
+          <li>Duplicate Line Remover</li>
+
+        </ul>
+
       </div>
-    </a>
-
-    <nav>
-      <a href="index.html">Tools</a>
-      <a href="about.html">About</a>
-    </nav>
-
-  </div>
-</header>
 
 
-<main class="page">
+      <div class="category">
 
-  <div class="content">
+        <h3>💻 Developer & Utility Tools</h3>
 
-    <h1>About Velquro</h1>
+        <ul class="tool-list">
 
-    <p class="intro">
-      Simple, useful and easy-to-use online tools for everyday digital tasks.
-    </p>
+          <li>JSON Formatter & Validator</li>
 
-    <h2>What is Velquro?</h2>
+          <li>Password Generator</li>
 
-    <p>
-      Velquro is a collection of free online tools designed to make
-      common digital tasks faster and easier.
-    </p>
+          <li>Image Compressor</li>
 
-    <p>
-      Our tools are designed with simplicity in mind, so you can get
-      the result you need without unnecessary steps or complicated software.
-    </p>
+        </ul>
 
-    <h2>Our Tools</h2>
-
-    <p>
-      Velquro currently provides tools for text processing, developer
-      utilities, password generation and image compression.
-    </p>
-
-    <ul>
-      <li>Word Counter</li>
-      <li>Case Converter</li>
-      <li>Duplicate Line Remover</li>
-      <li>JSON Formatter & Validator</li>
-      <li>Password Generator</li>
-      <li>Image Compressor</li>
-    </ul>
-
-    <h2>Privacy-Focused Approach</h2>
-
-    <p>
-      Whenever possible, Velquro tools process information directly
-      in your browser rather than requiring you to upload it to a server.
-    </p>
-
-    <p>
-      This can help reduce unnecessary data sharing while using
-      browser-based tools.
-    </p>
-
-    <h2>Our Goal</h2>
-
-    <p>
-      Our goal is to continue building useful, straightforward tools
-      that anyone can access without complicated installation or software.
-    </p>
-
-    <a href="index.html" class="home-button">
-      Back to Tools
-    </a>
-
-  </div>
-
-</main>
+      </div>
 
 
-<footer>
+      <div class="category">
 
-  <p style="color:#d1d5db;">
-    © 2026 Velquro. All rights reserved.
-  </p>
+        <h3>📏 Measurement & Conversion Tools</h3>
 
-</footer>
+        <ul class="tool-list">
+
+          <li>Unit Converter</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="category">
+
+        <h3>🧮 Calculator Tools</h3>
+
+        <ul class="tool-list">
+
+          <li>Percentage Calculator</li>
+
+          <li>Age Calculator</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="category">
+
+        <h3>📱 QR & Generator Tools</h3>
+
+        <ul class="tool-list">
+
+          <li>QR Code Generator</li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- Mission -->
+
+    <section class="content-card highlight">
+
+      <h2>Our Goal</h2>
+
+      <p>
+        Our goal is to build a growing collection of practical
+        online tools that are simple, fast and accessible to people
+        around the world.
+      </p>
+
+      <p>
+        We plan to continue adding useful tools while keeping the
+        experience straightforward and easy to use.
+      </p>
+
+    </section>
+
+
+    <!-- Accessibility -->
+
+    <section class="content-card">
+
+      <h2>Simple & Accessible</h2>
+
+      <p>
+        Velquro tools are designed to work directly in modern web
+        browsers without requiring complicated software installation.
+      </p>
+
+      <p>
+        We aim to keep the interface clean, responsive and usable
+        across desktop, tablet and mobile devices.
+      </p>
+
+    </section>
+
+
+    <!-- Back -->
+
+    <section style="text-align:center; margin-top:30px;">
+
+      <a
+        href="index.html"
+        style="
+          display:inline-block;
+          background:#6d28d9;
+          color:white;
+          padding:12px 22px;
+          border-radius:9px;
+          font-weight:700;
+        "
+      >
+        Explore Velquro Tools
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <h3>Velquro</h3>
+
+          <p>
+            Simple, free and useful online tools for everyday
+            digital tasks.
+          </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+          <a href="index.html">Home</a>
+
+          <a href="index.html#tools">Tools</a>
+
+          <a href="about.html">About</a>
+
+          <a href="contact.html">Contact</a>
+
+          <a href="privacy.html">Privacy</a>
+
+          <a href="terms.html">Terms</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        © 2026 Velquro. All rights reserved.
+
+      </div>
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
