@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Unit Converter - Free Online Unit Conversion Tool | Velquro</title>
+
+  <meta
+    name="description"
+    content="Convert length, weight and temperature units quickly with Velquro's free online unit converter."
+  >
+
+  <meta
+    name="keywords"
+    content="unit converter, online unit converter, length converter, weight converter, temperature converter, km to miles, kg to pounds"
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://fasihuddin313.github.io/unit-converter.html"
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="shortcut icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg?v=2">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Unit Converter - Velquro">
+  <meta
+    property="og:description"
+    content="Free online unit converter for length, weight and temperature."
+  >
+  <meta
+    property="og:url"
+    content="https://fasihuddin313.github.io/unit-converter.html"
+  >
+  <meta property="og:site_name" content="Velquro">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Unit Converter - Velquro">
+  <meta
+    name="twitter:description"
+    content="Convert common units quickly and easily."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 20px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #111827;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      background: #7c3aed;
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      color: #4b5563;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #7c3aed;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px 70px;
+    }
+
+    .breadcrumb {
+      margin-bottom: 25px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .breadcrumb a {
+      color: #7c3aed;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #6b7280;
+      font-size: 17px;
+    }
+
+    .tool-box {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .converter-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 9px;
+      background: #ffffff;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    }
+
+    .category-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .category-button {
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      color: #374151;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .category-button:hover {
+      border-color: #7c3aed;
+      color: #7c3aed;
+    }
+
+    .category-button.active {
+      background: #7c3aed;
+      color: #ffffff;
+      border-color: #7c3aed;
+    }
+
+    .swap-row {
+      text-align: center;
+      margin: 2px 0 18px;
+    }
+
+    .swap-button {
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      padding: 9px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .swap-button:hover {
+      border-color: #7c3aed;
+      color: #7c3aed;
+    }
+
+    .result-box {
+      margin-top: 22px;
+      padding: 20px;
+      border-radius: 12px;
+      background: #f5f3ff;
+      text-align: center;
+      display: none;
+    }
+
+    .result-label {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 5px;
+    }
+
+    .result-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: #5b21b6;
+      word-break: break-word;
+    }
+
+    .info-section {
+      margin-top: 45px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 25px;
+    }
+
+    .info-section h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .info-section h3 {
+      margin-bottom: 5px;
+      margin-top: 24px;
+    }
+
+    .info-section p {
+      color: #4b5563;
+    }
+
+    .related {
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    .related a {
+      display: inline-block;
+      margin: 6px;
+      padding: 9px 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #374151;
+      background: #ffffff;
+      font-size: 14px;
+    }
+
+    .related a:hover {
+      color: #7c3aed;
+      border-color: #7c3aed;
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      background: #ffffff;
+      padding: 25px 20px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #6b7280;
+      text-decoration: none;
+      margin: 0 7px;
+    }
+
+    footer a:hover {
+      color: #7c3aed;
+    }
+
+    @media (max-width: 650px) {
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .converter-row {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-box {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand-mark">V</span>
+        <span>Velquro</span>
+      </a>
+
+      <nav>
+        <a href="index.html">Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      &nbsp;›&nbsp;
+      Unit Converter
+    </div>
+
+
+    <section class="hero">
+      <h1>Unit Converter</h1>
+      <p>
+        Convert length, weight and temperature units quickly and easily.
+      </p>
+    </section>
+
+
+    <section class="tool-box">
+
+      <div class="category-buttons">
+
+        <button
+          class="category-button active"
+          onclick="setCategory('length', this)"
+        >
+          Length
+        </button>
+
+        <button
+          class="category-button"
+          onclick="setCategory('weight', this)"
+        >
+          Weight
+        </button>
+
+        <button
+          class="category-button"
+          onclick="setCategory('temperature', this)"
+        >
+          Temperature
+        </button>
+
+      </div>
+
+
+      <div class="converter-row">
+
+        <div class="field">
+          <label for="fromValue">Value</label>
+
+          <input
+            type="number"
+            id="fromValue"
+            placeholder="Enter value"
+            step="any"
+            oninput="convert()"
+          >
+        </div>
+
+
+        <div class="field">
+          <label for="fromUnit">From</label>
+
+          <select id="fromUnit" onchange="convert()"></select>
+        </div>
+
+      </div>
+
+
+      <div class="swap-row">
+
+        <button
+          class="swap-button"
+          onclick="swapUnits()"
+        >
+          ⇄ Swap Units
+        </button>
+
+      </div>
+
+
+      <div class="converter-row">
+
+        <div class="field">
+          <label for="toUnit">To</label>
+
+          <select id="toUnit" onchange="convert()"></select>
+        </div>
+
+        <div class="field">
+          <label for="resultDisplay">Result</label>
+
+          <input
+            type="text"
+            id="resultDisplay"
+            placeholder="Result"
+            readonly
+          >
+        </div>
+
+      </div>
+
+
+      <div class="result-box" id="resultBox">
+
+        <div class="result-label">
+          Converted Result
+        </div>
+
+        <div class="result-value" id="resultValue">
+          —
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="info-section">
+
+      <h2>Free Online Unit Converter</h2>
+
+      <p>
+        Velquro's unit converter helps you convert common measurements
+        without installing any software. Choose a category, enter a value,
+        select your units and get the result instantly.
+      </p>
+
+
+      <h3>Length Conversion</h3>
+
+      <p>
+        Convert between meters, kilometers, centimeters, millimeters,
+        miles, yards, feet and inches.
+      </p>
+
+
+      <h3>Weight Conversion</h3>
+
+      <p>
+        Convert between kilograms, grams, milligrams, pounds and ounces.
+      </p>
+
+
+      <h3>Temperature Conversion</h3>
+
+      <p>
+        Convert between Celsius, Fahrenheit and Kelvin.
+      </p>
+
+
+      <h3>How to Use</h3>
+
+      <p>
+        Select a category, enter your number, choose the unit you are
+        converting from and select the unit you want to convert to.
+        The result updates automatically.
+      </p>
+
+    </section>
+
+
+    <div class="related">
+
+      <h2>Related Tools</h2>
+
+      <a href="word-counter.html">Word Counter</a>
+
+      <a href="percentage-calculator.html">Percentage Calculator</a>
+
+      <a href="age-calculator.html">Age Calculator</a>
+
+      <a href="qr-code-generator.html">QR Code Generator</a>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <div>
+      <strong>Velquro</strong>
+    </div>
+
+    <div style="margin-top: 8px;">
+      Free online tools for everyday digital tasks.
+    </div>
+
+    <div style="margin-top: 12px;">
+
+      <a href="index.html">Tools</a>
+
+      <a href="about.html">About</a>
+
+      <a href="contact.html">Contact</a>
+
+      <a href="privacy.html">Privacy</a>
+
+      <a href="terms.html">Terms</a>
+
+    </div>
+
+    <div style="margin-top: 12px;">
+      © 2026 Velquro. All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    const units = {
+
+      length: {
+        "Meters": 1,
+        "Kilometers": 1000,
+        "Centimeters": 0.01,
+        "Millimeters": 0.001,
+        "Miles": 1609.344,
+        "Yards": 0.9144,
+        "Feet": 0.3048,
+        "Inches": 0.0254
+      },
+
+      weight: {
+        "Kilograms": 1,
+        "Grams": 0.001,
+        "Milligrams": 0.000001,
+        "Pounds": 0.45359237,
+        "Ounces": 0.028349523125
+      },
+
+      temperature: {
+        "Celsius": "Celsius",
+        "Fahrenheit": "Fahrenheit",
+        "Kelvin": "Kelvin"
+      }
+
+    };
+
+
+    let currentCategory = "length";
+
+
+    function setCategory(category, button) {
+
+      currentCategory = category;
+
+      document
+        .querySelectorAll(".category-button")
+        .forEach(function(btn) {
+          btn.classList.remove("active");
+        });
+
+      button.classList.add("active");
+
+      populateUnits();
+
+      document.getElementById("fromValue").value = "";
+      document.getElementById("resultDisplay").value = "";
+
+      document.getElementById("resultBox").style.display = "none";
+      document.getElementById("resultValue").textContent = "—";
+    }
+
+
+    function populateUnits() {
+
+      const fromUnit = document.getElementById("fromUnit");
+      const toUnit = document.getElementById("toUnit");
+
+      fromUnit.innerHTML = "";
+      toUnit.innerHTML = "";
+
+      Object.keys(units[currentCategory]).forEach(function(unit) {
+
+        const option1 = document.createElement("option");
+        option1.value = unit;
+        option1.textContent = unit;
+
+        const option2 = document.createElement("option");
+        option2.value = unit;
+        option2.textContent = unit;
+
+        fromUnit.appendChild(option1);
+        toUnit.appendChild(option2);
+
+      });
+
+      if (currentCategory === "length") {
+
+        fromUnit.value = "Meters";
+        toUnit.value = "Kilometers";
+
+      }
+
+      if (currentCategory === "weight") {
+
+        fromUnit.value = "Kilograms";
+        toUnit.value = "Pounds";
+
+      }
+
+      if (currentCategory === "temperature") {
+
+        fromUnit.value = "Celsius";
+        toUnit.value = "Fahrenheit";
+
+      }
+
+    }
+
+
+    function convertTemperature(value, from, to) {
+
+      let celsius;
+
+      if (from === "Celsius") {
+        celsius = value;
+      }
+
+      else if (from === "Fahrenheit") {
+        celsius = (value - 32) * 5 / 9;
+      }
+
+      else if (from === "Kelvin") {
+        celsius = value - 273.15;
+      }
+
+
+      if (to === "Celsius") {
+        return celsius;
+      }
+
+      if (to === "Fahrenheit") {
+        return (celsius * 9 / 5) + 32;
+      }
+
+      if (to === "Kelvin") {
+        return celsius + 273.15;
+      }
+
+    }
+
+
+    function convert() {
+
+      const valueInput = document.getElementById("fromValue");
+      const fromUnit = document.getElementById("fromUnit").value;
+      const toUnit = document.getElementById("toUnit").value;
+
+      const resultDisplay = document.getElementById("resultDisplay");
+      const resultBox = document.getElementById("resultBox");
+      const resultValue = document.getElementById("resultValue");
+
+      const value = parseFloat(valueInput.value);
+
+      if (isNaN(value)) {
+
+        resultDisplay.value = "";
+        resultValue.textContent = "—";
+        resultBox.style.display = "none";
+
+        return;
+      }
+
+
+      let result;
+
+
+      if (currentCategory === "temperature") {
+
+        result = convertTemperature(
+          value,
+          fromUnit,
+          toUnit
+        );
+
+      }
+
+      else {
+
+        const baseValue =
+          value * units[currentCategory][fromUnit];
+
+        result =
+          baseValue / units[currentCategory][toUnit];
+
+      }
+
+
+      const roundedResult =
+        Number(result.toFixed(10));
+
+
+      resultDisplay.value =
+        roundedResult + " " + toUnit;
+
+      resultValue.textContent =
+        roundedResult + " " + toUnit;
+
+      resultBox.style.display = "block";
+
+    }
+
+
+    function swapUnits() {
+
+      const fromUnit = document.getElementById("fromUnit");
+      const toUnit = document.getElementById("toUnit");
+
+      const temporary = fromUnit.value;
+
+      fromUnit.value = toUnit.value;
+      toUnit.value = temporary;
+
+      convert();
+
+    }
+
+
+    populateUnits();
+
+  </script>
+
+</body>
+</html>
