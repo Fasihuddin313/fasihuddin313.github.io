@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Age Calculator - Free Online Tool | Velquro</title>
+
+  <meta
+    name="description"
+    content="Calculate your exact age in years, months and days with Velquro's free online age calculator."
+  >
+
+  <meta
+    name="keywords"
+    content="age calculator, calculate age, exact age calculator, birthday calculator, date of birth calculator"
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://fasihuddin313.github.io/age-calculator.html"
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="shortcut icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg?v=2">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Age Calculator - Velquro">
+  <meta
+    property="og:description"
+    content="Calculate your exact age in years, months and days."
+  >
+  <meta
+    property="og:url"
+    content="https://fasihuddin313.github.io/age-calculator.html"
+  >
+  <meta property="og:site_name" content="Velquro">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Age Calculator - Velquro">
+  <meta
+    name="twitter:description"
+    content="Calculate your exact age quickly and easily."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 20px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #111827;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      background: #7c3aed;
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      color: #4b5563;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #7c3aed;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px 70px;
+    }
+
+    .breadcrumb {
+      margin-bottom: 25px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .breadcrumb a {
+      color: #7c3aed;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #6b7280;
+      font-size: 17px;
+    }
+
+    .tool-box {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .input-group {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 9px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    }
+
+    .calculate-button {
+      display: block;
+      width: 100%;
+      margin-top: 18px;
+      padding: 13px 20px;
+      border: none;
+      border-radius: 9px;
+      background: #7c3aed;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .calculate-button:hover {
+      background: #6d28d9;
+    }
+
+    .result {
+      display: none;
+      margin-top: 25px;
+    }
+
+    .result-title {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 15px;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .result-card {
+      background: #f5f3ff;
+      border-radius: 12px;
+      padding: 18px 10px;
+      text-align: center;
+    }
+
+    .result-number {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      color: #5b21b6;
+    }
+
+    .result-label {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .birthday-box {
+      margin-top: 18px;
+      padding: 16px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .birthday-box strong {
+      color: #5b21b6;
+    }
+
+    .error {
+      display: none;
+      margin-top: 18px;
+      padding: 12px;
+      background: #fef2f2;
+      color: #b91c1c;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .info-section {
+      margin-top: 45px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 25px;
+    }
+
+    .info-section h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .info-section h3 {
+      margin-top: 24px;
+      margin-bottom: 5px;
+    }
+
+    .info-section p {
+      color: #4b5563;
+    }
+
+    .related {
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    .related a {
+      display: inline-block;
+      margin: 6px;
+      padding: 9px 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #374151;
+      background: #ffffff;
+      font-size: 14px;
+    }
+
+    .related a:hover {
+      color: #7c3aed;
+      border-color: #7c3aed;
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      background: #ffffff;
+      padding: 25px 20px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #6b7280;
+      text-decoration: none;
+      margin: 0 7px;
+    }
+
+    footer a:hover {
+      color: #7c3aed;
+    }
+
+    @media (max-width: 650px) {
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .tool-box {
+        padding: 20px;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand-mark">V</span>
+        <span>Velquro</span>
+      </a>
+
+      <nav>
+        <a href="index.html">Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      &nbsp;›&nbsp;
+      Age Calculator
+    </div>
+
+
+    <section class="hero">
+
+      <h1>Age Calculator</h1>
+
+      <p>
+        Calculate your exact age in years, months and days.
+      </p>
+
+    </section>
+
+
+    <section class="tool-box">
+
+      <div class="input-group">
+
+        <label for="birthDate">
+          Enter your date of birth
+        </label>
+
+        <input
+          type="date"
+          id="birthDate"
+        >
+
+        <button
+          class="calculate-button"
+          onclick="calculateAge()"
+        >
+          Calculate Age
+        </button>
+
+      </div>
+
+
+      <div class="error" id="error">
+        Please enter a valid date of birth.
+      </div>
+
+
+      <div class="result" id="result">
+
+        <div class="result-title">
+          Your exact age is:
+        </div>
+
+        <div class="result-grid">
+
+          <div class="result-card">
+            <span
+              class="result-number"
+              id="years"
+            >0</span>
+
+            <span class="result-label">
+              Years
+            </span>
+          </div>
+
+
+          <div class="result-card">
+            <span
+              class="result-number"
+              id="months"
+            >0</span>
+
+            <span class="result-label">
+              Months
+            </span>
+          </div>
+
+
+          <div class="result-card">
+            <span
+              class="result-number"
+              id="days"
+            >0</span>
+
+            <span class="result-label">
+              Days
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="birthday-box" id="birthdayText">
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="info-section">
+
+      <h2>Free Online Age Calculator</h2>
+
+      <p>
+        Velquro's age calculator helps you calculate your exact age
+        from your date of birth. Enter your birthday and the calculator
+        will show your age in years, months and days.
+      </p>
+
+
+      <h3>How to Use</h3>
+
+      <p>
+        Select your date of birth and click the Calculate Age button.
+        Your exact age will be calculated automatically.
+      </p>
+
+
+      <h3>When Can You Use It?</h3>
+
+      <p>
+        An age calculator can be useful for birthdays, forms,
+        applications, school admissions, eligibility checks and
+        everyday date calculations.
+      </p>
+
+
+      <h3>Privacy</h3>
+
+      <p>
+        Your date of birth is processed directly in your browser.
+        Velquro does not require an account to use this calculator.
+      </p>
+
+    </section>
+
+
+    <div class="related">
+
+      <h2>Related Tools</h2>
+
+      <a href="percentage-calculator.html">
+        Percentage Calculator
+      </a>
+
+      <a href="unit-converter.html">
+        Unit Converter
+      </a>
+
+      <a href="word-counter.html">
+        Word Counter
+      </a>
+
+      <a href="qr-code-generator.html">
+        QR Code Generator
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <div>
+      <strong>Velquro</strong>
+    </div>
+
+    <div style="margin-top: 8px;">
+      Free online tools for everyday digital tasks.
+    </div>
+
+    <div style="margin-top: 12px;">
+
+      <a href="index.html">Tools</a>
+
+      <a href="about.html">About</a>
+
+      <a href="contact.html">Contact</a>
+
+      <a href="privacy.html">Privacy</a>
+
+      <a href="terms.html">Terms</a>
+
+    </div>
+
+    <div style="margin-top: 12px;">
+      © 2026 Velquro. All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    function calculateAge() {
+
+      const birthInput =
+        document.getElementById("birthDate");
+
+      const error =
+        document.getElementById("error");
+
+      const result =
+        document.getElementById("result");
+
+      const birthdayText =
+        document.getElementById("birthdayText");
+
+
+      if (!birthInput.value) {
+
+        error.textContent =
+          "Please enter your date of birth.";
+
+        error.style.display = "block";
+        result.style.display = "none";
+
+        return;
+
+      }
+
+
+      const birthDate =
+        new Date(
+          birthInput.value + "T00:00:00"
+        );
+
+      const today =
+        new Date();
+
+
+      if (
+        isNaN(birthDate.getTime()) ||
+        birthDate > today
+      ) {
+
+        error.textContent =
+          "Please enter a valid date of birth.";
+
+        error.style.display = "block";
+        result.style.display = "none";
+
+        return;
+
+      }
+
+
+      error.style.display = "none";
+
+
+      let years =
+        today.getFullYear() -
+        birthDate.getFullYear();
+
+      let months =
+        today.getMonth() -
+        birthDate.getMonth();
+
+      let days =
+        today.getDate() -
+        birthDate.getDate();
+
+
+      if (days < 0) {
+
+        months--;
+
+        const previousMonth =
+          new Date(
+            today.getFullYear(),
+            today.getMonth(),
+            0
+          );
+
+        days +=
+          previousMonth.getDate();
+
+      }
+
+
+      if (months < 0) {
+
+        years--;
+        months += 12;
+
+      }
+
+
+      document.getElementById("years").textContent =
+        years;
+
+      document.getElementById("months").textContent =
+        months;
+
+      document.getElementById("days").textContent =
+        days;
+
+
+      let nextBirthday =
+        new Date(
+          today.getFullYear(),
+          birthDate.getMonth(),
+          birthDate.getDate()
+        );
+
+
+      if (nextBirthday < today) {
+
+        nextBirthday =
+          new Date(
+            today.getFullYear() + 1,
+            birthDate.getMonth(),
+            birthDate.getDate()
+          );
+
+      }
+
+
+      const oneDay =
+        1000 * 60 * 60 * 24;
+
+
+      const daysUntilBirthday =
+        Math.ceil(
+          (
+            nextBirthday - today
+          ) / oneDay
+        );
+
+
+      if (daysUntilBirthday === 0) {
+
+        birthdayText.innerHTML =
+          "🎉 <strong>Happy Birthday!</strong>";
+
+      }
+
+      else if (daysUntilBirthday === 1) {
+
+        birthdayText.innerHTML =
+          "Your next birthday is <strong>tomorrow!</strong>";
+
+      }
+
+      else {
+
+        birthdayText.innerHTML =
+          "Your next birthday is in <strong>" +
+          daysUntilBirthday +
+          " days</strong>.";
+
+      }
+
+
+      result.style.display = "block";
+
+    }
+
+  </script>
+
+</body>
+</html>
