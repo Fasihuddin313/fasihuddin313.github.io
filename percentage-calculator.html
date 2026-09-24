@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Percentage Calculator - Free Online Tool | Velquro</title>
+
+  <meta
+    name="description"
+    content="Use Velquro's free percentage calculator to calculate percentages, percentage increases, decreases and more."
+  >
+
+  <meta
+    name="keywords"
+    content="percentage calculator, percent calculator, percentage increase calculator, percentage decrease calculator, online calculator"
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://fasihuddin313.github.io/percentage-calculator.html"
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="shortcut icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg?v=2">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Percentage Calculator - Velquro">
+  <meta
+    property="og:description"
+    content="Free online percentage calculator for everyday calculations."
+  >
+  <meta
+    property="og:url"
+    content="https://fasihuddin313.github.io/percentage-calculator.html"
+  >
+  <meta property="og:site_name" content="Velquro">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Percentage Calculator - Velquro">
+  <meta
+    name="twitter:description"
+    content="Calculate percentages, increases and decreases quickly."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 20px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #111827;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      background: #7c3aed;
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      color: #4b5563;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #7c3aed;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px 70px;
+    }
+
+    .breadcrumb {
+      margin-bottom: 25px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .breadcrumb a {
+      color: #7c3aed;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #6b7280;
+      font-size: 17px;
+    }
+
+    .calculator {
+      display: grid;
+      gap: 20px;
+    }
+
+    .calc-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .calc-card h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 21px;
+    }
+
+    .calc-card p {
+      color: #6b7280;
+      margin-top: 0;
+    }
+
+    .input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 9px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    }
+
+    .calc-button {
+      margin-top: 18px;
+      border: none;
+      background: #7c3aed;
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .calc-button:hover {
+      background: #6d28d9;
+    }
+
+    .result {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 10px;
+      background: #f5f3ff;
+      color: #5b21b6;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      display: none;
+      word-break: break-word;
+    }
+
+    .info-section {
+      margin-top: 45px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 25px;
+    }
+
+    .info-section h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .info-section h3 {
+      margin-top: 24px;
+      margin-bottom: 5px;
+    }
+
+    .info-section p {
+      color: #4b5563;
+    }
+
+    .related {
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    .related a {
+      display: inline-block;
+      margin: 6px;
+      padding: 9px 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #374151;
+      background: #ffffff;
+      font-size: 14px;
+    }
+
+    .related a:hover {
+      color: #7c3aed;
+      border-color: #7c3aed;
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      background: #ffffff;
+      padding: 25px 20px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #6b7280;
+      text-decoration: none;
+      margin: 0 7px;
+    }
+
+    footer a:hover {
+      color: #7c3aed;
+    }
+
+    @media (max-width: 650px) {
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .input-row {
+        grid-template-columns: 1fr;
+      }
+
+      .calc-card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand-mark">V</span>
+        <span>Velquro</span>
+      </a>
+
+      <nav>
+        <a href="index.html">Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      &nbsp;›&nbsp;
+      Percentage Calculator
+    </div>
+
+
+    <section class="hero">
+
+      <h1>Percentage Calculator</h1>
+
+      <p>
+        Calculate percentages, increases and decreases quickly and easily.
+      </p>
+
+    </section>
+
+
+    <section class="calculator">
+
+
+      <!-- Calculator 1 -->
+
+      <div class="calc-card">
+
+        <h2>What is X% of Y?</h2>
+
+        <p>
+          Find a percentage of any number.
+        </p>
+
+        <div class="input-row">
+
+          <div class="field">
+
+            <label for="percent1">
+              Percentage (%)
+            </label>
+
+            <input
+              type="number"
+              id="percent1"
+              placeholder="Example: 20"
+              step="any"
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="number1">
+              Number
+            </label>
+
+            <input
+              type="number"
+              id="number1"
+              placeholder="Example: 500"
+              step="any"
+            >
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="calc-button"
+          onclick="calculatePercentage()"
+        >
+          Calculate
+        </button>
+
+
+        <div class="result" id="result1"></div>
+
+      </div>
+
+
+      <!-- Calculator 2 -->
+
+      <div class="calc-card">
+
+        <h2>X is what percentage of Y?</h2>
+
+        <p>
+          Find what percentage one number is of another.
+        </p>
+
+        <div class="input-row">
+
+          <div class="field">
+
+            <label for="number2">
+              Number X
+            </label>
+
+            <input
+              type="number"
+              id="number2"
+              placeholder="Example: 50"
+              step="any"
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="number3">
+              Number Y
+            </label>
+
+            <input
+              type="number"
+              id="number3"
+              placeholder="Example: 200"
+              step="any"
+            >
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="calc-button"
+          onclick="calculateWhatPercent()"
+        >
+          Calculate
+        </button>
+
+
+        <div class="result" id="result2"></div>
+
+      </div>
+
+
+      <!-- Calculator 3 -->
+
+      <div class="calc-card">
+
+        <h2>Percentage Increase or Decrease</h2>
+
+        <p>
+          Find the percentage change between two numbers.
+        </p>
+
+        <div class="input-row">
+
+          <div class="field">
+
+            <label for="oldValue">
+              Original Value
+            </label>
+
+            <input
+              type="number"
+              id="oldValue"
+              placeholder="Example: 100"
+              step="any"
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="newValue">
+              New Value
+            </label>
+
+            <input
+              type="number"
+              id="newValue"
+              placeholder="Example: 125"
+              step="any"
+            >
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="calc-button"
+          onclick="calculateChange()"
+        >
+          Calculate
+        </button>
+
+
+        <div class="result" id="result3"></div>
+
+      </div>
+
+
+    </section>
+
+
+    <section class="info-section">
+
+      <h2>Free Online Percentage Calculator</h2>
+
+      <p>
+        Velquro's percentage calculator makes everyday percentage
+        calculations quick and simple. You can calculate a percentage
+        of a number, find what percentage one number represents of
+        another, and calculate percentage increases or decreases.
+      </p>
+
+
+      <h3>Calculate a Percentage</h3>
+
+      <p>
+        To calculate X% of Y, multiply Y by X and divide the result by 100.
+      </p>
+
+
+      <h3>Find What Percentage One Number Is</h3>
+
+      <p>
+        Enter the two numbers and the calculator will show what percentage
+        the first number represents of the second number.
+      </p>
+
+
+      <h3>Percentage Increase or Decrease</h3>
+
+      <p>
+        Enter the original value and the new value to calculate the
+        percentage change.
+      </p>
+
+
+      <h3>Common Uses</h3>
+
+      <p>
+        Percentage calculations can be useful for discounts, price changes,
+        marks, statistics, business calculations, shopping and everyday
+        financial planning.
+      </p>
+
+    </section>
+
+
+    <div class="related">
+
+      <h2>Related Tools</h2>
+
+      <a href="unit-converter.html">
+        Unit Converter
+      </a>
+
+      <a href="word-counter.html">
+        Word Counter
+      </a>
+
+      <a href="age-calculator.html">
+        Age Calculator
+      </a>
+
+      <a href="qr-code-generator.html">
+        QR Code Generator
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <div>
+      <strong>Velquro</strong>
+    </div>
+
+    <div style="margin-top: 8px;">
+      Free online tools for everyday digital tasks.
+    </div>
+
+    <div style="margin-top: 12px;">
+
+      <a href="index.html">Tools</a>
+
+      <a href="about.html">About</a>
+
+      <a href="contact.html">Contact</a>
+
+      <a href="privacy.html">Privacy</a>
+
+      <a href="terms.html">Terms</a>
+
+    </div>
+
+    <div style="margin-top: 12px;">
+      © 2026 Velquro. All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    function formatNumber(number) {
+
+      return Number(
+        number.toFixed(10)
+      );
+
+    }
+
+
+    function calculatePercentage() {
+
+      const percentage =
+        parseFloat(
+          document.getElementById("percent1").value
+        );
+
+      const number =
+        parseFloat(
+          document.getElementById("number1").value
+        );
+
+      const result =
+        document.getElementById("result1");
+
+
+      if (
+        isNaN(percentage) ||
+        isNaN(number)
+      ) {
+
+        result.textContent =
+          "Please enter both values.";
+
+        result.style.display = "block";
+
+        return;
+
+      }
+
+
+      const answer =
+        (percentage / 100) * number;
+
+
+      result.textContent =
+        formatNumber(answer);
+
+      result.style.display = "block";
+
+    }
+
+
+    function calculateWhatPercent() {
+
+      const numberX =
+        parseFloat(
+          document.getElementById("number2").value
+        );
+
+      const numberY =
+        parseFloat(
+          document.getElementById("number3").value
+        );
+
+      const result =
+        document.getElementById("result2");
+
+
+      if (
+        isNaN(numberX) ||
+        isNaN(numberY)
+      ) {
+
+        result.textContent =
+          "Please enter both values.";
+
+        result.style.display = "block";
+
+        return;
+
+      }
+
+
+      if (numberY === 0) {
+
+        result.textContent =
+          "The second number cannot be zero.";
+
+        result.style.display = "block";
+
+        return;
+
+      }
+
+
+      const answer =
+        (numberX / numberY) * 100;
+
+
+      result.textContent =
+        formatNumber(answer) + "%";
+
+      result.style.display = "block";
+
+    }
+
+
+    function calculateChange() {
+
+      const oldValue =
+        parseFloat(
+          document.getElementById("oldValue").value
+        );
+
+      const newValue =
+        parseFloat(
+          document.getElementById("newValue").value
+        );
+
+      const result =
+        document.getElementById("result3");
+
+
+      if (
+        isNaN(oldValue) ||
+        isNaN(newValue)
+      ) {
+
+        result.textContent =
+          "Please enter both values.";
+
+        result.style.display = "block";
+
+        return;
+
+      }
+
+
+      if (oldValue === 0) {
+
+        result.textContent =
+          "Original value cannot be zero.";
+
+        result.style.display = "block";
+
+        return;
+
+      }
+
+
+      const change =
+        ((newValue - oldValue) / Math.abs(oldValue)) * 100;
+
+
+      const rounded =
+        formatNumber(Math.abs(change));
+
+
+      if (change > 0) {
+
+        result.textContent =
+          "Increase: " + rounded + "%";
+
+      }
+
+      else if (change < 0) {
+
+        result.textContent =
+          "Decrease: " + rounded + "%";
+
+      }
+
+      else {
+
+        result.textContent =
+          "No change: 0%";
+
+      }
+
+
+      result.style.display = "block";
+
+    }
+
+  </script>
+
+</body>
+</html>
