@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Case Converter - Uppercase, Lowercase & Title Case | Velquro</title>
+
+  <meta
+    name="description"
+    content="Convert text to uppercase, lowercase, title case and sentence case with Velquro's free online Case Converter."
+  >
+
+  <meta
+    name="keywords"
+    content="case converter, uppercase converter, lowercase converter, title case converter, sentence case converter, text converter"
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://fasihuddin313.github.io/case-converter.html">
+
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="shortcut icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg?v=2">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Case Converter - Velquro">
+  <meta
+    property="og:description"
+    content="Free online tool to convert text between uppercase, lowercase, title case and sentence case."
+  >
+  <meta property="og:url" content="https://fasihuddin313.github.io/case-converter.html">
+  <meta property="og:site_name" content="Velquro">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 20px;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #111827;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      background: #7c3aed;
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #7c3aed;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      color: #374151;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #7c3aed;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 55px 20px 70px;
+    }
+
+    .breadcrumb {
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .breadcrumb a {
+      color: #7c3aed;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin: 0 0 12px;
+      letter-spacing: -1px;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: auto;
+      color: #6b7280;
+      font-size: 17px;
+    }
+
+    .tool-box {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 280px;
+      resize: vertical;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    button {
+      border: none;
+      background: #7c3aed;
+      color: white;
+      padding: 12px 10px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background: #6d28d9;
+    }
+
+    .clear-btn {
+      background: #374151;
+    }
+
+    .clear-btn:hover {
+      background: #1f2937;
+    }
+
+    .content {
+      margin-top: 45px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 25px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 19px;
+      margin-top: 25px;
+    }
+
+    .content p {
+      color: #4b5563;
+    }
+
+    .related {
+      margin-top: 35px;
+    }
+
+    .related a {
+      display: inline-block;
+      margin: 6px 8px 6px 0;
+      padding: 8px 12px;
+      background: #f3f4f6;
+      border-radius: 8px;
+      color: #374151;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .related a:hover {
+      background: #ede9fe;
+      color: #7c3aed;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    .footer-brand {
+      color: white;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .footer-links {
+      margin: 18px 0;
+    }
+
+    .footer-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .buttons {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .buttons {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav">
+
+      <a href="index.html" class="brand">
+        <div class="brand-mark">V</div>
+        <div class="logo">Vel<span>quro</span></div>
+      </a>
+
+      <nav>
+        <a href="index.html">Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <div class="breadcrumb">
+      <a href="index.html">Velquro</a> / Case Converter
+    </div>
+
+    <section class="hero">
+
+      <h1>Free Case Converter</h1>
+
+      <p class="intro">
+        Convert your text to uppercase, lowercase, title case or sentence case instantly.
+      </p>
+
+    </section>
+
+    <section class="tool-box">
+
+      <textarea
+        id="textInput"
+        placeholder="Type or paste your text here..."
+        aria-label="Text to convert"
+      ></textarea>
+
+      <div class="buttons">
+
+        <button onclick="convertUppercase()">
+          UPPERCASE
+        </button>
+
+        <button onclick="convertLowercase()">
+          lowercase
+        </button>
+
+        <button onclick="convertTitleCase()">
+          Title Case
+        </button>
+
+        <button onclick="convertSentenceCase()">
+          Sentence case
+        </button>
+
+        <button class="clear-btn" onclick="clearText()">
+          Clear
+        </button>
+
+      </div>
+
+    </section>
+
+    <section class="content">
+
+      <h2>Online Case Converter</h2>
+
+      <p>
+        Velquro's free Case Converter lets you quickly change text between
+        uppercase, lowercase, title case and sentence case. It is useful for
+        writing, editing, formatting and preparing text for documents.
+      </p>
+
+      <h3>How to use the Case Converter</h3>
+
+      <p>
+        Enter or paste your text into the text box and select the desired
+        case format. The text will be converted instantly in your browser.
+      </p>
+
+      <h3>Is my text uploaded?</h3>
+
+      <p>
+        No. The conversion happens directly in your browser, so the tool
+        does not need to upload your text to a server.
+      </p>
+
+      <div class="related">
+
+        <h3>More Free Tools</h3>
+
+        <a href="word-counter.html">Word Counter</a>
+        <a href="duplicate-line-remover.html">Duplicate Line Remover</a>
+        <a href="json-formatter.html">JSON Formatter</a>
+        <a href="password-generator.html">Password Generator</a>
+        <a href="image-compressor.html">Image Compressor</a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="footer-brand">
+      Velquro
+    </div>
+
+    <p>
+      Free online tools for everyday digital tasks.
+    </p>
+
+    <div class="footer-links">
+      <a href="index.html">Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+
+    <p>
+      © 2026 Velquro. All rights reserved.
+    </p>
+
+  </footer>
+
+  <script>
+    const textInput = document.getElementById("textInput");
+
+    function convertUppercase() {
+      textInput.value = textInput.value.toUpperCase();
+    }
+
+    function convertLowercase() {
+      textInput.value = textInput.value.toLowerCase();
+    }
+
+    function convertTitleCase() {
+      textInput.value = textInput.value
+        .toLowerCase()
+        .replace(/\b\w/g, function(letter) {
+          return letter.toUpperCase();
+        });
+    }
+
+    function convertSentenceCase() {
+      const text = textInput.value.toLowerCase();
+
+      textInput.value = text.replace(
+        /(^\s*\w|[.!?]\s*\w)/g,
+        function(letter) {
+          return letter.toUpperCase();
+        }
+      );
+    }
+
+    function clearText() {
+      textInput.value = "";
+      textInput.focus();
+    }
+  </script>
+
+</body>
+</html>
