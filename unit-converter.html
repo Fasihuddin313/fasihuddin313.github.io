@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,28 +32,59 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Unit Converter - Velquro">
+
+  <meta
+    property="og:title"
+    content="Unit Converter - Velquro"
+  >
+
   <meta
     property="og:description"
     content="Free online unit converter for length, weight and temperature."
   >
+
   <meta
     property="og:url"
     content="https://fasihuddin313.github.io/unit-converter.html"
   >
-  <meta property="og:site_name" content="Velquro">
+
+  <meta
+    property="og:site_name"
+    content="Velquro"
+  >
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Unit Converter - Velquro">
+  <meta
+    name="twitter:card"
+    content="summary"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Unit Converter - Velquro"
+  >
+
   <meta
     name="twitter:description"
     content="Convert common units quickly and easily."
   >
 
+  <!-- Google AdSense -->
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9726069290156048"
+    crossorigin="anonymous">
+  </script>
+
+
   <style>
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -62,6 +94,11 @@
       color: #111827;
       line-height: 1.6;
     }
+
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       background: #ffffff;
@@ -117,10 +154,37 @@
       color: #7c3aed;
     }
 
+
+    /* =========================
+       ADVERTISEMENT
+    ========================= */
+
+    .top-ad {
+      width: 100%;
+      max-width: 1100px;
+      margin: 18px auto 0;
+      padding: 0 20px;
+      min-height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top-ad .adsbygoogle {
+      display: block;
+      width: 100%;
+      min-height: 90px;
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
     main {
       max-width: 900px;
       margin: auto;
-      padding: 40px 20px 70px;
+      padding: 30px 20px 70px;
     }
 
     .breadcrumb {
@@ -133,6 +197,15 @@
       color: #7c3aed;
       text-decoration: none;
     }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       text-align: center;
@@ -151,6 +224,11 @@
       font-size: 17px;
     }
 
+
+    /* =========================
+       TOOL BOX
+    ========================= */
+
     .tool-box {
       background: #ffffff;
       border: 1px solid #e5e7eb;
@@ -158,6 +236,46 @@
       padding: 25px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
     }
+
+
+    /* =========================
+       CATEGORY BUTTONS
+    ========================= */
+
+    .category-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .category-button {
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      color: #374151;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .category-button:hover {
+      border-color: #7c3aed;
+      color: #7c3aed;
+    }
+
+    .category-button.active {
+      background: #7c3aed;
+      color: #ffffff;
+      border-color: #7c3aed;
+    }
+
+
+    /* =========================
+       CONVERTER
+    ========================= */
 
     .converter-row {
       display: grid;
@@ -194,34 +312,10 @@
       box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
     }
 
-    .category-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 22px;
-    }
 
-    .category-button {
-      border: 1px solid #d1d5db;
-      background: #ffffff;
-      color: #374151;
-      padding: 10px 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .category-button:hover {
-      border-color: #7c3aed;
-      color: #7c3aed;
-    }
-
-    .category-button.active {
-      background: #7c3aed;
-      color: #ffffff;
-      border-color: #7c3aed;
-    }
+    /* =========================
+       SWAP BUTTON
+    ========================= */
 
     .swap-row {
       text-align: center;
@@ -241,6 +335,11 @@
       border-color: #7c3aed;
       color: #7c3aed;
     }
+
+
+    /* =========================
+       RESULT
+    ========================= */
 
     .result-box {
       margin-top: 22px;
@@ -264,8 +363,33 @@
       word-break: break-word;
     }
 
+
+    /* =========================
+       MIDDLE AD
+    ========================= */
+
+    .content-ad {
+      width: 100%;
+      min-height: 100px;
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content-ad .adsbygoogle {
+      display: block;
+      width: 100%;
+      min-height: 100px;
+    }
+
+
+    /* =========================
+       INFORMATION
+    ========================= */
+
     .info-section {
-      margin-top: 45px;
+      margin-top: 35px;
       background: #ffffff;
       border: 1px solid #e5e7eb;
       border-radius: 16px;
@@ -286,9 +410,18 @@
       color: #4b5563;
     }
 
+
+    /* =========================
+       RELATED TOOLS
+    ========================= */
+
     .related {
       margin-top: 35px;
       text-align: center;
+    }
+
+    .related h2 {
+      margin-bottom: 15px;
     }
 
     .related a {
@@ -307,6 +440,11 @@
       color: #7c3aed;
       border-color: #7c3aed;
     }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       border-top: 1px solid #e5e7eb;
@@ -327,7 +465,13 @@
       color: #7c3aed;
     }
 
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 650px) {
+
       .header-inner {
         flex-direction: column;
       }
@@ -347,61 +491,117 @@
       .tool-box {
         padding: 18px;
       }
+
+      .top-ad {
+        padding: 0 12px;
+      }
+
+      main {
+        padding-top: 25px;
+      }
+
     }
+
   </style>
+
 </head>
 
+
 <body>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9726069290156048"
-     crossorigin="anonymous"></script>
-<!-- box ad -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9726069290156048"
-     data-ad-slot="5306253795"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
+
     <div class="header-inner">
 
       <a href="index.html" class="brand">
+
         <span class="brand-mark">V</span>
+
         <span>Velquro</span>
+
       </a>
 
+
       <nav>
+
         <a href="index.html">Tools</a>
+
         <a href="about.html">About</a>
+
         <a href="contact.html">Contact</a>
+
         <a href="privacy.html">Privacy</a>
+
         <a href="terms.html">Terms</a>
+
       </nav>
 
     </div>
+
   </header>
 
 
+  <!-- =========================
+       TOP AD
+  ========================= -->
+
+  <div class="top-ad">
+
+    <ins
+      class="adsbygoogle"
+      data-ad-client="ca-pub-9726069290156048"
+      data-ad-slot="5306253795"
+      data-ad-format="auto"
+      data-full-width-responsive="true">
+    </ins>
+
+  </div>
+
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================= -->
+
   <main>
 
+
+    <!-- Breadcrumb -->
+
     <div class="breadcrumb">
+
       <a href="index.html">Home</a>
+
       &nbsp;›&nbsp;
+
       Unit Converter
+
     </div>
 
 
+    <!-- Hero -->
+
     <section class="hero">
+
       <h1>Unit Converter</h1>
+
       <p>
         Convert length, weight and temperature units quickly and easily.
       </p>
+
     </section>
 
 
+    <!-- Converter -->
+
     <section class="tool-box">
+
+
+      <!-- Categories -->
 
       <div class="category-buttons">
 
@@ -412,12 +612,14 @@
           Length
         </button>
 
+
         <button
           class="category-button"
           onclick="setCategory('weight', this)"
         >
           Weight
         </button>
+
 
         <button
           class="category-button"
@@ -429,10 +631,16 @@
       </div>
 
 
+      <!-- First Row -->
+
       <div class="converter-row">
 
+
         <div class="field">
-          <label for="fromValue">Value</label>
+
+          <label for="fromValue">
+            Value
+          </label>
 
           <input
             type="number"
@@ -441,17 +649,27 @@
             step="any"
             oninput="convert()"
           >
+
         </div>
 
 
         <div class="field">
-          <label for="fromUnit">From</label>
 
-          <select id="fromUnit" onchange="convert()"></select>
+          <label for="fromUnit">
+            From
+          </label>
+
+          <select
+            id="fromUnit"
+            onchange="convert()">
+          </select>
+
         </div>
 
       </div>
 
+
+      <!-- Swap -->
 
       <div class="swap-row">
 
@@ -465,16 +683,30 @@
       </div>
 
 
+      <!-- Second Row -->
+
       <div class="converter-row">
 
-        <div class="field">
-          <label for="toUnit">To</label>
 
-          <select id="toUnit" onchange="convert()"></select>
+        <div class="field">
+
+          <label for="toUnit">
+            To
+          </label>
+
+          <select
+            id="toUnit"
+            onchange="convert()">
+          </select>
+
         </div>
 
+
         <div class="field">
-          <label for="resultDisplay">Result</label>
+
+          <label for="resultDisplay">
+            Result
+          </label>
 
           <input
             type="text"
@@ -482,29 +714,64 @@
             placeholder="Result"
             readonly
           >
+
         </div>
 
       </div>
 
 
-      <div class="result-box" id="resultBox">
+      <!-- Result Box -->
+
+      <div
+        class="result-box"
+        id="resultBox"
+      >
 
         <div class="result-label">
           Converted Result
         </div>
 
-        <div class="result-value" id="resultValue">
+        <div
+          class="result-value"
+          id="resultValue"
+        >
           —
         </div>
 
       </div>
 
+
     </section>
 
 
+    <!-- =========================
+         MIDDLE AD
+    ========================= -->
+
+    <div class="content-ad">
+
+      <ins
+        class="adsbygoogle"
+        data-ad-client="ca-pub-9726069290156048"
+        data-ad-slot="5306253795"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+      </ins>
+
+    </div>
+
+
+    <!-- =========================
+         INFORMATION
+    ========================= -->
+
     <section class="info-section">
 
-      <h2>Free Online Unit Converter</h2>
+
+      <h2>
+        Free Online Unit Converter
+      </h2>
+
 
       <p>
         Velquro's unit converter helps you convert common measurements
@@ -513,7 +780,9 @@
       </p>
 
 
-      <h3>Length Conversion</h3>
+      <h3>
+        Length Conversion
+      </h3>
 
       <p>
         Convert between meters, kilometers, centimeters, millimeters,
@@ -521,21 +790,27 @@
       </p>
 
 
-      <h3>Weight Conversion</h3>
+      <h3>
+        Weight Conversion
+      </h3>
 
       <p>
         Convert between kilograms, grams, milligrams, pounds and ounces.
       </p>
 
 
-      <h3>Temperature Conversion</h3>
+      <h3>
+        Temperature Conversion
+      </h3>
 
       <p>
         Convert between Celsius, Fahrenheit and Kelvin.
       </p>
 
 
-      <h3>How to Use</h3>
+      <h3>
+        How to Use
+      </h3>
 
       <p>
         Select a category, enter your number, choose the unit you are
@@ -543,84 +818,155 @@
         The result updates automatically.
       </p>
 
+
     </section>
 
 
+    <!-- =========================
+         RELATED TOOLS
+    ========================= -->
+
     <div class="related">
 
-      <h2>Related Tools</h2>
 
-      <a href="word-counter.html">Word Counter</a>
+      <h2>
+        Related Tools
+      </h2>
 
-      <a href="percentage-calculator.html">Percentage Calculator</a>
 
-      <a href="age-calculator.html">Age Calculator</a>
+      <a href="word-counter.html">
+        Word Counter
+      </a>
 
-      <a href="qr-code-generator.html">QR Code Generator</a>
+
+      <a href="percentage-calculator.html">
+        Percentage Calculator
+      </a>
+
+
+      <a href="age-calculator.html">
+        Age Calculator
+      </a>
+
+
+      <a href="bmi-calculator.html">
+        BMI Calculator
+      </a>
+
+
+      <a href="qr-code-generator.html">
+        QR Code Generator
+      </a>
+
 
     </div>
+
 
   </main>
 
 
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
+
 
     <div>
       <strong>Velquro</strong>
     </div>
 
+
     <div style="margin-top: 8px;">
       Free online tools for everyday digital tasks.
     </div>
 
+
     <div style="margin-top: 12px;">
 
-      <a href="index.html">Tools</a>
+      <a href="index.html">
+        Tools
+      </a>
 
-      <a href="about.html">About</a>
+      <a href="about.html">
+        About
+      </a>
 
-      <a href="contact.html">Contact</a>
+      <a href="contact.html">
+        Contact
+      </a>
 
-      <a href="privacy.html">Privacy</a>
+      <a href="privacy.html">
+        Privacy
+      </a>
 
-      <a href="terms.html">Terms</a>
+      <a href="terms.html">
+        Terms
+      </a>
 
     </div>
+
 
     <div style="margin-top: 12px;">
       © 2026 Velquro. All rights reserved.
     </div>
 
+
   </footer>
 
+
+  <!-- =========================
+       UNIT CONVERTER JAVASCRIPT
+  ========================= -->
 
   <script>
 
     const units = {
 
       length: {
+
         "Meters": 1,
+
         "Kilometers": 1000,
+
         "Centimeters": 0.01,
+
         "Millimeters": 0.001,
+
         "Miles": 1609.344,
+
         "Yards": 0.9144,
+
         "Feet": 0.3048,
+
         "Inches": 0.0254
+
       },
+
 
       weight: {
+
         "Kilograms": 1,
+
         "Grams": 0.001,
+
         "Milligrams": 0.000001,
+
         "Pounds": 0.45359237,
+
         "Ounces": 0.028349523125
+
       },
 
+
       temperature: {
+
         "Celsius": "Celsius",
+
         "Fahrenheit": "Fahrenheit",
+
         "Kelvin": "Kelvin"
+
       }
 
     };
@@ -633,64 +979,99 @@
 
       currentCategory = category;
 
+
       document
         .querySelectorAll(".category-button")
         .forEach(function(btn) {
+
           btn.classList.remove("active");
+
         });
+
 
       button.classList.add("active");
 
+
       populateUnits();
 
+
       document.getElementById("fromValue").value = "";
+
       document.getElementById("resultDisplay").value = "";
 
       document.getElementById("resultBox").style.display = "none";
+
       document.getElementById("resultValue").textContent = "—";
+
     }
 
 
     function populateUnits() {
 
-      const fromUnit = document.getElementById("fromUnit");
-      const toUnit = document.getElementById("toUnit");
+      const fromUnit =
+        document.getElementById("fromUnit");
+
+      const toUnit =
+        document.getElementById("toUnit");
+
 
       fromUnit.innerHTML = "";
+
       toUnit.innerHTML = "";
 
-      Object.keys(units[currentCategory]).forEach(function(unit) {
 
-        const option1 = document.createElement("option");
+      Object.keys(
+        units[currentCategory]
+      ).forEach(function(unit) {
+
+
+        const option1 =
+          document.createElement("option");
+
+
         option1.value = unit;
+
         option1.textContent = unit;
 
-        const option2 = document.createElement("option");
+
+        const option2 =
+          document.createElement("option");
+
+
         option2.value = unit;
+
         option2.textContent = unit;
 
+
         fromUnit.appendChild(option1);
+
         toUnit.appendChild(option2);
 
       });
 
+
       if (currentCategory === "length") {
 
         fromUnit.value = "Meters";
+
         toUnit.value = "Kilometers";
 
       }
 
+
       if (currentCategory === "weight") {
 
         fromUnit.value = "Kilograms";
+
         toUnit.value = "Pounds";
 
       }
 
+
       if (currentCategory === "temperature") {
 
         fromUnit.value = "Celsius";
+
         toUnit.value = "Fahrenheit";
 
       }
@@ -698,33 +1079,58 @@
     }
 
 
-    function convertTemperature(value, from, to) {
+    function convertTemperature(
+      value,
+      from,
+      to
+    ) {
 
       let celsius;
 
+
       if (from === "Celsius") {
+
         celsius = value;
+
       }
 
       else if (from === "Fahrenheit") {
-        celsius = (value - 32) * 5 / 9;
+
+        celsius =
+          (value - 32) * 5 / 9;
+
       }
 
       else if (from === "Kelvin") {
-        celsius = value - 273.15;
+
+        celsius =
+          value - 273.15;
+
       }
 
 
       if (to === "Celsius") {
+
         return celsius;
+
       }
+
 
       if (to === "Fahrenheit") {
-        return (celsius * 9 / 5) + 32;
+
+        return (
+          celsius * 9 / 5
+        ) + 32;
+
       }
 
+
       if (to === "Kelvin") {
-        return celsius + 273.15;
+
+        return (
+          celsius + 273.15
+        );
+
       }
 
     }
@@ -732,83 +1138,143 @@
 
     function convert() {
 
-      const valueInput = document.getElementById("fromValue");
-      const fromUnit = document.getElementById("fromUnit").value;
-      const toUnit = document.getElementById("toUnit").value;
+      const valueInput =
+        document.getElementById("fromValue");
 
-      const resultDisplay = document.getElementById("resultDisplay");
-      const resultBox = document.getElementById("resultBox");
-      const resultValue = document.getElementById("resultValue");
 
-      const value = parseFloat(valueInput.value);
+      const fromUnit =
+        document.getElementById("fromUnit").value;
+
+
+      const toUnit =
+        document.getElementById("toUnit").value;
+
+
+      const resultDisplay =
+        document.getElementById("resultDisplay");
+
+
+      const resultBox =
+        document.getElementById("resultBox");
+
+
+      const resultValue =
+        document.getElementById("resultValue");
+
+
+      const value =
+        parseFloat(valueInput.value);
+
 
       if (isNaN(value)) {
 
         resultDisplay.value = "";
+
         resultValue.textContent = "—";
+
         resultBox.style.display = "none";
 
         return;
+
       }
 
 
       let result;
 
 
-      if (currentCategory === "temperature") {
+      if (
+        currentCategory === "temperature"
+      ) {
 
-        result = convertTemperature(
-          value,
-          fromUnit,
-          toUnit
-        );
+        result =
+          convertTemperature(
+            value,
+            fromUnit,
+            toUnit
+          );
 
       }
 
       else {
 
         const baseValue =
-          value * units[currentCategory][fromUnit];
+          value *
+          units[currentCategory][fromUnit];
+
 
         result =
-          baseValue / units[currentCategory][toUnit];
+          baseValue /
+          units[currentCategory][toUnit];
 
       }
 
 
       const roundedResult =
-        Number(result.toFixed(10));
+        Number(
+          result.toFixed(10)
+        );
 
 
       resultDisplay.value =
-        roundedResult + " " + toUnit;
+        roundedResult +
+        " " +
+        toUnit;
+
 
       resultValue.textContent =
-        roundedResult + " " + toUnit;
+        roundedResult +
+        " " +
+        toUnit;
 
-      resultBox.style.display = "block";
+
+      resultBox.style.display =
+        "block";
 
     }
 
 
     function swapUnits() {
 
-      const fromUnit = document.getElementById("fromUnit");
-      const toUnit = document.getElementById("toUnit");
+      const fromUnit =
+        document.getElementById("fromUnit");
 
-      const temporary = fromUnit.value;
 
-      fromUnit.value = toUnit.value;
-      toUnit.value = temporary;
+      const toUnit =
+        document.getElementById("toUnit");
+
+
+      const temporary =
+        fromUnit.value;
+
+
+      fromUnit.value =
+        toUnit.value;
+
+
+      toUnit.value =
+        temporary;
+
 
       convert();
 
     }
 
 
+    /* Initialize converter */
+
     populateUnits();
 
+
+    /* Initialize Google AdSense */
+
+    (adsbygoogle =
+      window.adsbygoogle || []).push({});
+
+    (adsbygoogle =
+      window.adsbygoogle || []).push({});
+
   </script>
+
 
 </body>
 </html>
