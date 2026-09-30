@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>WhatsApp QR Code Generator - Free WhatsApp QR | Velquro</title>
+
+  <meta
+    name="description"
+    content="Create a free WhatsApp QR Code with a phone number and pre-filled message. Download your QR code as PNG or copy the WhatsApp link."
+  >
+
+  <meta
+    name="keywords"
+    content="WhatsApp QR Code Generator, WhatsApp QR, WhatsApp Message QR, WhatsApp Business QR, WhatsApp QR Code, wa.me QR"
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="icon"
+    href="favicon.png"
+    type="image/png"
+  >
+
+  <meta
+    property="og:title"
+    content="WhatsApp QR Code Generator - Velquro"
+  >
+
+  <meta
+    property="og:description"
+    content="Generate a WhatsApp QR Code with a pre-filled message and download it as PNG."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://fasihuddin313.github.io/whatsapp-qr-generator.html"
+  >
+
+  <!-- Google AdSense -->
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9726069290156048"
+    crossorigin="anonymous"
+  ></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 20px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #111827;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #7c3aed;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    nav a {
+      color: #4b5563;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #7c3aed;
+    }
+
+    .top-ad {
+      width: 100%;
+      max-width: 900px;
+      margin: 18px auto 0;
+      padding: 0 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    main {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+
+    .breadcrumb {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+
+    .breadcrumb a {
+      color: #7c3aed;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .hero-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 16px;
+      border-radius: 16px;
+      background: #ecfdf5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 38px;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #6b7280;
+      font-size: 17px;
+    }
+
+    .tool-box {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 25px rgba(17, 24, 39, 0.05);
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #374151;
+    }
+
+    .field small {
+      display: block;
+      margin-top: 6px;
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 13px 14px;
+      font-family: inherit;
+      font-size: 16px;
+      color: #111827;
+      background: #ffffff;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.10);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .example-message {
+      margin-top: 10px;
+      padding: 11px 13px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 9px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .generate-button {
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 14px 18px;
+      background: #7c3aed;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .generate-button:hover {
+      background: #6d28d9;
+    }
+
+    .generate-button:active {
+      transform: translateY(1px);
+    }
+
+    .error-message {
+      display: none;
+      margin-top: 16px;
+      padding: 12px 14px;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #b91c1c;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .result {
+      display: none;
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+    }
+
+    .result h2 {
+      margin: 0 0 18px;
+      font-size: 22px;
+    }
+
+    .qr-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px auto 22px;
+    }
+
+    #qrcode {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+    }
+
+    #qrcode img,
+    #qrcode canvas {
+      display: block;
+    }
+
+    .generated-link {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 12px 14px;
+      text-align: left;
+      word-break: break-all;
+      color: #374151;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .result-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .action-button {
+      border: 0;
+      border-radius: 9px;
+      padding: 11px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .download-button {
+      background: #7c3aed;
+      color: #ffffff;
+    }
+
+    .download-button:hover {
+      background: #6d28d9;
+    }
+
+    .copy-button {
+      background: #111827;
+      color: #ffffff;
+    }
+
+    .copy-button:hover {
+      background: #1f2937;
+    }
+
+    .whatsapp-button {
+      background: #25d366;
+      color: #ffffff;
+    }
+
+    .whatsapp-button:hover {
+      background: #1ebe5d;
+    }
+
+    .content-ad {
+      width: 100%;
+      margin: 30px 0;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .content-section {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 30px;
+    }
+
+    .content-section h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 25px;
+    }
+
+    .content-section h3 {
+      margin-top: 24px;
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .content-section p {
+      color: #4b5563;
+      margin: 10px 0;
+    }
+
+    .content-section ul {
+      color: #4b5563;
+      padding-left: 22px;
+    }
+
+    .content-section li {
+      margin-bottom: 7px;
+    }
+
+    .related-tools {
+      margin-top: 30px;
+    }
+
+    .related-tools h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .related-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .related-card h3 {
+      margin: 0 0 7px;
+      font-size: 18px;
+    }
+
+    .related-card p {
+      margin: 0 0 14px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .related-card a {
+      color: #7c3aed;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer strong {
+      color: #ffffff;
+    }
+
+    .footer-links {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: #9ca3af;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 650px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+      }
+
+      main {
+        padding-top: 22px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .tool-box,
+      .content-section {
+        padding: 20px;
+      }
+
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .result-actions {
+        flex-direction: column;
+      }
+
+      .action-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <div class="brand-mark">V</div>
+        <div class="brand-name">Velquro</div>
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#tools">Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- Top Ad -->
+  <div class="top-ad">
+
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-9726069290156048"
+      data-ad-slot="5306253795"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
+
+  </div>
+
+
+  <main>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      &nbsp;›&nbsp;
+      <a href="index.html#tools">QR &amp; Generator Tools</a>
+      &nbsp;›&nbsp;
+      WhatsApp QR Code Generator
+    </div>
+
+
+    <!-- Hero -->
+    <section class="hero">
+
+      <div class="hero-icon">📱</div>
+
+      <h1>WhatsApp QR Code Generator</h1>
+
+      <p>
+        Create a WhatsApp QR code with your phone number and a
+        pre-filled message. Download the QR code or copy your
+        WhatsApp link instantly.
+      </p>
+
+    </section>
+
+
+    <!-- Tool -->
+    <section class="tool-box">
+
+      <div class="field">
+
+        <label for="phone">
+          WhatsApp Phone Number
+        </label>
+
+        <input
+          type="tel"
+          id="phone"
+          placeholder="+92XXXXXXXXXX"
+          autocomplete="tel"
+        >
+
+        <small>
+          Enter the full international number with country code.
+          Example: +923001234567
+        </small>
+
+      </div>
+
+
+      <div class="field">
+
+        <label for="message">
+          Pre-filled Message
+        </label>
+
+        <textarea
+          id="message"
+          placeholder="Hello, mujhe aapki service ke bare mein maloomat chahiye."
+        ></textarea>
+
+        <div class="example-message">
+          Example:
+          "Hello, mujhe aapki service ke bare mein maloomat chahiye."
+        </div>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="generate-button"
+        onclick="generateWhatsAppQR()"
+      >
+        Generate WhatsApp QR
+      </button>
+
+
+      <div
+        id="errorMessage"
+        class="error-message"
+      ></div>
+
+
+      <!-- Result -->
+      <div
+        id="result"
+        class="result"
+      >
+
+        <h2>Your WhatsApp QR Code</h2>
+
+        <div class="qr-wrapper">
+          <div id="qrcode"></div>
+        </div>
+
+        <div
+          id="generatedLink"
+          class="generated-link"
+        ></div>
+
+        <div class="result-actions">
+
+          <button
+            type="button"
+            class="action-button download-button"
+            onclick="downloadQR()"
+          >
+            📥 Download PNG
+          </button>
+
+          <button
+            type="button"
+            class="action-button copy-button"
+            onclick="copyWhatsAppLink()"
+          >
+            📋 Copy WhatsApp Link
+          </button>
+
+          <a
+            id="openWhatsApp"
+            class="action-button whatsapp-button"
+            href="#"
+            target="_blank"
+            rel="noopener"
+          >
+            🟢 Open WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Second Ad -->
+    <div class="content-ad">
+
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-9726069290156048"
+        data-ad-slot="5306253795"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+
+    </div>
+
+
+    <!-- Information -->
+    <section class="content-section">
+
+      <h2>WhatsApp QR Code Generator</h2>
+
+      <p>
+        A WhatsApp QR Code makes it easy for people to start a
+        conversation with you without manually typing or saving
+        your phone number.
+      </p>
+
+      <p>
+        Enter your WhatsApp number, add an optional message, and
+        generate your QR code. When someone scans the QR code,
+        the WhatsApp chat opens with your message ready to send.
+      </p>
+
+
+      <h3>How does it work?</h3>
+
+      <ul>
+        <li>Enter your WhatsApp phone number.</li>
+        <li>Add an optional pre-filled message.</li>
+        <li>Click "Generate WhatsApp QR".</li>
+        <li>Download the QR code as a PNG image.</li>
+        <li>Share the QR code on your website, flyer, poster or social media.</li>
+      </ul>
+
+
+      <h3>WhatsApp Business QR Code</h3>
+
+      <p>
+        Businesses can use WhatsApp QR codes for customer support,
+        product enquiries, service requests, bookings and sales.
+        A pre-filled message can make it easier for customers to
+        start the conversation.
+      </p>
+
+
+      <h3>Important phone number format</h3>
+
+      <p>
+        WhatsApp click-to-chat links use the full international
+        phone number. The number should include the country code
+        and should not contain spaces, brackets, dashes or the
+        international plus sign in the generated wa.me URL.
+      </p>
+
+
+      <h3>Is the message sent automatically?</h3>
+
+      <p>
+        No. The QR code only opens the WhatsApp conversation with
+        the message pre-filled. The person scanning the QR code
+        still needs to press the Send button.
+      </p>
+
+    </section>
+
+
+    <!-- Related Tools -->
+    <section class="related-tools">
+
+      <h2>Related Tools</h2>
+
+      <div class="related-grid">
+
+        <div class="related-card">
+
+          <h3>📱 QR Code Generator</h3>
+
+          <p>
+            Create QR codes from URLs or text quickly and easily.
+          </p>
+
+          <a href="qr-code-generator.html">
+            Use Tool →
+          </a>
+
+        </div>
+
+
+        <div class="related-card">
+
+          <h3>🔐 Password Generator</h3>
+
+          <p>
+            Generate strong random passwords for your accounts.
+          </p>
+
+          <a href="password-generator.html">
+            Use Tool →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+
+    <strong>Velquro</strong>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+
+    <p>
+      © 2026 Velquro. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- QR Code Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+  <script>
+
+    let currentWhatsAppLink = "";
+
+
+    function cleanPhoneNumber(phone) {
+
+      /*
+        WhatsApp wa.me links require an international
+        phone number containing digits only.
+
+        Example:
+        +92 300 1234567
+        becomes:
+        923001234567
+      */
+
+      let cleaned = phone.replace(/\D/g, "");
+
+      return cleaned;
+    }
+
+
+    function generateWhatsAppQR() {
+
+      const phoneInput =
+        document.getElementById("phone").value.trim();
+
+      const message =
+        document.getElementById("message").value.trim();
+
+      const error =
+        document.getElementById("errorMessage");
+
+      const result =
+        document.getElementById("result");
+
+      const qrContainer =
+        document.getElementById("qrcode");
+
+      const generatedLink =
+        document.getElementById("generatedLink");
+
+      const openWhatsApp =
+        document.getElementById("openWhatsApp");
+
+
+      error.style.display = "none";
+      result.style.display = "none";
+
+
+      if (!phoneInput) {
+
+        showError(
+          "Please enter a WhatsApp phone number."
+        );
+
+        return;
+      }
+
+
+      const phone =
+        cleanPhoneNumber(phoneInput);
+
+
+      /*
+        Basic validation.
+        International WhatsApp numbers normally contain
+        a country code and enough digits for a phone number.
+      */
+
+      if (phone.length < 8 || phone.length > 15) {
+
+        showError(
+          "Please enter a valid international phone number."
+        );
+
+        return;
+      }
+
+
+      let whatsappLink =
+        "https://wa.me/" + phone;
+
+
+      if (message) {
+
+        whatsappLink +=
+          "?text=" + encodeURIComponent(message);
+
+      }
+
+
+      currentWhatsAppLink =
+        whatsappLink;
+
+
+      /*
+        Clear previous QR code
+      */
+
+      qrContainer.innerHTML = "";
+
+
+      /*
+        Generate QR
+      */
+
+      new QRCode(qrContainer, {
+
+        text: whatsappLink,
+
+        width: 260,
+
+        height: 260,
+
+        colorDark: "#111827",
+
+        colorLight: "#ffffff",
+
+        correctLevel: QRCode.CorrectLevel.H
+
+      });
+
+
+      generatedLink.textContent =
+        whatsappLink;
+
+
+      openWhatsApp.href =
+        whatsappLink;
+
+
+      result.style.display =
+        "block";
+
+
+      result.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+    }
+
+
+    function showError(message) {
+
+      const error =
+        document.getElementById("errorMessage");
+
+      error.textContent =
+        message;
+
+      error.style.display =
+        "block";
+
+    }
+
+
+    function copyWhatsAppLink() {
+
+      if (!currentWhatsAppLink) {
+        return;
+      }
+
+
+      if (navigator.clipboard) {
+
+        navigator.clipboard
+          .writeText(currentWhatsAppLink)
+          .then(function () {
+
+            showCopySuccess();
+
+          })
+          .catch(function () {
+
+            fallbackCopy();
+
+          });
+
+      } else {
+
+        fallbackCopy();
+
+      }
+
+    }
+
+
+    function fallbackCopy() {
+
+      const textarea =
+        document.createElement("textarea");
+
+      textarea.value =
+        currentWhatsAppLink;
+
+      textarea.style.position =
+        "fixed";
+
+      textarea.style.left =
+        "-9999px";
+
+      document.body.appendChild(
+        textarea
+      );
+
+      textarea.select();
+
+      try {
+
+        document.execCommand("copy");
+
+        showCopySuccess();
+
+      } catch (error) {
+
+        alert(
+          "Unable to copy the link. Please copy it manually."
+        );
+
+      }
+
+      document.body.removeChild(
+        textarea
+      );
+
+    }
+
+
+    function showCopySuccess() {
+
+      const button =
+        document.querySelector(".copy-button");
+
+      const originalText =
+        button.textContent;
+
+      button.textContent =
+        "✓ Link Copied!";
+
+
+      setTimeout(function () {
+
+        button.textContent =
+          originalText;
+
+      }, 1800);
+
+    }
+
+
+    function downloadQR() {
+
+      const qrContainer =
+        document.getElementById("qrcode");
+
+      const canvas =
+        qrContainer.querySelector("canvas");
+
+
+      if (!canvas) {
+
+        alert(
+          "Please generate a QR code first."
+        );
+
+        return;
+      }
+
+
+      const link =
+        document.createElement("a");
+
+      link.download =
+        "velquro-whatsapp-qr.png";
+
+      link.href =
+        canvas.toDataURL("image/png");
+
+      link.click();
+
+    }
+
+
+    /*
+      Allow Enter key from phone input
+    */
+
+    document
+      .getElementById("phone")
+      .addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+
+          generateWhatsAppQR();
+
+        }
+
+      });
+
+
+    /*
+      Allow Ctrl + Enter in message box
+    */
+
+    document
+      .getElementById("message")
+      .addEventListener("keydown", function(event) {
+
+        if (event.ctrlKey && event.key === "Enter") {
+
+          generateWhatsAppQR();
+
+        }
+
+      });
+
+
+    /*
+      AdSense
+    */
+
+    (adsbygoogle =
+      window.adsbygoogle || [])
+      .push({});
+
+
+    (adsbygoogle =
+      window.adsbygoogle || [])
+      .push({});
+
+  </script>
+
+</body>
+</html>
