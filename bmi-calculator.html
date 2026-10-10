@@ -1,1 +1,596 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="monetag" content="a51f32fd609e6364eff0dc77598cef43"><meta name="google-site-verification" content="Rv-FFP7h8EQQlMWsjKf4fIoonWUYx6I_c6QNB5dIgDA"><link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml"><link rel="stylesheet" href="style.css"><title>BMI Calculator - Free Online Tool | Velquro</title><meta name="description" content="Free BMI calculator. Check your Body Mass Index from height and weight."><link rel="canonical" href="https://fasihuddin313.github.io/bmi-calculator.html"><meta property="og:title" content="BMI Calculator | Velquro"><meta property="og:description" content="Free BMI calculator. Check your Body Mass Index from height and weight."><meta property="og:url" content="https://fasihuddin313.github.io/bmi-calculator.html"><meta property="og:type" content="website"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a normal BMI?", "acceptedAnswer": {"@type": "Answer", "text": "18.5 to 24.9 is the usual normal range for adults."}}, {"@type": "Question", "name": "Is BMI accurate for everyone?", "acceptedAnswer": {"@type": "Answer", "text": "No. It ignores muscle mass and body composition, so treat it as a rough guide."}}, {"@type": "Question", "name": "What are the BMI categories?", "acceptedAnswer": {"@type": "Answer", "text": "Under 18.5 is underweight, 18.5 to 24.9 is normal, 25 to 29.9 is overweight and 30 or above is obese."}}, {"@type": "Question", "name": "Is BMI suitable for children?", "acceptedAnswer": {"@type": "Answer", "text": "No. Children use age and sex specific growth charts."}}]}</script></head><body><header><div class="header-inner"><a href="index.html" class="logo"><span class="logo-mark">V</span><span>Velquro</span></a><nav><a href="index.html#tools">Tools</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header><div class="page"><h1>BMI Calculator</h1><p>Free BMI calculator. Check your Body Mass Index from height and weight.</p><section class="tool"><div class=row><label>Height (cm) <input id=h type=number value=170></label><label>Weight (kg) <input id=w type=number value=70></label><button id=go>Calculate</button></div><p id=o class=out></p></section><h2>About this tool</h2><p>Enter height in centimetres and weight in kilograms to get your BMI and category. BMI is a general screening number and does not replace advice from a doctor.</p><p>Body Mass Index is a quick screening number based on height and weight. Enter your height in centimetres and weight in kilograms and this BMI calculator shows your BMI and the standard adult category. It is a starting point for a conversation about health, not a diagnosis.</p><h2>How to use it</h2><ol><li>Enter your height in centimetres.</li><li>Enter your weight in kilograms.</li><li>Press Calculate.</li><li>Read your BMI value and category.</li></ol><h2>Common uses</h2><p>People use it to track general weight changes, set fitness goals, fill in health forms or compare their value against standard ranges used for adults.</p><h2>Tips and limits</h2><p>BMI does not measure body fat, muscle, age, sex or where weight is carried, so athletes and older adults can get misleading categories. It is designed for adults, not children. If your result worries you or you have health questions, speak to a doctor or qualified health professional.</p><h2>Privacy and convenience</h2><p>Your height and weight are processed only in your browser and are never saved or shared. Use the result as one data point alongside other measures such as waist size, activity level and medical advice. Checking at regular intervals, rather than daily, gives a more meaningful picture of trends. This tool provides general information and is not medical advice.</p><h2>FAQ</h2><details><summary>What is a normal BMI?</summary><p>18.5 to 24.9 is the usual normal range for adults.</p></details><details><summary>Is BMI accurate for everyone?</summary><p>No. It ignores muscle mass and body composition, so treat it as a rough guide.</p></details><details><summary>What are the BMI categories?</summary><p>Under 18.5 is underweight, 18.5 to 24.9 is normal, 25 to 29.9 is overweight and 30 or above is obese.</p></details><details><summary>Is BMI suitable for children?</summary><p>No. Children use age and sex specific growth charts.</p></details><h2>More free tools</h2><div class="more"><a href="word-counter.html">Word Counter</a><a href="case-converter.html">Case Converter</a><a href="duplicate-line-remover.html">Duplicate Line Remover</a><a href="json-formatter.html">JSON Formatter</a><a href="password-generator.html">Password Generator</a><a href="image-compressor.html">Image Compressor (to KB)</a><a href="unit-converter.html">Unit Converter</a><a href="percentage-calculator.html">Percentage Calculator</a><a href="age-calculator.html">Age Calculator</a><a href="bmi-calculator.html">BMI Calculator</a><a href="qr-code-generator.html">QR Code Generator</a><a href="whatsapp-qr-generator.html">WhatsApp QR Code Generator</a></div></div><footer><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><h3>Velquro</h3><p>Simple, free and useful online tools for everyday digital tasks.</p></div><div class="footer-links"><a href="index.html">Home</a><a href="index.html#tools">Tools</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div><div class="footer-bottom">© 2026 Velquro. All rights reserved.</div></div></footer><script>go.onclick=()=>{let b=+w.value/((+h.value/100)**2);if(!isFinite(b)||b<=0){o.textContent='Enter height and weight';return}o.textContent='BMI '+b.toFixed(1)+': '+(b<18.5?'Underweight':b<25?'Normal':b<30?'Overweight':'Obese')}</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://quge5.com/88/tag.min.js" data-zone="292928" async data-cfasync="false"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BMI Calculator - Calculate Your Body Mass Index | Velquro</title>
+  <meta name="description" content="Use Velquro's free BMI Calculator to calculate your Body Mass Index quickly using your height and weight.">
+  <meta name="keywords" content="BMI calculator, body mass index calculator, calculate BMI, free BMI calculator">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 20px;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      text-decoration: none;
+      color: #111827;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .home-link {
+      text-decoration: none;
+      color: #4f46e5;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .tool-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 30px;
+    }
+
+    .unit-switch {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .unit-btn {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .unit-btn.active {
+      background: #4f46e5;
+      color: white;
+      border-color: #4f46e5;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #4f46e5;
+    }
+
+    .calculate-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #4f46e5;
+      color: white;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .calculate-btn:hover {
+      background: #4338ca;
+    }
+
+    .reset-btn {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #374151;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .result {
+      display: none;
+      margin-top: 28px;
+      padding: 24px;
+      border-radius: 12px;
+      background: #f3f4f6;
+      text-align: center;
+    }
+
+    .result h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .bmi-number {
+      font-size: 42px;
+      font-weight: 700;
+      color: #4f46e5;
+      margin: 5px 0;
+    }
+
+    .category {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .error {
+      display: none;
+      color: #dc2626;
+      margin-top: 12px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .info {
+      margin-top: 35px;
+    }
+
+    .info h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .info p {
+      color: #6b7280;
+      margin-bottom: 12px;
+    }
+
+    .bmi-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+    }
+
+    .bmi-table th,
+    .bmi-table td {
+      border: 1px solid #e5e7eb;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .bmi-table th {
+      background: #f9fafb;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 30px auto;
+      }
+
+      .tool-card {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .bmi-number {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Velquro</a>
+      <a href="index.html" class="home-link">Home</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <div class="tool-card">
+
+      <h1>BMI Calculator</h1>
+
+      <p class="subtitle">
+        Calculate your Body Mass Index quickly and easily.
+      </p>
+
+      <div class="unit-switch">
+        <button class="unit-btn active" id="metricBtn" type="button">
+          Metric (kg / cm)
+        </button>
+
+        <button class="unit-btn" id="imperialBtn" type="button">
+          Imperial (lb / ft)
+        </button>
+      </div>
+
+      <form id="bmiForm">
+
+        <div id="metricInputs">
+
+          <div class="form-group">
+            <label for="weightKg">Weight (kg)</label>
+            <input
+              type="number"
+              id="weightKg"
+              placeholder="e.g. 70"
+              min="1"
+              step="0.1"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="heightCm">Height (cm)</label>
+            <input
+              type="number"
+              id="heightCm"
+              placeholder="e.g. 175"
+              min="1"
+              step="0.1"
+            >
+          </div>
+
+        </div>
+
+        <div id="imperialInputs" style="display: none;">
+
+          <div class="form-group">
+            <label for="weightLb">Weight (lb)</label>
+            <input
+              type="number"
+              id="weightLb"
+              placeholder="e.g. 154"
+              min="1"
+              step="0.1"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="heightFt">Height (feet)</label>
+            <input
+              type="number"
+              id="heightFt"
+              placeholder="e.g. 5"
+              min="1"
+              step="1"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="heightIn">Height (inches)</label>
+            <input
+              type="number"
+              id="heightIn"
+              placeholder="e.g. 9"
+              min="0"
+              max="11.99"
+              step="0.1"
+            >
+          </div>
+
+        </div>
+
+        <button type="submit" class="calculate-btn">
+          Calculate BMI
+        </button>
+
+        <button type="button" class="reset-btn" id="resetBtn">
+          Reset
+        </button>
+
+        <div class="error" id="errorMessage"></div>
+
+      </form>
+
+      <div class="result" id="result">
+
+        <h2>Your BMI</h2>
+
+        <div class="bmi-number" id="bmiValue">0</div>
+
+        <div class="category" id="bmiCategory"></div>
+
+        <p id="resultMessage"></p>
+
+      </div>
+
+      <section class="info">
+
+        <h2>What is BMI?</h2>
+
+        <p>
+          BMI (Body Mass Index) is a measurement calculated from a person's
+          weight and height. It is commonly used as a general screening tool
+          for weight categories.
+        </p>
+
+        <table class="bmi-table">
+          <thead>
+            <tr>
+              <th>BMI</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Below 18.5</td>
+              <td>Underweight</td>
+            </tr>
+
+            <tr>
+              <td>18.5 – 24.9</td>
+              <td>Normal weight</td>
+            </tr>
+
+            <tr>
+              <td>25.0 – 29.9</td>
+              <td>Overweight</td>
+            </tr>
+
+            <tr>
+              <td>30.0 or above</td>
+              <td>Obesity</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 18px;">
+          BMI is a general screening measure and does not directly measure
+          body fat or overall health.
+        </p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    © 2026 Velquro. All rights reserved.
+  </footer>
+
+  <script>
+    const metricBtn = document.getElementById("metricBtn");
+    const imperialBtn = document.getElementById("imperialBtn");
+
+    const metricInputs = document.getElementById("metricInputs");
+    const imperialInputs = document.getElementById("imperialInputs");
+
+    const bmiForm = document.getElementById("bmiForm");
+    const result = document.getElementById("result");
+    const bmiValue = document.getElementById("bmiValue");
+    const bmiCategory = document.getElementById("bmiCategory");
+    const resultMessage = document.getElementById("resultMessage");
+    const errorMessage = document.getElementById("errorMessage");
+    const resetBtn = document.getElementById("resetBtn");
+
+    let currentUnit = "metric";
+
+    metricBtn.addEventListener("click", function () {
+      currentUnit = "metric";
+
+      metricBtn.classList.add("active");
+      imperialBtn.classList.remove("active");
+
+      metricInputs.style.display = "block";
+      imperialInputs.style.display = "none";
+
+      clearResult();
+    });
+
+    imperialBtn.addEventListener("click", function () {
+      currentUnit = "imperial";
+
+      imperialBtn.classList.add("active");
+      metricBtn.classList.remove("active");
+
+      imperialInputs.style.display = "block";
+      metricInputs.style.display = "none";
+
+      clearResult();
+    });
+
+    bmiForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      errorMessage.style.display = "none";
+
+      let bmi;
+
+      if (currentUnit === "metric") {
+
+        const weight = parseFloat(
+          document.getElementById("weightKg").value
+        );
+
+        const heightCm = parseFloat(
+          document.getElementById("heightCm").value
+        );
+
+        if (
+          !Number.isFinite(weight) ||
+          !Number.isFinite(heightCm) ||
+          weight <= 0 ||
+          heightCm <= 0
+        ) {
+          showError("Please enter a valid weight and height.");
+          return;
+        }
+
+        const heightMeters = heightCm / 100;
+
+        bmi = weight / (heightMeters * heightMeters);
+
+      } else {
+
+        const weightLb = parseFloat(
+          document.getElementById("weightLb").value
+        );
+
+        const heightFt = parseFloat(
+          document.getElementById("heightFt").value
+        );
+
+        const heightIn = parseFloat(
+          document.getElementById("heightIn").value
+        ) || 0;
+
+        if (
+          !Number.isFinite(weightLb) ||
+          !Number.isFinite(heightFt) ||
+          !Number.isFinite(heightIn) ||
+          weightLb <= 0 ||
+          heightFt <= 0 ||
+          heightIn < 0 ||
+          heightIn >= 12
+        ) {
+          showError("Please enter a valid weight and height.");
+          return;
+        }
+
+        const totalInches = (heightFt * 12) + heightIn;
+
+        bmi = (weightLb / (totalInches * totalInches)) * 703;
+      }
+
+      if (!Number.isFinite(bmi) || bmi <= 0) {
+        showError("Unable to calculate BMI. Please check your values.");
+        return;
+      }
+
+      displayResult(bmi);
+    });
+
+    function displayResult(bmi) {
+
+      const roundedBMI = bmi.toFixed(1);
+
+      let category = "";
+      let message = "";
+
+      if (bmi < 18.5) {
+        category = "Underweight";
+        message = "Your BMI is below the standard healthy-weight range.";
+      } else if (bmi < 25) {
+        category = "Normal weight";
+        message = "Your BMI falls within the standard healthy-weight range.";
+      } else if (bmi < 30) {
+        category = "Overweight";
+        message = "Your BMI falls within the standard overweight range.";
+      } else {
+        category = "Obesity";
+        message = "Your BMI is within the standard obesity range.";
+      }
+
+      bmiValue.textContent = roundedBMI;
+      bmiCategory.textContent = category;
+      resultMessage.textContent = message;
+
+      result.style.display = "block";
+
+      result.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+    }
+
+    function showError(message) {
+      errorMessage.textContent = message;
+      errorMessage.style.display = "block";
+      result.style.display = "none";
+    }
+
+    function clearResult() {
+      result.style.display = "none";
+      errorMessage.style.display = "none";
+    }
+
+    resetBtn.addEventListener("click", function () {
+
+      bmiForm.reset();
+
+      clearResult();
+
+      currentUnit = "metric";
+
+      metricBtn.classList.add("active");
+      imperialBtn.classList.remove("active");
+
+      metricInputs.style.display = "block";
+      imperialInputs.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
